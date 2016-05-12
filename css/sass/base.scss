@@ -1,0 +1,8 @@
+@charset "UTF-8";
+//参数配置
+@import "config"; //页面相关配置
+
+//通用主样式
+@import "model/reset"; //重置CSS基础样式
+@import "model/layout"; //栅格布局
+@import "model/public"; //公共基础样式

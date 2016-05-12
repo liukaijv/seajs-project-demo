@@ -1,0 +1,8 @@
+<!-- 账户类别 -->
+<div class="user-brief">
+  <dl>
+    <dt>账户类别:</dt>
+    <dd>个人账户</dd>
+    <dd class="safe-status"><a href="javascript:void(0);" class="active" target="_self"><i class="ift-certification"></i></a> <a href="javascript:void(0);" target="_self"><i class="ift-phone"></i></a> <a href="javascript:void(0);" target="_self"><i class="ift-safe"></i></a></dd>
+  </dl>
+</div>

@@ -1,0 +1,79 @@
+<table class="table table-hline">
+    <colgroup>
+      <col width="128">
+      <col width="160">
+      <col width="128">
+      <col width="128">
+      <col width="100">
+      <col width="100">
+      <col width="128">
+    </colgroup>
+    <thead>
+      <tr class="tac">
+        <th>订单编号</th>
+        <th>产品名称</th>
+        <th>金额(元)</th>
+        <th>已支付金额(元)</th>
+        <th>下单时间</th>
+        <th>支付状态</th>
+        <th>操作</th>
+      </tr>
+    </thead>
+{{#if flag}}
+<tbody></tbody><tfoot>
+  <tr>
+    <td colspan="6" class="tac">暂无购买的记录！</td>
+  </tr>
+</tfoot>
+{{else}}
+  {{#each this}}
+  <tr>
+    <td>
+      <a class="blue" href="#" target="_blank">{{appsheetserialno}}</a></td>
+    <td>{{fundname}}</td>
+    <td>{{applicationamount}}</td>
+    <td>{{frozenamount}}</td>
+    <td>{{transactiondate}}</td>
+    <td>{{paystatusname}}</td>
+    <td>
+    {{#equal paystatus '0'}}
+      {{#equal transtatus '00'}}
+        {{#equal cancelflag '1'}}
+          <span class="btn btn-gray">已撤单</span>
+        {{/equal}}
+        {{#equal cancelflag '0'}}
+          <span class="btn btn-red J_payBtn" appsheetserialno={{appsheetserialno}}>付款</span>
+          <span class="btn btn-red J_cancel" appsheetserialno={{appsheetserialno}} businesscode={{businesscode}}>取消</span>
+        {{/equal}}
+      {{/equal}}   
+      {{#equal transtatus '01'}}
+        {{#equal cancelflag '1'}}
+          <span class="btn btn-gray">待成交确认</span>
+        {{/equal}}
+        {{#equal cancelflag '0'}}
+          <span class="btn btn-red J_payBtn" appsheetserialno={{appsheetserialno}}>付款</span>
+          <span class="btn btn-red J_cancel" appsheetserialno={{appsheetserialno}} businesscode={{businesscode}}>取消</span>
+        {{/equal}}
+      {{/equal}}    
+      {{#equal transtatus '02'}}
+          <span class="btn btn-gray">完成</span>
+      {{/equal}}   
+      {{#equal transtatus '03'}}
+        <span class="btn btn-gray">失败</span>
+      {{/equal}} 
+    {{/equal}} 
+    {{#equal paystatus '1'}}
+      <span class="btn btn-gray">部分支付</span>
+    {{/equal}} 
+    {{#equal paystatus '2'}}
+      <span class="btn btn-gray">已付款</span>
+    {{/equal}} 
+    {{#equal paystatus '3'}}
+      <span class="btn btn-gray">退款</span>
+    {{/equal}} 
+    </td>
+  </tr>
+{{/each}}
+{{/if}}
+</table>
+<ul id="page_has" class="pagination"><li class="disabled"><a class="first">首页</a></li><li class="pre disabled"><a class="disabled prev">上一页</a></li><li class="page active" pnum="1"><a page="1">1</a></li><li></li><li class="next disabled"><a class="disabled next">下一页</a></li><li class="last disabled"><a class="last" target="_self">末页</a></li><li class="disabled"><a class="normalsize">共1页</a></li></ul>

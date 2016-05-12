@@ -1,0 +1,70 @@
+@charset "UTF-8";
+//公用模块盒子hd,bd,ft
+.box{
+	.box-hd{
+		@extend %clearfix;
+		// height: 45px;
+		// line-height: 45px;
+		// border-top: 3px solid colors(primary);
+		border-bottom: 1px solid colors(gray);
+		.title{
+			@include float;
+			font-size: fonts(size) * 2;
+			font-family: fonts(family);
+			cursor: pointer;
+		}
+		p{
+			font-size: fonts(size) * 1.2;
+			@include float(right);
+			strong{
+				font-weight: bold;
+			}
+			a{
+				padding:0 10px;
+				margin-right: -2px;
+				border-right:1px solid colors(gray);
+			}
+		}
+		.more{
+			@include float(right);
+			line-height: 30px;
+			font-size: fonts(size) * 1.2;
+			color:colors(dark);
+		}
+	}	
+	.box-bd{
+		// padding-top: 16px;
+		@extend %clearfix;
+	}
+}
+
+.ad-box{
+	margin-bottom: 16px;
+	img{
+		width: 100%;
+	}
+}
+
+.news{
+	.tab-hd{
+		border: 1px solid lighten(colors(gray),10%);
+		background-color: lighten(colors(gray),18%);
+		// overflow: hidden;
+		li{
+			width: 50%;
+			font-size: fonts(size) * 1.6;
+			padding: 0;
+			border-left:1px solid lighten(colors(gray),10%);
+			margin-left: -1px;
+			text-align: center;
+			&.active{
+				margin-bottom: -1px;
+				color: colors(primary);
+				background-color: colors(white);
+			}
+		}
+	}
+	.tab-bd{
+		padding-top: 0;
+	}
+}

@@ -1,0 +1,63 @@
+{{#if flag}}
+<div class="gd-19" style="min-height: 337px;">
+  <div class="bankcards page-wrap clearfix">
+      <div class="titlebar">
+        <h2 class="title">银行卡管理</h2>
+      </div>
+        <div class="panel-info mt20">
+      <div class="section mt20">
+        <ul class="bankcards-list clearfix">
+            <li class="gd-8">
+              <div class="card-info">
+                <a target="_self" style="width:100%;" class="add" href="/user/bindbank.html">
+                  <img src="/images/binding/tianjia.png" width="60" height="60">
+                </a>
+              </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+{{else}}
+{{#each this}}
+<div class="gd-19" style="min-height: 337px;">
+<div class="bankcards page-wrap clearfix">
+      <div class="titlebar">
+        <h2 class="title">银行卡管理</h2>
+        <!--<ul class="breadcrumb clearfix fr">
+          <li>账户中心</li>
+          <li>&nbsp;-&nbsp;</li>
+          <li><a href="/auction/financial_asset">我的账户</a></li>
+          <li>&nbsp;-&nbsp;</li>
+          <li class="active">银行卡管理</li>
+        </ul>-->
+      </div>
+        <div class="panel-info mt20">
+      <div class="section mt20">
+        <ul class="bankcards-list clearfix">
+              <li class="gd-8">
+              <div class="card-info">
+                <div class="head">
+                  <div class="bank-icon">
+                    <img src="/images/bank/bank_26.png" width="136" height="36">
+                  </div>
+                  <a target="_self" id="J_unbindBtn" class="btn-sm btn-red fr unbind" href="javascript:void(0);">解绑</a>
+                </div>
+                <div class="content">
+                  <h2 class="tac">
+                    {{bankaccount}}
+                  </h2>
+                </div>
+                <div class="foot tar">
+                  <!--通联支付-->
+                </div>
+              </div>
+            </li>
+          </ul>
+      </div>
+    </div>
+  </div>
+</div>
+{{/each}}
+{{/if}}

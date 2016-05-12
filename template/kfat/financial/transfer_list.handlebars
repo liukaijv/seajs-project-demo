@@ -1,0 +1,42 @@
+{{#if flag}}
+	暂无数据
+{{else}}
+	{{#each this}}
+      <li class="item">
+        <div class="item-hd">
+          <a href="/financial/transfer_detail.html?id={{fundcode}}&appsheetserialno={{appsheetserialno}}&publishserialno={{publishserialno}}" class="btn-lg btn-blue btn-w60">立即投资</a>
+          <h3 class="title">
+            <a href="/financial/transfer_detail.html?id={{fundcode}}&appsheetserialno={{appsheetserialno}}&publishserialno={{publishserialno}}">{{fundname}}</a>
+          </h3>
+        </div>
+        <div class="item-bd">
+          <ul class="attr">
+            <li class="yield">
+              <b class="dt">预期年化收益率</b>
+              <strong class="dd f28 red">{{annualrate}}%</strong>
+            </li>
+            <li>
+              <b class="dt">产品规模</b>
+              <strong class="dd  f16">{{#toLocalString applicationamount}}{{/toLocalString}}万元</strong>
+            </li>
+            <li>
+              <b class="dt">已投金额</b>
+              <strong class="dd  f16">{{#toLocalString dealvol}}{{/toLocalString}}万元</strong>
+            </li>
+            <li>
+              <b class="dt">产品期限</b>
+              <span class="dd  f16">{{deadline}}{{deadlineunitname}}</span>
+            </li>
+            <li>
+              <b class="dt">转让者</b>
+              <span class="dd  f16">{{investorname}}</span>
+            </li>
+            <li>
+              <b class="dt">保障方式</b>
+              <span class="dd  f16"><i class="iconfont">&#xe60a;</i>本息保障&emsp;</span>
+            </li>
+          </ul>
+        </div>
+      </li>
+	{{/each}}
+{{/if}}

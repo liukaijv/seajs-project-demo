@@ -1,0 +1,20 @@
+@charset "UTF-8";
+@import "config"; //页面相关配置
+
+@import "model/reset"; //重置CSS基础样式
+@import "model/layout"; //footer
+@import "model/public"; //公共
+
+@import "fonts/iconfont"; //字体样式
+@import "model/icon"; //icon图片精灵
+@import "model/tab"; //tab切换
+@import "model/box"; //tab切换
+@import "model/button"; //基础按钮
+@import "model/table"; //基础表格
+@import "model/form"; //表单基础
+@import "model/site-nav"; //站点导航
+@import "model/pages"; //分页
+@import "model/header"; //header
+@import "model/footer"; //footer
+@import "model/tips"; //
+@import "model/crumb"; //

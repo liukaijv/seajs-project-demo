@@ -1,0 +1,77 @@
+/* ’Àªß–≈œ¢ */
+.account-transfer {
+  margin-bottom: 60px;
+  padding: 20px;
+}
+.account-transfer .bill {
+  baccount-bottom: 1px dashed #c0c0c0;
+  padding-bottom: 30px;
+  margin-bottom: 10px;
+}
+.account-transfer .bill h3 {
+  font-size: 22px;
+  line-height: 40px;
+  margin-bottom: 20px;
+  color: #655641;
+}
+.account-transfer .bill h3 em {
+  color: #00b7bb;
+  font-size: 90%;
+}
+.account-transfer .bill .properties {
+  padding: 0 10px;
+}
+.account-transfer .bill .properties dl {
+  float: left;
+  width: 50%;
+  font-size: 14px;
+  line-height: 40px;
+}
+.account-transfer .bill .properties dl dt {
+  float: left;
+  width: 40%;
+  min-width: 100px;
+  color: #999;
+}
+.account-transfer .bill .properties dl dd {
+  float: left;
+  width: 60%;
+  color: #000;
+}
+.account-transfer .floorform {
+  padding: 10px;
+}
+.account-transfer .floorform .agreement {
+  font-size: 13px;
+  color: #747474;
+  text-align: left;
+}
+.account-transfer .floorform .actionArea {
+  text-align: left;
+}
+.account-transfer .floorform .actionArea input {
+  margin-left: 0;
+}
+.account-transfer .floorform .floor .value .steps-input input {
+  margin-right: 0;
+}
+.account-page {
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+.account-page .account-board {
+  background-color: #fcfcfc;
+  padding: 60px 80px;
+}
+.account-page .account-board .project-name {
+  font-size: 28px;
+  line-height: 60px;
+  margin-bottom: 20px;
+  color: #655641;
+}
+.account-confirm .floorform .actionArea {
+  text-align: left;
+}
+.account-confirm .floorform .actionArea .btn {
+  margin-left: 162px;
+}

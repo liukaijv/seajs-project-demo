@@ -1,0 +1,100 @@
+@charset "UTF-8";
+.yield{
+	@include pie-clearfix;
+	padding:20px 20px 20px 400px;
+	border:1px solid lighten(colors(gray), 10%);
+	background-color: lighten(colors(gray), 18%);
+	@include border-radius(radius(M));
+	.thumbnail{
+		@include float;
+		width: 360px;
+		height: 270px;
+		margin-left: -380px;
+		img{
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.info{
+		h1{
+			font-size: fonts(size) * 3;
+			margin: 8px 0 16px 0;
+			color: colors(auxiliary);
+		}
+		dl{
+			margin-bottom: 20px;
+			padding-bottom: 10px;
+			border-bottom: 1px dotted colors(gray);
+			font-size: fonts(size) * 1.4;
+		}
+		dt{
+			@include float;
+			margin-right: 5px;
+			color: colors(dark);
+		}
+		dd{
+			margin-bottom: 10px;
+		}
+	}
+}
+
+.yield-detail,.auction-detail{
+	margin-top: 20px;
+	.tab-hd{
+		font-size: fonts(size) * 1.6;
+		border:1px solid lighten(colors(gray), 10%);
+		background-color: lighten(colors(gray), 18%);
+		li{
+			border-right: 1px solid lighten(colors(gray), 10%);
+			&.active{
+				background-color: colors(white);
+				margin-bottom: -1px;
+			}
+		}
+	}
+	.tab-bd{
+		border: 1px solid lighten(colors(gray), 10%);
+		border-top: none;
+		padding:19px;
+	}
+	.tab-item{
+		margin-bottom: 10px;
+	}
+}
+
+//产品议价
+.pro-consult{
+	padding: 20px;
+	width: 480px;
+	.form{
+		dt{
+			position: absolute;
+			width: 120px;
+			line-height: 36px;
+			text-align: right;
+			color:darken(colors(dark), 10%);
+		}
+		dd{
+			padding-left:125px;
+			font-size: fonts(size) * 1.4;
+			line-height: 35px;
+		}
+		.input, .textarea{
+			width: 240px;
+		}
+		.textarea{
+			height: 80px;
+			resize: none;
+		}
+		h3{
+			padding-left:125px;			
+			margin: 30px 0 10px;
+			font-weight: bold;
+			font-size: fonts(size) * 1.4;
+			@include pie-clearfix;
+		}
+	}
+	.fr{
+		width: 100px;
+	}
+}

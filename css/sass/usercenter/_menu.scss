@@ -1,0 +1,132 @@
+@charset "UTF-8";
+/* .uc-aside{
+	border:1px solid lighten(colors(gray),10%);
+	margin-right: 16px;
+	background-color: lighten(colors(light),3%);
+}
+// 侧边主菜单
+.uc-asideMenu{
+	font-family: fonts(family);
+	font-size: fonts(size) * 1.4;
+	// padding:10px 0;
+	margin-right: -1px;
+	overflow: hidden;
+	li{
+		padding-left: 10px;
+	}
+	.cate-hd{
+		display: block;
+		height: 32px;
+		padding:0 10px;
+		margin-left: -10px;
+		border-top: 1px solid colors(light);
+		margin-top: -1px;
+		line-height: 32px;
+		cursor: pointer;
+		img{
+			width: 16px;
+			height: 16px;
+			margin-right: 3px;
+		}
+		.ico-arrow{
+			position:relative;
+			@include float(right);
+			margin: 11px 0;
+			@include arrow(transparent transparent transparent colors(gray), 5px 0 5px 5px, dashed dashed dashed solid);
+			&:after{
+				position:absolute;
+				left: 0;
+				top: 0;
+				margin:-5px -6px;
+				@include arrow(transparent transparent transparent lighten(colors(light),3%), 5px 0 5px 5px, dashed dashed dashed solid);
+			}
+		}
+		&.active{
+			.ico-arrow{
+				margin: 14px 0 13px 0;
+				@include arrow(colors(gray) transparent transparent transparent, 5px 5px 0 5px,solid dashed dashed dashed);
+				&:after{
+					position:absolute;
+					left: 0;
+					top: 0;
+					margin:-6px -5px;
+					@include arrow(colors(white) transparent transparent transparent, 5px 5px 0 5px,solid dashed dashed dashed);
+				}
+			}
+		}
+	}
+	.sub-cate-hd{
+		display: block;
+		height: 32px;
+		line-height: 32px;
+		border-top:0;
+		margin-top: 0;
+		.ico-arrow2{
+			@include float;
+			margin: 12px 5px 12px 2px;
+			@include arrow(transparent transparent transparent colors(gray), 4px 0 4px 4px, dashed dashed dashed solid);
+		}
+		&.active{
+			.ico-arrow2{
+				margin: 14px 3px 14px 0;
+				@include arrow(colors(gray) transparent transparent, 4px 4px 0,solid dashed dashed);
+			}
+		}
+	}	
+	.cate-bd{
+		display: none;
+		li{
+			position: relative;
+			line-height: 32px;
+			color:colors(dark);
+			cursor: pointer;
+			a{
+				color:colors(dark);
+			}
+			&.active{
+				position:relative;
+				border-right:2px solid darken(colors(auxiliary),20%);
+				background-color: colors(auxiliary);
+				color: colors(white);
+				a{
+					color: colors(white);
+				}
+			}
+		}
+	}	
+} */
+
+//筛选菜单
+.uc-sift-menu{
+	position: relative;
+	border-bottom:1px solid colors(gray);
+	line-height: 24px;
+	font-size: fonts(size) * 1.4;
+	@include pie-clearfix;
+	.modifier{
+		position: absolute;
+		left:10px;
+		bottom:-1px;
+		height: 2px;
+		min-width: 30px;
+		background-color: colors(darker);
+	}
+	dt,dd{
+		@include float;
+		color:colors(dark);
+		position: relative;
+	}
+	dt{
+		padding-left: 10px;
+	}
+	li{
+		@include float;
+		margin: 0 10px;
+		a{
+			color:colors(darker);
+		}
+		strong{
+			color:colors(darker);
+		}
+	}
+}

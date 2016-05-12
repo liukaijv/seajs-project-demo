@@ -1,0 +1,152 @@
+@charset "UTF-8";
+@import "config"; //页面相关配置
+.user-brief{
+  font-size:fonts(size) * 1.6;
+  height: 40px;
+  line-height: 32px;
+  border-bottom: 2px solid lighten(colors(gray),10%);
+  dt,dd{
+    @include float;
+  }
+  dt{
+     border-bottom: 2px solid colors(auxiliary);
+     margin:0 8px -2px 0;
+     height: 40px;
+  }
+}
+.asset{
+    position: relative;
+    margin-bottom: 32px;
+    overflow: hidden;
+    .asset-properties{
+        .title{
+            height: 40px;
+            line-height: 40px;
+            margin-top: 20px;
+        }
+        .table{
+            td{
+                line-height: 48px;
+                height: 48px;
+				overflow: hidden;
+                font-size: 16px;
+                .label{
+                    display: inline-block;
+                    width:130px;
+                    line-height: 48px;
+                    height: 48px;
+                    padding-left: 30px;
+                    float: left;
+                    color: #666;
+                }
+                .label-val{
+                    float: left;
+                    display: inline-block;
+                    line-height: 48px;
+					height: auto;
+                }
+                .label-input{
+                    float: left;
+                    line-height: 48px;
+                    height: 48px;
+                    input{
+                        width: 230px;
+                        height: 30px;
+                        padding-left: 10px;
+                        font-size: 15px;
+                    }
+                    select{
+                        width: 244px;
+                        height: 36px;
+                        padding-left: 10px;
+                        font-size: 15px;
+                    }
+                }
+                .money{
+                    color: colors(red);
+                    font-size: 22px;
+                }
+                .star{
+                    color: red;
+                }
+            }
+        }
+    }
+    .buttonarea{
+        width: 300px;
+        padding-top: 40px;
+        height: 70px;
+        margin: 0 auto;
+        input{
+            width: 200px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 18px;
+        }
+    }
+}
+
+
+//参数配置
+.uc-fillform{
+    border:0 !important;
+    padding: 0 !important;
+    h1{
+        text-align: center;
+        font-size: fonts(size) * 3;
+        line-height: 64px;
+    }
+    fieldset{
+        position: relative;
+        padding:19px 19px 0;
+        border:1px solid lighten(colors(gray),10%);
+        @extend %form;
+        legend{
+            position: absolute;
+            top: -24px;
+            left: 0;
+            height: 24px;
+            line-height: 24px;
+            font-size: fonts(size) * 1.6;
+            color:colors(dark);
+        }
+    }
+    dt{
+        position: absolute;
+        width: 150px;
+        line-height: 30px;
+        font-size: fonts(size) * 1.6;
+        color:colors(dark);
+        strong{
+            font-family: fonts(cn);
+        }
+    }
+    dd{
+        padding-left: 152px;
+        min-height: 30px;
+        line-height: 30px;
+        font-size: fonts(size) * 1.6;
+        border-bottom: 1px solid lighten(colors(gray), 10%);
+        padding-bottom: 10px;
+        @include last-child{
+            border-bottom: 0;
+        };
+        p{
+            line-height: 1;
+        }
+    }
+}
+
+.order-confirm{
+    width: 80%;
+    margin: 0 auto;
+    padding: 16px 56px;
+    background-color: #fff;
+    .btn-lg {
+        margin-top: 30px;
+        width: 256px;
+        line-height: 56px;
+        font-size: 24px;
+        padding: 0 16px;
+    }
+}

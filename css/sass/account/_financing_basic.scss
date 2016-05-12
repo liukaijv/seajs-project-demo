@@ -1,0 +1,171 @@
+@charset "UTF-8";
+// 我的理财
+.financing,.recommend,.qualification{
+	//盒子
+	.box-hd{
+		border-top: 0;
+		height: 46px;
+		line-height: 46px;
+		border-bottom: 2px solid colors(gray);
+		.title,h2{
+			@include float;
+			padding-right: 32px;
+			border-bottom:2px solid colors(orange);
+			margin-bottom: -2px;
+			font-size: fonts(size) * 1.6;
+		}
+	}
+}
+
+.statis-asset{
+	margin-bottom: 32px;
+	padding-left: 250px;
+	&-hd{
+		@include float;
+	  width: 200px;
+	  height: 90px;
+	  padding: 32px 16px;
+	  margin-left: -250px;
+	  border: 1px solid lighten(colors(orange), 30%);
+	  background-color: lighten(colors(orange), 48%);
+	  text-align: center;
+	  color: colors(dark);
+	  dt{
+	  	font-size: fonts(size) * 1.6;
+	  }
+	  strong{
+	  	display: block;
+	    font-size: fonts(size) * 4.8;
+	    line-height: 1.2;
+	    color: colors(orange);
+	  }
+	}
+	&-bd{
+		padding: 16px 32px;
+		height: 122px;
+		border: 1px solid colors(gray);
+		ul{
+			overflow: hidden;
+		}
+		li{
+			@include float;
+			width: 45%;
+			padding-right: 5%;
+			border-bottom: 1px solid colors(light);
+			margin-bottom: -1px;
+			line-height: 64px;
+			color: colors(dark);
+			@include ellipsis;
+		}
+		strong{
+			color: colors(blue);
+			font-size: fonts(size) * 2.4;
+		}
+		span{
+			color: colors(darker);
+		}
+	}
+}
+
+
+//筛选菜单
+.sift-menu{
+	position: relative;
+	// border-bottom:1px solid colors(gray);
+	line-height: 24px;
+	font-size: fonts(size) * 1.4;
+	margin-bottom: 8px;
+	@extend %clearfix;
+	/* .modifier{
+		position: absolute;
+		left:10px;
+		bottom:-1px;
+		height: 2px;
+		min-width: 30px;
+		background-color: colors(darker);
+	} */
+	dt,dd{
+		@include float;
+		color:colors(dark);
+		position: relative;
+	}
+	dt{
+		padding-left: 10px;
+	}
+	li{
+		@include float;
+		margin: 0 10px;
+		a{
+			color:colors(darker);
+		}
+		strong{
+			color:colors(darker);
+		}
+	}
+	.chosen{
+		padding: 1px 4px 2px;
+		color: colors(white);
+		background-color: colors(blue);
+		@include border-radius(radius(S));
+	}
+}
+
+.recommend{
+	.box-bd{
+		padding-bottom: 16px;
+	}
+	.list{
+		@include float;
+		width: 45%;
+		padding: 16px;
+		@include nth-child(2n){
+			@include float(right);
+		};
+		border: 1px solid lighten(colors(gray), 10%);
+		li{
+			height: 40px;
+			line-height: 40px;
+			border-bottom: 1px dotted lighten(colors(gray), 10%);
+			&:hover{
+				background-color: colors(light)
+			}
+			&:last-child{
+				border-bottom: 0;
+			}
+		}
+		.title{
+			@include float;
+			width: 80%;
+			margin-left: 5px;
+			@include ellipsis;
+		}
+		.btn{
+			@include float(right);
+			margin: 7px 5px 0 0;
+		}
+	}
+}
+
+
+//融资
+.finace-info{
+	margin-bottom: 32px;
+	@extend %clearfix;
+	.fl, .fr{
+		width: 45%;
+		padding: 16px;
+		border: 2px solid lighten(colors(orange), 30%);
+		background-color: lighten(colors(yellow), 48%);
+		line-height: 1.5;
+		font-size: fonts(size) * 1.4;
+		text-align: center;
+	}
+	.fl{
+		background-color: lighten(colors(blue), 45%); 
+		border-color: lighten(colors(blue), 30%);
+	}
+	strong{
+		font-size: fonts(size) * 4;
+		margin-bottom: 16px;
+	}
+}

@@ -1,0 +1,165 @@
+@charset "UTF-8";
+.loan{
+	border: 1px solid lighten(colors(gray),10%);
+	@include border-radius(radius(M));
+	margin-top: 10px;
+	.box-hd{
+		background-color: colors(light);
+		padding: 10px 20px;
+		@include border-radius(radius(M) radius(M) 0 0);
+		h1{
+			font-size: fonts(size) * 2.4;
+		}
+	}
+	.box-bd{
+		padding-right: 320px;
+	}
+	@at-root{
+		&-main{
+			@include float;
+			position: relative;
+			width: 100%;
+			height: 100%;
+			border-right: 1px solid lighten(colors(gray), 10%);
+			padding: 30px 30px 20px 20px;
+			@include box-sizing(border-box);
+		}
+		&-aside{
+			@include float(right);
+			width: 270px;
+			padding:30px 20px 20px 30px;
+			margin-right: -321px;
+			margin-left: -1px;
+			border-left: 1px solid lighten(colors(gray), 10%);
+			font-size: fonts(size) * 1.4;
+			.btn-xl{
+				width: 100%;
+				@include box-sizing(border-box);
+			}
+
+		}
+		&-key-attr{
+			@extend %clearfix;
+			margin-bottom: 20px;
+			dl{
+				@include float;
+				width: 33.3333%;
+			}
+			dt{
+				font-size: fonts(size) * 1.4;
+				color: colors(dark);
+			}
+			dd{
+				line-height: 1.5;
+				font-size: fonts(size) * 2.4;
+			}
+			strong{
+				font-size: fonts(size) * 3.6;
+			}
+		}
+
+		&-attr{
+			font-size: fonts(size) * 1.4;
+			line-height: 30px;
+			@extend %clearfix;			
+			dt{
+				@include float;
+				margin-right: 5px;
+				color: colors(dark);
+			}
+		}		
+		// 可投金额
+		.loan-cast{
+			color: colors(dark);
+			margin-bottom: 20px;
+			p{
+				margin-top: 10px;
+				color: colors(orange);
+				font-size: fonts(size) * 2.4;
+				strong{
+					font-size: fonts(size) * 3.6;
+				}
+			}
+		}
+		// 账户余额
+		.balance{
+			color: colors(dark);
+			line-height: 1.5;
+			margin-bottom: 20px;
+			.money{
+				color: colors(darker);
+			}
+		}
+
+	}
+		
+	.progress{
+		width: 240px;
+		display: inline-block;
+	}
+	// 分列
+	.col2{
+		dl{
+			@include float;
+			width: 45%;
+			margin-right: 10%;
+			@include nth-child(2n){
+				margin-right: 0;
+			};
+		}
+	}
+	/* 
+	.col3{
+		dl{
+			@include float;
+			width: 30%;
+			margin-right: 5%;
+			@include nth-child(3n){
+				margin-right: 0;
+			};
+		}
+	}
+	.col4{
+		dl{
+			@include float;
+			width: 22.75%;
+			margin-right: 3%;
+			@include nth-child(4n){
+				margin-right: 0;
+			};
+		}
+	} */
+	.tab-hd{
+		background-color: colors(light);
+		border: 1px solid lighten(colors(gray),10%);
+		li{
+			width: 25%;
+			padding: 0;
+			margin:0 -1px;
+			font-size: fonts(size) * 2;
+			text-align: center;
+			border: 1px solid transparent;
+			border-width:0 1px;
+			color: colors(dark);
+			a{
+				color: colors(dark);
+			}
+			&.active{
+				height: 37px;
+				color: colors(primary);
+				border-color:lighten(colors(gray),10%);
+				border-bottom: none;
+				background-color: colors(white);
+				// @include border-radius(radius(S) radius(S) 0 0);
+				 a{
+					color: colors(darker);
+				}
+			} 
+		}
+	}
+	.tab-bd{
+		border: 1px solid lighten(colors(gray),10%);
+		border-top: 0;
+		padding: 19px;
+	}
+}

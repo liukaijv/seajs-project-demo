@@ -1,0 +1,54 @@
+{{#if flag}}
+	暂无数据
+{{else}}
+	{{#each this}}
+      <li class="item">
+        <div class="item-hd">
+          {{#equal fundstatus '3'}}
+            <a href="/financial/bondsdetail.html?id={{fundcode}}" class="btn-lg btn-blue btn-w60">立即投资</a>
+          {{/equal}}
+          {{#equal fundstatus '2'}}
+            <a href="/financial/bondsdetail.html?id={{fundcode}}" class="btn-lg btn-blue btn-w60">立即投资</a>
+          {{/equal}}
+          {{#equal fundstatus '4'}}
+            <a href="/financial/bondsdetail.html?id={{fundcode}}" class="btn-lg btn-blue btn-w60">已结束</a>
+          {{/equal}}
+          {{#equal fundstatus '5'}}
+            <span class="btn-lg btn-gray btn-w60">已结束</span>
+          {{/equal}}
+          <h3 class="title">
+            <em>【{{cat_name}}】</em>
+            <a href="/financial/bondsdetail.html?id={{fundcode}}">{{fundname}}</a>
+          </h3>
+        </div>
+        <div class="item-bd">
+          <ul class="attr">
+            <li class="yield">
+              <b class="dt">预期年化收益率</b>
+              <strong class="dd f28 red">{{annualrate}}%</strong>
+            </li>
+            <li>
+              <b class="dt">产品规模</b>
+              <strong class="dd f16">{{#conversionRMB 'y-w' fundtolvol}}{{/conversionRMB}}万元</strong>
+            </li>
+            <li>
+              <b class="dt">已投金额</b>
+              <strong class="dd f16">{{#conversionRMB 'y-w' hasinvestamount}}{{/conversionRMB}}万元</strong>
+            </li>
+            <li>
+              <b class="dt">产品期限</b>
+              <span class="dd f16">{{deadline}}{{deadlineunitname}}</span>
+            </li>
+            <li>
+              <b class="dt">最低认购金额</b>
+              <span class="dd f16">{{#toLocalString mintendtenderedsum}}{{/toLocalString}}万元</span>
+            </li>
+            <li>
+              <b class="dt">保障方式</b>
+              <span class="dd  f16"><i class="iconfont">&#xe60a;</i>本息保障&emsp;</span>
+            </li>
+          </ul>
+        </div>
+      </li>
+	{{/each}}
+{{/if}}

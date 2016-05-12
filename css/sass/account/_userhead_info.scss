@@ -1,0 +1,328 @@
+@charset "UTF-8";
+//用户信息展示
+.uc-userinfo{
+	@include float;
+	// 用户信息头部展示
+	// padding:9px;
+	width: 480px;
+	height: image-width('usercenter/userheadBg.png');
+	margin: 48px 0 0 48px;
+	background: image-url('usercenter/userheadBg.png') no-repeat;
+	// border-bottom: 1px solid lighten(colors(gray),10%);
+	font-size: fonts(size) * 1.4;
+	color: colors(white);
+	a{
+		color: colors(white);
+	}
+	.uc-userinfo-hd{
+		@include pie-clearfix;
+		padding-left: 128px;
+		// margin-bottom: 10px;
+		.thumbnail{
+			@include float;
+			width: 100px; 
+			height: 100px;
+			margin-left: -128px;
+			background-color: colors(gray);
+			text-align: center;
+			@include border-radius(50%);
+			border:2px solid colors(white);
+			overflow: hidden;
+			img{
+				width: 100%;
+			}
+		}
+	}
+	// 用户信息主体
+	.uc-userinfo-bd{
+		p{
+			height: 20px;
+			margin-bottom: 5px;
+		}
+	}
+
+	
+	/* .user-name,.user-info{
+		margin-bottom: 5px;
+	} */
+	.user-name{
+		padding-top: 16px;
+		margin-bottom: 16px;
+		line-height: 24px;
+		a{
+			font-size: fonts(size) * 1.6;
+		}
+		.user-info{
+			padding:2px 4px;
+			margin-left: 12px;
+			font-size: fonts(size) * 1.2;
+			background-color: lighten(colors(blue), 10%);
+			@include border-radius(radius(S));
+		}
+	}
+	.user-info{
+		/* padding:2px 4px;
+		margin-left: 12px;
+		font-size: fonts(size) * 1.2;
+		background-color: lighten(colors(blue), 10%);
+		@include border-radius(radius(S));
+		position: relative;
+		&:hover{
+			.user-info-hd{
+				.ico-arrow{
+					display: none;
+				}
+			}
+			.user-info-bd{
+				display: block;
+			}
+		}
+		.user-info-hd{
+			line-height: 20px;
+			cursor: pointer;
+			.ico-arrow{
+				position:relative;
+				@include float(right);
+				margin: 5px 0;
+				@include arrow(transparent transparent transparent colors(gray), 5px 0 5px 5px, dashed dashed dashed solid);
+				&:after{
+					position:absolute;
+					left: 0;
+					top: 0;
+					margin:-5px -6px;
+					@include arrow(transparent transparent transparent lighten(colors(light),3%), 5px 0 5px 5px, dashed dashed dashed solid);
+				}
+			}
+
+		}
+		.user-info-bd{
+			display: none;
+			position: absolute;
+			top:-49px;
+			right: -408px;
+			height: 120px;
+			width: 360px;
+			border: 1px solid lighten(colors(gray),10%);
+			border-left:0;
+			padding: 19px;
+			background-color: lighten(colors(light),3%);
+			@include box-shadow(3px 3px 0 0 rgba(colors(black), .2));
+			&:before{
+				display: block;
+				position: absolute;
+				left: 0;
+				width: 1px;
+				height: 120px;
+				content:'';
+				background-color: darken(colors(light),5%);
+			}
+			dt{
+				@include float;
+				clear: float;
+				width: 80px;
+				text-align: right;
+				line-height: 25px;
+				color: colors(dark);
+			}
+			dd{
+				padding-left: 85px;
+				line-height: 25px;
+				margin-bottom: 10px;
+				strong{
+					color: colors(auxiliary);
+					margin-left: 3px;
+				}
+			}
+		} */
+	}
+}
+.account-statis{
+	position: relative;
+	padding-right:300px;
+	margin-bottom: 32px;
+	border:1px solid lighten(colors(gray), 10%);
+	// background-color: lighten(colors(gray), 18%);
+	color: colors(dark);
+	overflow: hidden;
+	&-aside{
+		@include float(right);
+		width: 300px;
+		padding:0 0 1000px;
+		margin-bottom: -1000px;
+		margin-right: -300px;
+		border-left: 1px solid lighten(colors(gray), 10%);
+		background-color:colors(white);
+		dt{
+			font-size: fonts(size) * 1.4;
+		}
+		dd{
+			padding-bottom: 16px;
+			margin-bottom: 16px;
+			font-size: fonts(size) * 3;
+			color: colors(red);
+			border-bottom: 1px solid colors(gray);
+			&:last-child{
+				border: none;
+			}
+		}
+	}
+	&-main{
+		padding:32px 0;
+		dl{
+			overflow: hidden;
+			line-height: 1.5;
+		}
+		dt{
+			padding:0 32px;
+		}
+		dd{
+			padding:0 32px 20px;
+			margin-bottom: -1px;
+			border-bottom: 1px solid lighten(colors(gray),10%);
+			strong{
+				font-size: fonts(size) * 3.6;
+				color: colors(blue);
+			}
+		}
+	}
+	.manage{
+		margin: 0 32px;
+		border-top: 1px solid lighten(colors(gray), 10%);
+		padding-top: 10px;
+		overflow: hidden;
+		font-size: fonts(size) * 1.4;
+		li{
+			padding:0 10px;
+			margin-left: -1px;
+			display: inline-block;
+			border-left: 1px solid colors(gray);
+		}
+	}
+	.operate{
+		position: absolute;
+		right: 332px;
+		top: 56px;
+	}
+}
+.account-statis-aside{
+	background-color: lighten(colors(yellow), 48%);
+	.box-hd{
+		border-top: 0;
+		padding: 0 32px;
+		height: 32px;
+		line-height: 32px;
+		background-color: colors(light);
+		h2{
+			font-size: fonts(size) * 1.6;
+			color: colors(blue);
+		}
+		.more{
+			margin-top: 7px;
+		}
+	}
+	.box-bd{
+		line-height: 1.5;
+		margin:20px 32px;
+		overflow: hidden;
+	}
+}
+.account-figure{
+	background: image-url('usercenter/banner.jpg') center top no-repeat;
+	.bd{
+		height: 220px;
+		overflow: hidden;
+	}
+	.now_yields{
+		@include float(right);
+		position: relative;
+		margin: 64px 48px 0 0;
+		padding-right: 32px;
+		color: colors(white);
+		line-height: 1.5;
+		text-align: center;
+		strong{
+			font-size: fonts(size) * 4;
+			color: colors(yellow);
+			font-weight: bold;
+		}
+		.ico-arrow{
+			position: absolute;
+			right: 0;
+			top: 50%;
+			margin-top: -12px;
+			@include arrow-border(colors(white),24px,24px);
+			// border-width:2px 2px;
+		}
+	}
+	.now_yields_info{
+		position: relative;
+		height: 80px;
+		overflow: hidden;
+		.mask{
+			position: absolute;
+			width: 100%;
+			height: 80px;
+			background-color: colors(black);
+			@include opacity(0.3);
+		}
+		.w{
+			position: relative;
+			z-index: 1;
+		}
+		ul{
+			overflow: hidden;
+			padding:16px 0;
+		}
+		li{
+			@include float;
+			height: 48px;
+			line-height: 48px;
+			width: 25%;
+			border-left: 1px solid colors(blue);
+			margin-left: -1px;
+			text-align: center;
+			color: colors(white);
+			strong{
+				font-size: fonts(size) * 2.4;
+			}
+		}
+	}
+	.operate{
+		margin-top: 80px;
+		color: colors(white);
+		text-align: right;
+		li{
+			display: inline-block;
+			text-align: center;
+			font-size: fonts(size) * 1.2;
+			margin-left: 32px;
+			vertical-align: middle;
+		}
+		a{
+			color: colors(white);
+			line-height: 1.2;
+		}
+		i{
+			display: block;
+			font-size: fonts(size) * 3.2;
+		}
+		.recharge,.withdraw{
+			display: inline-block;
+			padding: 6px 16px;
+			line-height: 32px;
+			border: 1px solid colors(white);
+			@include border-radius(radius(S));
+			font-size: fonts(size) * 1.6;
+			i{
+				display: inline-block;
+				font-size: fonts(size) * 2.8;
+				margin-right: 4px;
+			}
+		}	
+	}
+}
+body{background-color: colors(light)}
+.gd-19{
+	background-color: colors(white);
+	padding-top: 20px;
+}

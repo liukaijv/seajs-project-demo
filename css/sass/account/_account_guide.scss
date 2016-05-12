@@ -1,0 +1,128 @@
+@charset "UTF-8";
+
+.account-guide{
+	@extend %clearfix;
+	margin-top: 32px;
+	min-width: 1330px;
+	.item{
+		@include float;
+		min-width: 300px;
+		width: 23%;
+		height: 408px;
+		padding: 24px; 
+		margin: 0 1% 32px;
+		border:1px solid colors(light);
+		background-color: colors(white);
+		@include box-sizing(border-box);
+		@include box-shadow(6px 6px 0 darken(colors(light),10%));
+	}
+	dt{
+		height: 64px;
+		padding:8px 0 0 80px;
+		margin-bottom: 32px;
+		font-size: fonts(size) * 2;
+		line-height: 1.4;
+		@include ellipsis;
+		span{
+			display: block;
+			font-size: fonts(size) * 1.4;
+		}
+		strong{
+			font-size: fonts(size) * 1.8;
+		}
+	}
+	dd{
+		margin-top: 16px;
+	}
+	[class*="ift-"]{
+		@include float;
+		width: 72px;
+		height: 72px;
+		margin:-8px 0 0 -80px;
+		line-height: 72px;
+		font-size: fonts(size) * 5.6;
+		color: colors(white);
+		text-align: center;
+		// background-color: colors(gray);
+		@include border-radius(100%);
+	}
+	.btn-xl{
+		width: 100%;
+		padding: 0;
+	}
+	ul{
+		position: relative;
+		height: 192px;
+		&:before,&:after{
+			content: '';
+			position: absolute;
+			background-color: colors(light);
+		}
+		&:before{
+			height: 60%;
+			width: 1px;
+			left: 50%;
+			top:20%;
+		}
+		&:after{
+			height: 1px;
+			width: 100%;
+			left: 0;
+			top:50%;
+		}
+	}
+	li{
+		@include float;
+		width: 50%;
+		height: 72px;
+		padding: 8px 0;
+		text-align: center;
+		color: colors(dark);
+		font-size: fonts(size) * 1.2;
+		line-height: 24px;
+		strong{
+			display: block;
+			font-size: fonts(size) * 3.6;
+			line-height: 48px;
+			color: colors(darker);
+		}
+	}
+	.add{
+		display: none;
+		position: relative;
+		background-color: transparent;
+		outline:6px solid darken(colors(light),10%);
+		a{
+			position: absolute;
+			left: 50%;
+			top: 45%;
+			width: 48px;
+			height: 48px;
+			padding: 16px;
+			margin: -33px;
+			border: 1px solid colors(gray);
+			font-size: fonts(size) * 3.6;
+			line-height: 48px;
+			text-align: center;
+			@include border-radius(100%);
+			&:before,&:after{
+				content: '';
+				position: absolute;
+				background-color: colors(gray);
+			}
+			&:before{
+				height: 60%;
+				width: 1px;
+				left: 50%;
+				top:20%;
+			}
+			&:after{
+				height: 1px;
+				width: 60%;
+				left: 20%;
+				top:50%;
+
+			}
+		}
+	}
+}

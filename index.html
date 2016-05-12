@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <!-- 引入公用css -->
+    <!--#include virtual="/public/public_css.shtm"-->
+</head>
+
+<body>
+  <!-- 引入头部文件 -->
+  <!--#include virtual="/public/header.shtm"-->
+  <div class="w">
+    <div class="gd-24">
+      <div class="banner-box">
+    <div class="slider fl" id="J_slider">
+      <div class="slider-hd">
+        <ol>
+          <li class="active">1</li>
+          <li>2</li>
+        </ol>
+      </div>
+      <div class="slider-bd">
+        <div class="tempWrap" style="overflow:hidden; position:relative; width:870px">
+          <ul style="width: 870px; position: relative; overflow: hidden; padding: 0px; margin: 0px;left:-870px;">
+            <li class="clone" style="float: left; width: 870px;">
+              <a target="_self" href="javascript:void(0);" target="_self"  style="background-image: url(images/banner1.png);"></a>
+            </li>
+            <li class="clone" style="float: left; width: 870px;">
+              <a target="_self" href="javascript:void(0);" target="_self"  style="background-image: url(images/banner2.png);"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- 图片切换 end -->
+    <!-- 登录框 start -->
+    <div class="banner-right">
+      <div class="yield">
+        <div class="yield-title">年化收益率</div>
+        <h1>6%~12%</h1>
+        <div class="yield-content">
+          <span>50倍</span>
+          活期存款收益！
+        </div>
+      </div>
+      <div class="register">
+          <div class="button">
+            <a href="/user/register.html" target="_self">注&nbsp;&nbsp;册</a>
+          </div>
+          <span>
+            已有账号？
+            <a href="/user/login/login">立即登陆</a>
+          </span>
+      </div>
+    </div>
+  </div>
+</div></div>
+    <!-- 登录框 end -->
+  </div>
+  <div class="body-grey">
+     <!--handle属性：在home.js中使用，目的是为了实现鼠标滚动时才加载页面数据，可以不添加-->
+       <!--action属性：在home.js中做判断时使用使用，可以当做一种标识，必须唯一， 可以不添加-->
+      <div class="w">
+      <div class="gd-24">
+        <!-- 投资理财 start -->
+        <div class="invest">
+          <div class="hd">
+            <h1 class="">
+              投资理财
+              <a class="more fr" href="/financial/bonds_list.html" target="_self">查看更多></a>
+            </h1>
+          </div>
+          <div class="bd clearfix">
+            <ul class="clearfix" id="J_hotProduct">
+            </ul>
+          </div>
+        </div>
+        <!-- 投资理财 end -->
+    </div>
+      <!--<div class="display-card for-sell" handle="handlebars" action="action_hotProduct">
+        <div class="display-card-titlebar">
+          <h2 class="display-card-title colored-white">热卖产品</h2>
+        </div>
+        <ul class="listed-products" id="J_hotProduct">
+          <!--template/kfsp/index_hotProduct.handlebars
+        </ul>
+      </div>-->
+      <!-- banner end -->
+      <div class="w">
+        <div class="gd-24">
+		  <div class="advantage-box">
+			<ul class="advantage">
+						<h1><span></span>为什么选择我们？<span></span></h1>
+			  <li> <i class="share-country"></i>
+				<dl>
+				  <dt>国资背景</dt>
+				  <dd>国有控股，投资智选</dd>
+				</dl>
+			  </li>
+			  <li> <i class="share-safe"></i>
+				<dl>
+				  <dt>风险控制</dt>
+				  <dd>多重风控，安全保障</dd>
+				</dl>
+			  </li>
+			  <li>
+				<i class="share-major"></i>
+				<dl>
+				  <dt>专业团队</dt>
+				  <dd>规范操作，公开透明</dd>
+				</dl>
+			  </li>
+			  <li class="last">
+				<i class="share-free"></i>
+				<dl>
+				  <dt>灵活快捷</dt>
+				  <dd>灵活快捷，自由变现</dd>
+				</dl>
+			  </li>
+			</ul>
+		  </div>
+		</div>
+		<!-- 金融资产列表 结束 -->
+	</div>
+    </div>
+  </div>
+  <!-- 引入尾部文件 -->
+  <!--#include virtual="/public/footer.shtm"-->
+  <!--#include virtual="/public/base.shtm"-->
+  <script type="text/javascript">
+      seajs.use(["kfat/home"]);//引入home.js    seajs.use主要用于载入入口模块。入口模块相当于JAVA程序的main函数，同时也是整个模块依赖树的根。
+							  //一般seajs.use只用在页面载入入口模块，SeaJS会顺着入口模块解析所有依赖模块并将它们加载。
+  </script>
+</body>
+
+</html>

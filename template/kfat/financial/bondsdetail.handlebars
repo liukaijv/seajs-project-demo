@@ -1,0 +1,147 @@
+{{#if flag}}
+  暂无数据
+{{else}}
+{{#each this}}
+    <div class="pro-detail-deal">
+      <!-- 交易 -->
+      <!-- 进度 -->
+      <div class="progress">
+        <span class="fl">完成</span>
+        <span class="fr per-num">{{amountprop}}%</span>
+        <span class="per-bar clear">
+          <span class="per" style="width:{{amountprop}}%">
+            <span class="circle-bar"></span>
+          </span>
+        </span>
+      </div>
+      <!-- 用户资产列表 -->
+      <ul class="user-asset">
+        <li class="item">
+          <div class="dt">账户余额</div>
+          <div class="dd">
+            <a href="javascript:void(0);" class="btn-sm btn-red" style="width:30px;">充值</a>
+          </div>      
+        </li>
+        <li class="item">
+          <div class="dt">项目可投金额</div>
+          <div class="dd">¥{{#conversionRMB 'y-w' fundtolvol}}{{/conversionRMB}}万元</div>
+        </li>
+        <li class="item">
+          <div class="dt">单笔认购上限</div>
+          <div class="dd">¥<strong>{{#conversionRMB 'y-w' singlesubuplimit}}{{/conversionRMB}}万元</strong></div>
+        </li>
+        <li class="item">
+          <div class="dt">已投金额</div>
+          <div class="dd">¥<strong>{{#conversionRMB 'y-w' hasinvestamount}}{{/conversionRMB}}万元</strong></div>
+        </li>
+        <li class="item last">
+          <div class="dt">最低认购金额</div>
+          <div class="dd">¥{{#conversionRMB 'y-w' mintendtenderedsum}}{{/conversionRMB}}万元</div>
+        </li>
+      </ul>
+      
+      <div class="operate">
+        <div class="mt20 tac" id="J_login">
+          <a href="/login.html" target="_parent" class="blue f16">您还没登录，请点击登录</a>
+        </div>
+        <!-- 投资金额输入信息 -->
+        {{#equal fundstatus '3'}}
+        <div class="hide" id="J_invest">
+          <div class="input-num">
+            <span class="J_minus" onmousedown="reduce()">-</span>
+            <span class="J_add" onmousedown="plus()">+</span>
+            <input id="J_amount" name="applicationamount" nullmsg="请输入金额！" errormsg="请输入不小于投资起点金额不大于可投资的金额"  type="text" placeholder="请输入投资金额" value="100.00" class="input">
+          </div>
+          <span class="unit">元</span>
+          <div class="mt10 mb10">
+          </div>
+          <input type="button" class="btn-xl btn-per btn-red" id="J_dosubmit" value="立即投资">
+        </div>
+        {{/equal}}
+        {{#equal fundstatus '2'}}
+        <div class="hide" id="J_invest">
+          <div class="input-num">
+            <span class="J_minus" onmousedown="reduce()">-</span>
+            <span class="J_add" onmousedown="plus()">+</span>
+            <input id="J_amount" name="applicationamount" nullmsg="请输入金额！" errormsg="请输入不小于投资起点金额不大于可投资的金额"  type="text" placeholder="请输入投资金额" value="100.00" class="input">
+          </div>
+          <span class="unit">元</span>
+          <div class="mt10 mb10">
+          </div>
+          <input type="button" class="btn-xl btn-per btn-red" id="J_dosubmit" value="立即投资">
+        </div>
+        {{/equal}}
+      </div>
+    </div>
+    <div class="pro-detail">
+      <!-- 详情 -->
+      <div class="hd">
+        <h1 class="title">{{fundname}}</h1>
+      </div>
+      <div class="bd">
+        <div class="fr">
+        {{#equal fundstatus '2'}}
+          <img src="/images/status/investing.png">
+        {{/equal}}
+        {{#equal fundstatus '3'}}
+          <img src="/images/status/investing.png">
+        {{/equal}}
+        {{#equal fundstatus '4'}}
+          <img src="/images/status/invest_finish.png">
+        {{/equal}}
+        {{#equal fundstatus '5'}}
+          <img src="/images/status/invest_finish.png">
+        {{/equal}}
+        </div>
+        <ul class="spe-attr">
+          <li class="item">
+            <div class="dt">年化收益率</div>
+            <div class="dd"><span id="yearrate">{{annualrate}}%</div>
+          </li>
+          <li class="item">
+            <div class="dt">募集期限</div>
+            <div class="dd"><span id="yearrate">{{raiseterm}}日</div>
+          </li>
+          <li class="item">
+            <div class="dt">产品期限</div>
+            <div class="dd">{{deadline}}{{deadlineunitname}}</div>
+          </li>
+          <li class="item">
+            <div class="dt">还款方式</div>
+            <div class="dd" title="{{paymentmodename}}">{{paymentmodename}}</div>
+          </li>
+          <li class="item">
+            <div class="dt">产品规模</div>
+            <div class="dd">{{#conversionRMB 'y-w' fundtolvol}}{{/conversionRMB}}万元</div>
+          </li>
+        </ul>
+        <ul class="attr">
+          <li class="item">
+            <div class="dt">开始交易时间</div>
+            <div class="dd">{{#changeDate begintranstime}}{{/changeDate}}</div>
+          </li>
+          <li class="item">
+            <div class="dt">计息方式</div>
+            <div class="dd">{{intresttypename}}</div>
+          </li>
+          <li class="item nth-3n">
+            <div class="dt">是否担保</div>
+            <div class="dd">{{isagentname}}</div>
+          </li>
+          <li class="item">
+            <div class="dt">产品状态</div>
+            <div class="dd">{{fundstatusname}}</div>
+          </li>
+          <li class="item nth-3n">
+            <div class="dt">是否可转让</div>
+            <div class="dd">{{istransname}}</div>
+          </li>
+          <li class="item">
+            <div class="dt">是否允许部分转让</div>
+            <div class="dd">{{ispathtransname}}</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  {{/each}}
+{{/if}}

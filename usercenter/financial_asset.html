@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <!-- 引入公用css -->
+  <!--#include virtual="/public/public_css.shtm"-->
+  <link rel="stylesheet" type="text/css" href="/css/base.css">
+  <link rel="stylesheet" type="text/css" href="/css/public.css">
+  <link rel="stylesheet" type="text/css" href="/css/account.css">
+</head>
+
+<body>
+  <!-- 引入头部文件 -->
+  <!--#include virtual="/public/header.shtm"-->
+  <div id="J_account_figure"></div>
+  <div class="w">
+    <div class="gd-5">
+    <!--#include virtual="/usercenter/account_asidenav.shtm"-->
+    </div>
+    <div class="gd-19">
+    <!--#include virtual="/usercenter/user_brief.shtm"-->
+      <!-- 账户总览 -->
+      <div class="account-statis">
+        <div class="box account-statis-aside">
+          <div class="box-hd">
+            <h2>资产情况</h2>
+          </div>
+          <dl class="box-bd">
+            <dt>累计投资金额（元）</dt>
+            <dd id="J_totalprincipal">0.00</dd>
+            <dt>预期收益（元）</dt>
+            <dd id="J_totalinterest">0.00</dd>
+          </dl>
+        </div>
+        <div class="account-statis-main">
+          <div class="operate tar">
+            <a class="btn-xl btn-orange" href="#">充值</a>
+            <a class="btn-xl btn-orange" href="#">提现</a>
+          </div>
+          <dl>
+            <dt>账户余额</dt>
+            <dd>
+              <strong id="J_realmount">0.00</strong>元
+            </dd>
+          </dl>
+          <div class="manage">
+            <img src="/images/card.png" alt="">
+            <span>银行卡：<span id="J_bind_amount"></span>&nbsp;张 
+				<a target="_self" href="/usercenter/bankmanage.html" class="blue">管理</a>
+			  </span>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- 引入尾部文件 -->
+<!--#include virtual="/public/footer.shtm"-->
+<script type="text/javascript" src="../../sea.js"></script>
+<script type="text/javascript" src="../../seajs_config.js"></script>
+<script type="text/javascript">seajs.use(["kfat/usercenter/finacial_asset"]);</script>
+</body>
+</html>

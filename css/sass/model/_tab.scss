@@ -1,0 +1,43 @@
+@charset "UTF-8";
+//tab切换
+.tab{
+	.tab-hd{
+		position: relative;
+		height:36px;
+		border-bottom: 1px solid colors(gray);
+		font-size: fonts(size) * 2;
+		li{
+			@include float;
+			height: 36px;
+			padding: 0 20px;
+			line-height: 36px;
+			font-family: fonts(family);
+			cursor: pointer;
+			&.active{
+				height: 37px;
+				color:colors(primary);
+			}
+		}
+		.time{
+			@include float(right);
+		}
+	}
+	.tab-bd{
+		padding-top: 16px;
+		@include pie-clearfix;
+	}
+}
+.tab-modify{
+	.tab-hd{
+		.modify{
+			position:absolute;
+			left: 0;
+			bottom:-2px;
+			width: 80px;
+			height: 2px;
+			font-size: 0;
+			line-height: 0;
+			background-color: colors(primary);
+		}
+	}
+}

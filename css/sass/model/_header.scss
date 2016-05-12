@@ -1,0 +1,129 @@
+@charset "UTF-8";
+#header{
+	position: relative;
+	z-index: 2;
+	height: 96px;
+	background-color: colors(white);
+	// border-bottom: 1px solid lighten(colors(gray), 10%);
+	// margin-bottom: -1px;
+}
+
+//网站logo
+#logo{
+	$logo: "sprite/logo.png";
+	position: relative;
+	@include float;
+	height: image-height($logo);//获取logo的高宽
+	padding: 16px 0;
+	overflow: hidden;
+	a{
+		position: relative;
+	}
+	//seo处理解决图片没加载时显示文字
+	.title{
+		position: absolute;
+		z-index: 0;
+		width:  image-width($logo);
+		height: 100%;
+		line-height: image-height($logo);
+		color:colors(primary);
+		font-size: fonts(size) * 2.4;
+		font-family: fonts(family);		
+		text-align:center;
+	}
+	.sub-logo{
+		@include inline-block;
+		height:image-height($logo) - 20px;
+		line-height:image-height($logo) - 20px;
+		margin-left: 20px;
+		padding-left: 24px;
+		border-left:1px solid colors(gray);
+		font-size: fonts(size) * 2.4;
+		font-family: fonts(family);
+	}
+	//站点slogo，口号
+	.slogo{display: none;}
+}
+
+//导航菜单
+#nav{
+	@include float(right);
+	position: relative;
+	z-index:110;
+	margin-top: 48px;
+	font-size: fonts(size) * 1.6;
+	font-family: fonts(family);
+	.menu{
+		position: relative;
+		@include float;
+		height: 48px;
+		line-height: 32px;
+		&>a{
+			display: block;
+			position: relative;
+			z-index: 1;
+			height: 100%;
+			padding:0 20px;
+		}
+		&.active{
+			&>a{
+				color:colors(primary);
+			}
+		}
+		&.hover,&:hover{
+			color:colors(white);
+			background-color: colors(red);
+			@include border-radius(radius(S) radius(S) 0 0);
+			&>a{
+				color:colors(white);
+			}
+		}
+		&.hover{
+			z-index: 2;
+			&>a{
+			}
+			&>.cate-bd{
+				display: block;
+			}
+		}
+	}
+	.modify{
+		display: none;
+		position: absolute;
+		z-index: 3;
+		top: -1px;
+		left: 30px;
+		width: 36px;
+		height: 4px;
+		background-color: colors(primary);
+		@include border-radius(radius(S));
+	}
+	.cate-bd{
+		display: none;
+		position: absolute;
+		z-index: 0;
+		top: 48px;
+		background-color:colors(primary);
+		// @include border-radius(0 radius(S) radius(S) radius(S));
+		// @include box-shadow(0 0 5px 1px lighten(colors(gray),15%));
+		@include transform(scale(1,0));
+		@include transform-origin(left,top);
+		@include opacity(0);
+		overflow: hidden;
+		li{
+			width: 160px;
+			line-height: 48px;
+			border-bottom:1px solid lighten(colors(primary), 10%);
+			margin-bottom: -1px;
+			cursor: pointer;
+			a{
+				color: colors(white);
+				display: block;
+				padding:0 20px;
+				&:hover{
+					background-color: colors(red);
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,24 @@
+@charset "UTF-8";
+//tab切换
+%tab{
+	.tab-hd{
+		@include pie-clearfix;
+		li{
+			@include float;
+			text-align: center;
+			color:colors(dark);
+			&.active{
+				position: relative;
+				z-index: 1;
+				color:colors(primary);
+			}
+		}
+	}
+	.tab-bd{
+		line-height: 1.5;
+		p{
+			text-indent: 2em;
+			margin-bottom: 10px;
+		}
+	}
+}

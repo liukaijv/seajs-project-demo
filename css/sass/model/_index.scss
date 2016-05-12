@@ -1,0 +1,343 @@
+@charset "UTF-8";
+// 产品优势
+.advantage{
+	@include pie-clearfix;
+	padding:45px 0;
+	border-top:1px solid lighten(colors(gray),10%);
+	margin-top: 8px;
+	// border-width:1px 0;
+	overflow: hidden;
+	li{
+		@include float;
+		width: 27.33333%;
+		// margin-left:-1px;
+		padding:0 3%;
+		// border-left:1px solid colors(gray);
+		@include pie-clearfix;
+	}
+	i{
+		@include float;
+		display: block;
+		width: 118px;
+		height: 118px;
+		// line-height: 118px;
+		// margin: 0 auto;
+		margin-right: 16px;
+		// text-align: center;
+		// background-color:mix(colors(red),colors(blue),20%);
+		// @include border-radius(50%);
+		// @include box-shadow(0 0 30px rgba(255,255,255, .2) inset);
+		&:before{
+			content: none;
+			// color: colors(white);
+			// font-size: fonts(size) * 4;
+		}
+		/* &.ico-safe:before,&.ico-power:before{
+			font-size: fonts(size) * 5;
+		}
+		&.ico-resource{
+			background-color:mix(colors(green),colors(blue),20%);
+		}
+		&.ico-safe{
+			background-color:mix(colors(blue),colors(green),20%);			
+		}
+		&.ico-power{
+			background-color:mix(colors(red),colors(orange),20%);
+		} */
+	}
+
+	dt{
+		font-size: fonts(size) * 3;
+		margin: 10px 0;
+		// color: colors(primary);
+		// text-align: center;
+	}
+	dd{
+		font-size: fonts(size) * 1.4;
+		color: colors(dark);
+		// margin-right: 50px;
+		line-height: 1.5;
+		// text-align: center;
+	}
+}
+
+.guideline{
+	margin-top: 30px;
+	@extend %clearfix;
+	li{
+		@include float;
+		width: 23.5%;
+		height: 72px;
+		line-height: 72px;
+		margin-right:2%;
+		text-align: center;
+		background-color: lighten(colors(gray),18%);
+		border: 1px solid lighten(colors(gray),10%);
+		@include box-sizing(border-box);
+		@include border-radius(radius(M));
+		@include last-child{
+			margin-right: 0;
+		}
+		&:hover{
+			@include transition(.3s ease-in);
+			background-color: colors(white);
+		}
+		a{
+			display: inline-block;
+			color: colors(green);
+		}
+		i:before{
+			font-size: fonts(size) * 4.8;
+			@include float;
+			margin-right: 5px;
+		}
+	}
+}
+
+.partners{
+	margin-top: 30px;
+	.box-hd{
+		height: 40px;
+		line-height: 40px;
+		border-bottom: 2px solid colors(auxiliary);
+		font-size: fonts(size) * 2.4;
+		color: colors(darker);
+	}
+	.box-bd{
+		padding:20px 18px 18px;
+		border:1px solid lighten(colors(gray), 10%);
+		border-top: 0;
+		@include box-shadow(2px 2px 0 0 colors(light));
+	}
+}
+.partners + .partners{
+	.box-hd{
+		border-color: colors(blue);
+	}
+}
+
+.register-assist{
+	width: 240px;
+	height: 200px;
+	position: absolute;
+	top: -50px;
+	left: 98.75%;
+	padding: 40px 30px;
+	margin:-280px 0 0 -300px;
+	background-color: rgba(colors(black),.75);
+	@include border-radius(radius(L));
+	.yields{
+		height: 96px;
+		font-size: fonts(size) * 1.6;
+		line-height: 1.5;
+		color: colors(white);
+		margin-bottom: 20px;
+		span,em,strong{
+			vertical-align: middle;
+		}
+		strong{
+			font-size: fonts(size) * 3.2;
+			font-weight: bold;
+		}
+		strong,em{
+			color: mix(colors(red),colors(yellow),10%);
+		}
+	}
+	.register-box{
+		height: 36px;
+		line-height: 36px;
+		font-size: fonts(size) * 1.4;
+		color: colors(white);
+		.btn-xl{
+			width: 240px;
+			padding: 0;
+		}
+	}
+}
+
+.index-assets,.index-bonds,.index-transfer{
+	margin-top: 16px;
+	.hd{
+		height: 48px;
+		line-height: 48px;
+		border-bottom: 2px solid colors(auxiliary);
+		.title{
+			font-size: fonts(size) * 2.4;
+		}
+	}
+	.bd{
+		@include pie-clearfix;
+		.more{
+			display: block;
+			height: 40px;
+			margin-top: -1px;
+			border:1px solid lighten(colors(gray),10%);
+			line-height: 40px;
+			font-size: fonts(size) * 1.4;
+			text-align: center;
+			color: colors(dark);
+			background-color: colors(white);
+			@include box-shadow(2px 2px 0 0 colors(light));
+		}
+	}
+}
+.index-assets{
+	margin-top: 8px;
+	.bd{
+		background-color: lighten(colors(light), 2%);
+		&>ul{
+			@include pie-clearfix;
+			padding: 8px 0;			
+		}
+	}
+	.item{
+		@include float;
+		width: 32%;
+		margin-right: 2%;
+		background-color: colors(white);
+		@include last-child{
+			margin-right: 0;
+		};		
+	}
+	.item-warp{
+		padding:16px;
+		border:1px solid lighten(colors(gray),10%);
+		background-color: colors(white);
+		@include box-shadow(2px 2px 0 0 colors(light));
+	}
+	.title{
+		height: 36px;
+	}
+	.thumbnail{
+		width: 118px;
+		height: 118px;
+		@include float;
+		margin-right: 16px;
+	}
+	.info{
+		margin-left: 124px;
+		li{
+			line-height: 32px;
+			font-size: fonts(size) * 1.4;
+			@include ellipsis;
+		}
+		b{
+			color: colors(dark);
+			font-size: fonts(size) * 1.2;
+		}
+		.f24{
+			font-size: fonts(size) * 2.4;
+		}
+	}
+}
+
+.index-bonds,.index-transfer{
+	.table{
+		font-size: fonts(size) * 1.2;
+		background-color: colors(white);
+		@include box-shadow(2px 2px 0 0 colors(light));
+		td,th{ padding:10px 15px;}
+		thead{
+			th{
+				padding: 5px 15px;
+			}
+		}
+		tbody{
+			td,th{
+				@include ellipsis;
+			}
+		}
+		.title{
+			font-size: fonts(size) * 1.6;
+			font-weight: bold;
+			padding-left: 20px;
+			line-height: 1;
+			em{
+				@include float;
+				width: 12px;
+				height: 28px;
+				line-height: 14px;
+				padding:2px;
+				margin-left:-20px;
+				text-align: center;
+				white-space: normal;
+				font-size: fonts(size) * 1.2;
+				color:colors(white);
+				font-weight: normal;
+				background-color: colors(green);
+				@include border-radius(radius(S));
+				overflow: hidden;
+			}
+			span{
+				display: block;
+				margin-top: 8px;
+				font-weight: normal;
+				color: colors(dark);
+				font-size: fonts(size) * 1.2;
+			}
+		}
+		.assure{
+			color: colors(dark);
+		}
+		.iconfont{
+			margin-right: 2px;
+			color: colors(blue);
+		}
+		strong{
+			font-size: fonts(size) * 2;
+		}
+	}
+}
+.index-transfer{
+	.hd{
+		border-color: colors(blue);
+	}
+	.table{
+		tbody{
+			td,th{
+				padding:15px;
+			}
+		}
+		.title{
+			padding-left: 0;
+		}
+	}
+}
+
+.index-dynamics{
+	.hd{
+		height: 40px;
+		line-height: 40px;
+		border-bottom: 2px solid colors(auxiliary);
+		font-size: fonts(size) * 2.4;
+		color: colors(darker);
+	}
+	.bd{
+		padding:20px 18px 18px;
+		height: 260px;
+		border:2px solid lighten(colors(gray), 10%);
+		border-top: 0;
+		@include box-shadow(2px 2px 0 0 colors(light));
+		.more{
+			display: block;
+			height: 40px;
+			// margin-top: -1px;
+			border-top:1px solid lighten(colors(gray),10%);
+			line-height: 40px;
+			font-size: fonts(size) * 1.4;
+			text-align: center;
+			color: colors(dark);
+			// background-color: colors(white);
+			// @include box-shadow(2px 2px 0 0 colors(light));
+		}
+	}
+	.list li {
+		height: 43px;
+		line-height: 43px;
+	}
+}
+
+.index-bglight{
+	padding:16px 0 32px 0;
+	background-color: lighten(colors(light), 2%);
+}

@@ -1,0 +1,24 @@
+@charset "UTF-8";
+//表单基础盒子
+.form{
+	@extend %form;
+}
+.form-pop{
+	padding:20px;
+	dt{
+		position:absolute;
+		width: 124px;
+		text-align: right;
+		line-height: 26px;
+	}
+	dd{
+		padding-left: 128px;
+		line-height: 26px;
+	}
+	.input{
+		width: 128px;
+	}
+	.select{
+		
+	}
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <!-- 引入公用css -->
+  <!--#include virtual="/public/public_css.shtm"-->
+  <link rel="stylesheet" type="text/css" href="/css/base.css">
+  <link rel="stylesheet" type="text/css" href="/css/public.css">
+  <link rel="stylesheet" type="text/css" href="/css/account.css">
+</head>
+
+<body>
+  <!-- 引入头部文件 -->
+  <!--#include virtual="/public/header.shtm"-->
+  <div id="J_account_figure"></div>
+  <div class="w">
+    <div class="gd-5">
+    <!--#include virtual="/usercenter/account_asidenav.shtm"-->
+    </div>
+    <div class="gd-19">
+      <!-- 账户总览 -->
+      <div class="box financing">
+        <div class="box-hd">
+          <h2 class="title">我的理财</h2>
+        </div>
+          <div class="box-bd">
+           <!-- 我的理财 信息 -->
+             <div class="statis-asset-bd">
+               <ul>
+                 <li>累计投资金额:
+                 <strong id="J_totalprincipal">
+                  0.00 
+                 </strong>
+               <span>元</span>
+               </li>
+               <li>预期收益:
+                 <strong id="J_totalinterest">
+                   0.00         
+                 </strong>
+                 <span>元</span>
+               </li>
+               </ul>
+             </div>
+        </div>
+      </div>
+      <div class="tab uc-tab" id="J_shiftMenu">
+        <div class="tab-hd">
+          <ul>
+            <li class="active">我的理财</li>
+            <li class="">我的订单</li>
+            <li class="">我的转让</li>
+          </ul>
+        </div>
+        <div class="tab-bd">
+        <!-- 我的理财 -->
+          <div class="tab-item" id="J_myFinancial" style="display: block;">
+            
+          </div>
+        <!-- 我的订单 -->
+          <div class="tab-item hide" id="J_myOrder" style="display: none;">
+          </div>
+        <!-- 我的转让 -->
+          <div class="tab-item hide" id="J_myTransfer" style="display: none;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--赎回弹出框-->
+  <div id="J_redeemModal" style="display:none">
+    <form id="backform" class="form form-pop" method="post" style="width:480px">
+      <dl>
+        <dt>
+          <label for="authcode"> <strong>*</strong>
+            赎回产品:
+          </label>
+        </dt>
+        <dd>
+          <input type="text" id="J_redeemFundname" disabled="disabled" class="input">
+        </dd>
+        <dt>
+          <label for="old_capitalpwd">赎回份额:</label>
+        </dt>
+        <dd>
+          <input type="text" id="J_redeemVol" class="input">
+        </dd>
+        <dt>
+          <label for="new_capitalpwd">资金密码:</label>
+        </dt>
+        <dd>
+          <input type="password" id="new_capitalpwdback" name="new_capitalpwdback" maxlength="6" class="input" placeholder="6位数字交易密码">
+        </dd>
+      </dl>
+      <div class="tac pt10">
+        <input type="button" class="btn btn-red btn-pop" id="J_confirmRedeem" value="确认">
+    </form>
+  </div>
+  </div>
+<!-- 引入尾部文件 -->
+<!--#include virtual="/public/footer.shtm"-->
+<script type="text/javascript" src="../../sea.js"></script>
+<script type="text/javascript" src="../../seajs_config.js"></script>
+<script type="text/javascript">seajs.use(["kfat/usercenter/finacial_asset","kfat/usercenter/myFinancial"]);</script>
+</body>
+</html>

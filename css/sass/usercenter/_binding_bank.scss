@@ -1,0 +1,221 @@
+@charset "UTF-8";
+//银行绑定
+.bank-bind{
+	@include pie-clearfix;
+	font-size: fonts(size) * 1.2;
+	margin-top: 20px;
+	&-hd{
+		height:24px;
+		line-height: 24px;
+		padding:5px;
+		border-bottom: 1px dotted colors(gray);
+		background-color: darken(colors(light),3%);
+		img,h4{
+			@include float;
+			margin-right: 3px;
+			font-size: 16px;
+		}
+		.bank-cancel{
+			display: none;
+			@include float(right);
+			color:colors(primary);
+			
+		}
+	}
+	&-bd{
+		height: 90px;
+		text-align: center;
+		.bank-card{
+			display: none;
+			width: 100%;
+			padding-top:30px;
+			line-height: 20px;
+			color: colors(dark);
+		}
+	}
+	li{
+		@include float;
+		position:relative;
+		width: 300px;
+		margin:4px 30px 4px 0;
+		border:1px dotted colors(gray);
+		background-color: colors(light);
+	}
+	.select-bind{
+		@include float;
+		width:149px;
+		height:40px;
+		position:relative;
+		margin:-1px;
+		padding:50px 0px 0px;
+		border:1px dotted transparent;
+		color: colors(dark);
+		background:image-url("binding/tianjia.png") no-repeat center 20px;
+		cursor:pointer;
+	}
+	.select-bind:hover,.select-bind-ok{
+		border:1px dotted #ffc573!important;
+		background-color: colors(white);
+		z-index: 1;
+		.ico-select-ok{
+			display: block;
+		}
+	}
+	.own-bank{
+		width: 150px;
+		border-right: 1px dotted colors(gray);
+		margin-right: 0!important;
+	}
+	.ico-select-ok,.ico-bind-ok{
+		display:none;
+	  width: 14px;
+	  height: 14px;    
+		position:absolute;
+	  bottom:0;
+	  right:0;
+		background:colors(orange) image-url("binding/select_ok.gif") 1px top no-repeat;
+	}
+	.bank-bind-ok{
+		border:1px solid colors(orange);
+		.ico-bind-ok{
+			display: block;
+			background-color: colors(orange);
+		}
+		.select-bind{
+			display: none;
+		}
+		.bank-card,.bank-cancel{
+			display: block;
+		}
+	}
+}
+
+//银行核对
+.bank-verify{
+	border:1px solid lighten(colors(blue), 48%);
+	background-color: lighten(colors(blue), 55%);
+	padding:9px;
+	margin-bottom: 20px;
+	font-family: fonts(family);
+	&-hd{
+		border-bottom: 1px solid lighten(colors(blue), 48%);
+		h3{
+			font-size: 16px;
+			line-height: 24px;
+		}
+	}
+	&-bd{
+		border-top: 1px solid colors(white);
+		padding:10px 0;
+		p{
+			padding-left: 36px;	
+			margin-bottom: 10px;
+		}
+	}
+	.ico-bank-tips{	
+		background:image-url("binding/bank_tips.png") left 0 no-repeat;
+		height: image-height("binding/bank_tips.png");
+		line-height: image-height("binding/bank_tips.png");
+	}
+}
+
+
+// p2p 银行卡绑定
+.bankcards {
+	.section{
+		padding: 16px 0 0;
+		.title {
+		  font-size: fonts(size) * 1.6;
+		  line-height: 30px;
+		  color: colors(primary);
+		  // margin-bottom: 10px;
+		}
+	}
+	&>div:last-child {
+	  padding-bottom: 20px;
+	}
+	&-list{
+		padding: 0 1px;
+		.card,.new-card{
+			@include float;
+			position: relative;
+			width: 30%;
+			height: 160px;
+			min-width: 198px; 
+			margin: 0 3.33333% 30px 0;
+			padding: 6px;
+			border: 1px solid lighten(colors(gray), 10%);
+			background-color: colors(white);
+			@include box-shadow(5px 5px 0 0 colors(light));
+			@include box-sizing(border-box);
+			.bank{
+				position: absolute;
+				top: 6px;
+				left: 6px;
+				height: 32px;
+			}
+			.number{
+				display: block;
+				position: absolute;
+				top: 44px;
+				left: 0;
+				width: 100%;
+				height: 70px;
+				line-height: 70px;
+				font-size: fonts(size) * 1.6;
+				background-color: colors(white);
+				text-align: center;
+				color: colors(auxiliary);
+				border: 1px solid lighten(colors(gray), 10%);
+				border-width: 1px 0;
+				@include ellipsis;
+			}
+			.platform{
+				position: absolute;
+				bottom: 6px;
+				right: 6px;
+				height: 32px;
+				font-size: fonts(size) * 1.2;
+				line-height: 32px;
+			}
+			.btn {
+			  position: absolute;
+			  top: 10px;
+			  right: 6px;
+			}
+		}
+		.new-card{
+		  cursor: pointer;
+		  &:hover{
+		  	border: 1px dotted colors(blue);
+		  	.add{
+		  		b,i{
+		  			background-color: lighten(colors(blue), 30%);
+		  		}
+		  	}
+		  }
+		  .add {
+		    display: block;
+		    width: 100%;
+		    height: 100%;
+		    b,i{
+		    	display: block;
+		    	position: absolute;
+		    	background-color: colors(light);
+		    	left: 50%;
+		    	top: 50%;
+		    }
+		    b{
+		    	width: 48px;
+		    	height: 2px;
+		    	margin: -1px -24px;
+		    }
+		    i{
+		    	height: 48px;
+		    	width: 2px;
+		    	margin: -24px -1px;
+		    }
+		  }
+		}
+	}
+}

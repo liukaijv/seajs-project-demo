@@ -1,0 +1,64 @@
+{{#if flag}}
+	暂无数据
+{{else}}
+	{{#each this}}
+  <li>
+                  <div class="content">
+                    <div class="rate-box blue">
+                      <div class="title">
+                        <a href="/financial/bondsdetail.html?id={{fundcode}}">{{fundname}}</a>
+                      </div>
+                      <div class="rate clearfix">
+                        <div class="number fl">{{annualrate}}</div>
+                        <div class="unit-box fr">
+                          <span class="unit">%</span>
+                          <span>年化收益率</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="btn-box">
+                      <ul>
+                        <li class="first">
+                          <div class="dl">发行规模</div>
+                          <div class="dt">
+                            <span>{{#conversionRMB 'y-w' fundtolvol}}{{/conversionRMB}}</span>万元
+                          </div>
+                        </li>
+                        <li>
+                          <div class="dl">期限</div>
+                          <div class="dt">
+                            <span>{{deadline}}</span>
+                            <span>{{deadlineunitname}}</span>
+                          </div>
+                        </li>
+                      </ul>
+                      <ul class="sur fl">
+                        <li class="first">
+                          <div class="dl">已投金额</div>
+                          <div class="dt">
+                            <span> {{#conversionRMB 'y-w' hasinvestamount}}{{/conversionRMB}}</span>万元
+                          </div>
+                        </li>
+                      </ul>
+                      <div class="speed-bg">
+                        <div class="speed" style="width:{{hasinvestamount}}{{fundtolvol}}*100%"></div>
+                        <span>%</span>
+                      </div>
+
+                      {{#equal fundstatus '2'}}
+                        <a class="btn" href="/financial/bondsdetail.html?id={{fundcode}}">立即投资</a>
+                      {{/equal}}
+                      {{#equal fundstatus '3'}}
+                        <a class="btn" href="/financial/bondsdetail.html?id={{fundcode}}">立即投资</a>
+                      {{/equal}}
+                      {{#equal fundstatus '4'}}
+                        <span class="btn"">已结束</span>
+                      {{/equal}}
+                      {{#equal fundstatus '5'}}
+                        <span class="btn">已结束</span>
+                      {{/equal}}
+                    </div>
+                  </div>
+                </li>
+	{{/each}}
+{{/if}}

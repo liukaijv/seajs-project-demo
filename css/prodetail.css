@@ -1,0 +1,265 @@
+@charset "UTF-8";
+/**! 
+ * @author colpu
+ * @copyright mingfu network
+ * 本配置基于scss框架compass,在运用时请注意是否安装sass,compass
+ */
+/**
+ * 自定设置百分比 tags_per_width
+ * 实用范围 知道槽间距为margin-right, 子标签左右对齐父元素
+ * @parm $n 没换多少个标签
+ * @parm $gutter 每个标签间的槽距
+ */
+/**
+ * 获取颜色map方法
+ * @parm $k 颜色的key值
+ */
+/**
+ * 获取字体map方法
+ * @parm $k 颜色的key值
+ */
+/**
+ * 获取层级map方法
+ * @parm $k 颜色的key值
+ */
+/**
+ * 获取圆角map方法
+ * @parm $k 颜色的key值
+ */
+/**
+ * 获取圆角map方法
+ * @parm $k 颜色的key值
+ */
+body {
+  background-color: #f0f0f0;
+}
+
+.pro-detail-box {
+  height: 348px;
+  padding-right: 281px;
+  border: 1px solid #e6e6e6;
+  background-color: #fff;
+  overflow: hidden;
+}
+.pro-detail .hd {
+  height: 48px;
+  padding: 10px;
+  border-bottom: 1px dotted #ccc;
+  line-height: 48px;
+}
+.pro-detail .hd .title, .pro-detail .hd h1 {
+  height: 48px;
+  width: 520px;
+  font-size: 24px;
+  white-space: nowrap;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+.pro-detail .hd .type {
+  font-size: 16px;
+  color: #999;
+}
+.pro-detail .hd .red {
+  margin-left: 48px;
+}
+.pro-detail .bd {
+  padding: 32px 16px 16px;
+}
+.pro-detail .spe-attr, .pro-detail .attr, .top-attr {
+  font-size: 14px;
+}
+.pro-detail .spe-attr .item, .pro-detail .attr .item, .pro-detail .top-attr .item {
+  float: left;
+}
+.pro-detail .spe-attr {
+  width: 80%;
+  height: 96px;
+}
+.pro-detail .spe-attr .item {
+  height: 56px;
+  max-width: 220px;
+  padding-right: 32px;
+  margin-right: 10px;
+  border-right: 1px solid #f5f5f5;
+}
+.pro-detail .spe-attr  .item:last-child {
+  border: 0;
+  padding-right: 0;
+}   
+.pro-detail .spe-attr .item.last {
+  border: 0;
+  padding-right: 0;
+}
+.pro-detail .spe-attr .dt {
+  line-height: 24px;
+  color: #999;
+}
+.pro-detail .spe-attr .dd {
+  font-size: 20px;
+  height: 32px;
+  line-height: 32px;
+  white-space: nowrap;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+.pro-detail .attr .item {
+  width: 26%;
+  margin-right: 2%;
+  line-height: 32px;
+}
+.pro-detail .attr .item:nth-child(3n) {
+  margin-right: 0;
+}
+.pro-detail .attr .item.nth-3n {
+  margin-right: 0;
+}
+.pro-detail .attr .dt {
+  float: left;
+  margin-right: 16px;
+  color: #999;
+}
+.pro-detail .attr .dd {
+  height: 32px;
+  white-space: nowrap;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+
+
+.pro-detail .top-attr {
+  width: 80%;
+  height: 96px;
+  margin-top:30px;
+}
+.pro-detail .top-attr .item {
+  height: 56px;
+  max-width: 220px;
+  padding-right: 32px;
+  margin-right: 16px;
+  border-right: 1px solid #f5f5f5;
+}
+.pro-detail .top-attr .item:last-child {
+  border: 0;
+  padding-right: 0;
+}
+.pro-detail .top-attr .item.last {
+  border: 0;
+  padding-right: 0;
+}
+.pro-detail .top-attr .dt {
+  line-height: 24px;
+  color: #999;
+}
+.pro-detail .top-attr .dd {
+  font-size: 20px;
+  height: 32px;
+  line-height: 32px;
+  white-space: nowrap;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+
+
+.pro-detail .fr img {
+  width: 150px;
+}
+.pro-detail-deal {
+  float: right;
+  width: 240px;
+  border-left: 1px solid #e6e6e6;
+  background-color: #f7fbfe;
+  padding: 40px 20px 1000px;
+  margin: 0 -281px -1000px 0;
+}
+.pro-detail-deal .progress {
+  margin-bottom: 20px;
+  float: none;
+  margin: 0;
+  width: 230px;
+}
+.pro-detail-deal .progress .per-bar {
+  margin-top: 8px;
+}
+.pro-detail-deal .user-asset {
+  margin: 30px 0 10px;
+}
+.pro-detail-deal .user-asset .item {
+  line-height: 32px;
+  border-bottom: 1px solid #e6e6e6;
+}
+.pro-detail-deal .user-asset .dt {
+  float: left;
+  margin-right: 5px;
+  color: #999;
+}
+.pro-detail-deal .user-asset .dd {
+  text-align: right;
+  height: 32px;
+  white-space: nowrap;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+.pro-detail-deal .input-num {
+  width: 150px;
+  height: 32px;
+  padding: 0 32px;
+}
+.pro-detail-deal .input-num .J_add, .pro-detail-deal .input-num .J_minus {
+  width: 31px;
+  height: 40px;
+  line-height: 32px;
+}
+.pro-detail-deal .input-num .J_minus {
+  float: left;
+  margin-left: -32px;
+  border-left: 0;
+  border-right: 1px solid #ccc;
+}
+.pro-detail-deal .input-num .J_add {
+  margin-right: -32px;
+  border-left: 1px solid #ccc;
+}
+.pro-detail-deal .input-num .input {
+  height: 32px;
+  font-size: 16px;
+}
+
+.pro-detail-tab {
+  margin-top: 32px;
+  border: 1px solid #e6e6e6;
+  background-color: #fff;
+}
+.pro-detail-tab .tab-hd {
+  height: 48px;
+  background-color: #f5f5f5;
+  border-color: #e6e6e6;
+  font-size: 16px;
+}
+.pro-detail-tab .tab-hd li {
+  margin-left: -1px;
+  height: 48px;
+  line-height: 48px;
+  padding: 0 21px;
+}
+.pro-detail-tab .tab-hd li.active {
+  height: 49px;
+  border: 1px solid #e6e6e6;
+  border-top: 2px solid #5e8fe6;
+  border-bottom: 0;
+  margin-top: -2px;
+  padding: 0 20px;
+  background-color: #fff;
+}
+.pro-detail-tab .tab-bd {
+  padding: 32px;
+}

@@ -1,0 +1,381 @@
+@CHARSET "UTF-8";
+
+/*路径导航开始*/
+.pageNav {
+	color: #333;
+	padding: 4px 0;
+	border-bottom: 1px solid #DDD;
+	font-family: 微软雅黑;
+}
+
+.pageNav a {
+	margin: 0 5px;
+}
+
+.pageNav .current {
+	margin: 0 5px;
+	color: #787878;
+	font-weight: bold;
+}
+/*路径导航结束*/
+
+input:text, input:password {
+	width: 205px;
+	height: 28px;
+	color: #333333;
+	padding: 0 5px;
+	font-size: 12px;
+	line-height: 28px;
+	border: 1px solid #DDDDDD;
+}
+
+select {
+	width: 218px;
+	height: 28px;
+	color: #333333;
+	font-size: 12px;
+	line-height: 28px;
+	line-height: 24px\9;
+	vertical-align: middle;
+	padding-bottom: 8px\9;
+	border: 1px solid #DDDDDD;
+}
+
+textarea {
+	width: 212px;
+	height: 85px;
+	color: #333333;
+	padding: 0 5px;
+	font-size: 12px;
+	vertical-align: middle;
+	border: 1px solid #DDDDDD;
+	resize:none;
+}
+
+input:text:hover, input:password:hover, select:hover, textarea:hover {
+	box-shadow: 0 0 10px #a8e5fb;
+}
+
+input:text:focus, input:password:focus, select:focus, textarea:focus {
+	border: 1px solid #01739d;
+	outline: 2px solid #a8e5fb;
+}
+
+input:disabled, input.readonly, select:disabled, select.readonly, textarea:disabled, textarea.readonly {
+	color: #000000!important;
+	background: #ebebe4!important;
+	border: 1px solid #dddddd!important;
+}
+
+.input:hover,
+.select:hover,
+.textarea:hover {
+	box-shadow: 0 0 10px #a8e5fb;
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+	/*border: 1px solid #01739d;
+	outline: 2px solid #a8e5fb;*/
+}
+
+.kdmall-btn {
+	cursor: pointer;
+	font-size: 14px;
+	line-height: 20px;
+	text-align: center;
+	border-radius: 3px;
+	display: inline-block;
+	color: #FFFFFF!important;
+	padding: 4px 12px 4px 12px;
+	*padding: 1px 8px 1px 8px;
+	font-family: Microsoft Yahei;
+	text-decoration: none!important;
+	vertical-align: middle;
+	
+	border: 1px solid #f57f00;
+	background:#f57f00;
+	//background: #3371DD;
+}
+
+.kdmall-btn:hover {
+    color: #FFFFFF!important;
+    box-shadow: 0 0 8px #e1e1e1;
+	border: 1px solid #f57f00;
+    background: #f57f00;
+	//border: 1px solid rgba(8, 199, 192, 0.8);
+   // background: rgba(8, 199, 192, 0.8);
+}
+
+.linkButton {
+	width: 60px;
+	height: 26px;
+	line-height: 26px;
+	text-align: center;
+	border-radius: 3px;
+	color: #FFF!important;
+	text-decoration: none!important;
+	padding: 0 5px;
+	cursor: pointer;
+	//background: #3371DD;
+	background: #f57f00;
+	display: block;
+}
+
+input.linkButton {
+	width: auto;
+	padding: 0 8px;
+	display: inline;
+}
+.linkButton:hover {
+	//background: rgba(8, 199, 192, 0.8);
+	background: #f57f00;
+}
+
+.kd-outer-box {
+	width: 870px;
+	padding: 20px;
+	background: #FFF;
+	border: 1px solid #E7E7E7;
+	text-align: left !important;
+	box-shadow: 0 0 10px #C7C5C5;
+}
+
+.kd-outer-box-title {
+	width: 100%;
+	height: 30px;
+	line-height: 35px;
+	border-bottom: 2px solid #E0E0E0;
+	background-color: #FFF;
+}
+
+.kd-outer-box-title h {
+	font-size: 18px;
+	font-weight: bold;
+	height: 50px;
+	overflow: hidden;
+	color: #333;
+	border-bottom: 2px solid #808080;
+}
+
+.kd-form-style {
+	font-family: Microsoft Yahei;
+}
+
+.kd-form-style-item {
+	clear: left;
+	float: left;
+	width: 426px;
+	line-height: 35px;
+}
+
+.kd-form-style-itemnew {
+	clear: left;
+	float: left;
+	width: 600px;
+	line-height: 35px;
+}
+.kd-form-style-item.clear-left {
+	clear: none;
+}
+
+.kd-form-style-item em {
+	display: none;
+}
+
+.kd-form-style-label {
+	float: left;
+	width: 120px;
+	color: #585858;
+	font-size: 13px;
+	text-align: right;
+	line-height: 35px;
+	margin: 4px!important;
+}
+
+.kd-form-style-value {
+	padding-left: 4px;
+	min-height: 42px;
+	font-size:14px;
+}
+
+.kd-form-style-value input {
+	margin: 4px!important;
+}
+
+.kd-form-style-value i {
+	font-size: 13px!important;
+	line-height: 43px;
+}
+
+.kd-form-style-item.need em {
+	display: inline;
+	color: red !important;
+}
+
+.kd-form-style .input {
+	border: 1px solid #DDDDDD;
+	color: #333333;
+	font-size: 12px;
+	height: 28px;
+	line-height: 28px;
+	padding: 0 5px;
+	width: 205px;
+}
+
+.kd-form-style .select {
+	border: 1px solid #DDDDDD;
+	color: #333333;
+	font-size: 12px;
+	height: 28px;
+	line-height: 28px;
+	width: 218px;
+	margin: 4px;
+	vertical-align: middle;
+}
+
+.kd-form-style .textarea {
+	border: 1px solid #DDDDDD;
+	color: #333333;
+	font-size: 12px;
+	height: 85px;
+	width: 212px;
+	margin: 4px;
+	vertical-align: middle;
+}
+
+.kd-form-style .input:hover,
+.kd-form-style .select:hover,
+.kd-form-style .textarea:hover {
+	box-shadow: 0 0 10px #a8e5fb;
+}
+
+.kd-form-style .input:focus,
+.kd-form-style .select:focus,
+.kd-form-style .textarea:focus {
+	border: 1px solid #01739d;
+	outline: 2px solid #a8e5fb;
+}
+
+
+.kd-form-style-item.oneline {
+	clear: none;
+	width: 360px
+}
+
+.kd-form-style-item.oneline .kd-form-style-label,
+.kd-form-style-item.oneline .kd-form-style-value {
+	clear: both;
+	display: block;
+}
+
+.kd-form-style-item.oneline .kd-form-style-label {
+	width: 300px;
+	font-size: 16px;
+	text-align: left;
+	padding-left: 4px;
+}
+
+.kd-form-style-item.oneline input {
+	width: 336px;
+}
+
+.kd-form-style-item.oneline select {
+	width: 348px;
+}
+
+.kd-form-style-item.oneline textarea {
+	width: 336px;
+}
+
+.kd-form-style-item.oneline input[type="checkbox"],
+.kd-form-style-item.oneline input[type="radio"] {
+	width: 20px;
+}
+
+
+.kd-form-style-item.long {
+	width: 730px;
+}
+
+.kd-form-style-item.long input {
+	width: 696px;
+}
+
+.kd-form-style-item.long select {
+	width: 643px;
+}
+
+.kd-form-style-item.long textarea {
+	width: 695px;
+}
+
+.kd-form-style a {
+	color: #C70808;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.kd-form-style a:hover, .kd-form-style a:active {
+	color: #C70808;
+}
+
+/* 表格样式开始 */
+.table {
+	border: 1px solid #E9E9E9;
+	border-bottom: 0px solid #E9E9E9;
+	width: 100%;
+	font-size: 14px;
+	margin: 0px auto;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.table tr.even {
+	background: #F9F9F9;
+}
+
+.table th {
+	height: 35px;
+	line-height: 35px;
+	font-weight: bold;
+	background: #F5F5F5;
+	text-align: left;
+	padding-left: 5px;
+	color: #999;
+	border-bottom: 1px solid #E9E9E9;
+}
+
+.table tr td {
+    padding-left: 5px;
+    border-bottom: 1px solid #E9E9E9;
+    height: 38px;
+	line-height: 38px;
+	margin-left:2px;
+}
+
+.table tr td div {
+    white-space: nowrap;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.table tr td a {
+    color: #666;
+}
+
+.table tr td a:hover {
+    color: #C70808;
+    text-decoration: underline;
+}
+
+.table tr:hover {
+	background: #F5F5F5;
+}
+
+.table tr.last-col td {
+    border: none;
+}
+/* 表格样式结束 */

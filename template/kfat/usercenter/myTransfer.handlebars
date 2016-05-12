@@ -1,0 +1,57 @@
+<table class="table table-hline">
+    <colgroup>
+        <col width="30%">
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+    </colgroup>
+    <thead>
+      <tr class="tac">
+        <th>项目名称</th>
+        <th>投资期限</th>
+        <th>年化收益率</th>
+        <th>申请份额(份)</th>
+        <th>成交金额(元)</th>
+        <th>受理日期</th>
+        <th>操作</th>
+      </tr>
+    </thead>
+{{#if flag}}
+<tbody></tbody><tfoot>
+  <tr>
+    <td colspan="7" class="tac">暂无转让的记录！</td>
+  </tr>
+</tfoot>
+{{else}}
+  {{#each this}}
+  <tr>
+    <td>
+      <a class="blue" href="/financial/bondsdetail.html?id={{fundcode}}">{{fundname}}</a>
+    </td>
+    <td>{{deadline}}{{deadlineunitname}}</td>
+    <td>{{annualrate}}%</td>
+    <td>{{applicationvol}}</td>
+    <td>{{matchamount}}</td>
+    <td>{{transactiondate}}</td>
+    <td class="tac"> 
+      {{#equal transtatus '00'}}
+        <span class="btn btn-gray">未支付</span>
+      {{/equal}}   
+      {{#equal transtatus '01'}}
+        <span class="btn btn-gray">待成交确认</span>
+      {{/equal}}    
+      {{#equal transtatus '02'}}
+        <a class="btn btn-red J_cancelTransfer" href="javascript:void(0)" appsheetserialno="{{appsheetserialno}}">撤单</a>
+      {{/equal}}   
+      {{#equal transtatus '03'}}
+        <span class="btn btn-gray">失败</span>
+      {{/equal}}            
+    </td>
+  </tr>
+{{/each}}
+{{/if}}
+</table>
+<ul id="page_has" class="pagination"><li class="disabled"><a class="first">首页</a></li><li class="pre disabled"><a class="disabled prev">上一页</a></li><li class="page active" pnum="1"><a page="1">1</a></li><li></li><li class="next disabled"><a class="disabled next">下一页</a></li><li class="last disabled"><a class="last" target="_self">末页</a></li><li class="disabled"><a class="normalsize">共1页</a></li></ul>

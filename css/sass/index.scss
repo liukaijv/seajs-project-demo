@@ -1,0 +1,9 @@
+@charset "UTF-8";
+//参数配置
+@import "config"; //页面相关配置
+
+@import "model/slider";
+@import "model/index";
+@import "model/list"; //列表
+@import "product/asset";
+@import "model/unit"; //小组件

@@ -1,0 +1,638 @@
+@charset "UTF-8";
+/**! 
+ * @author colpu
+ * @copyright mingfu network
+ * 本配置基于scss框架compass,在运用时请注意是否安装sass,compass
+ */
+/* @media all and (orientation:portrait){ //这是匹配竖屏的状态，竖屏时的css代码
+  @content;
+}
+@media all and (orientation:landscape){ //这是匹配横屏的状态，横屏时的css代码
+  @content;
+} */
+/**
+ * 自定设置百分比 tags_per_width
+ * 实用范围 知道槽间距为margin-right, 子标签左右对齐父元素
+ * @parm $n 没换多少个标签
+ * @parm $gutter 每个标签间的槽距
+ */
+/**
+ * 获取颜色map方法
+ * @parm $k 颜色的key值
+ */
+/**
+ * 获取字体map方法
+ * @parm $k 颜色的key值
+ */
+/**
+ * 获取层级map方法
+ * @parm $k 颜色的key值
+ */
+/**
+ * 获取圆角map方法
+ * @parm $k 颜色的key值
+ */
+/**
+ * 获取圆角map方法
+ * @parm $k 颜色的key值
+ */
+/* line 5, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 4, sass/model/_reset.scss */
+a {
+  text-decoration: none;
+  color: #333;
+}
+/* line 24, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_link-colors.scss */
+a:hover {
+  color: #004ca0;
+}
+
+/* line 8, sass/model/_reset.scss */
+img {
+  vertical-align: middle;
+}
+
+/* line 9, sass/model/_reset.scss */
+body {
+  font-size: 16px;
+  color: #333;
+  font-family: "Microsoft Yahei", SimSun, Tahoma, arial, SimHei, sans-serif;
+}
+
+/* line 15, sass/model/_reset.scss */
+input {
+  font-family: inherit;
+}
+
+/* line 18, sass/model/_reset.scss */
+hr {
+  border: 0;
+  border-bottom: 1px dotted #ccc;
+  height: 1px;
+  margin: 10px 0 9px 0;
+  *margin: 3px 0 2px 0;
+}
+
+/* line 98, sass/core/_grid.scss */
+.w {
+  min-width: 960px;
+  max-width: 1200px;
+  _width: expression(this.width<960px ? 960px: this.width<1200px?this.width:1200px);
+  *zoom: 1;
+  margin: 0 auto;
+}
+/* line 38, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
+.w:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 102, sass/core/_grid.scss */
+.gd-1, .gd-2, .gd-3, .gd-4, .gd-5, .gd-6, .gd-7, .gd-8, .gd-9, .gd-10, .gd-11, .gd-12, .gd-13, .gd-14, .gd-15, .gd-16, .gd-17, .gd-18, .gd-19, .gd-20, .gd-21, .gd-22, .gd-23 {
+  float: left;
+  display: inline;
+  padding-left: 1.25%;
+  padding-right: 1.25%;
+}
+
+/* line 112, sass/core/_grid.scss */
+.gd-1 {
+  width: 1.66667%;
+}
+
+/* line 112, sass/core/_grid.scss */
+.gd-2 {
+  width: 5.83333%;
+}
+
+/* line 112, sass/core/_grid.scss */
+.gd-3 {
+  width: 10%;
+}
+
+/* line 112, sass/core/_grid.scss */
+.gd-4 {
+  width: 14.16667%;
+}
+
+/* line 112, sass/core/_grid.scss */
+.gd-5 {
+  width: 18.33333%;
+}
+
+/* line 112, sass/core/_grid.scss */
+.gd-6 {
+  width: 22.5%;
+}
+
+/* line 112, sass/core/_grid.scss */
+.gd-7 {
+  width: 26.66667%;
+}
+
+/* line 112, sass/core/_grid.scss */
+.gd-8 {
+  width: 30.83333%;
+}
+
+/* line 112, sass/core/_grid.scss */
+.gd-9 {
+  width: 35%;
+}
+
+/* line 112, sass/core/_grid.scss */
+.gd-10 {
+  width: 39.16667%;
+}
+
+/* line 112, sass/core/_grid.scss */
+.gd-11 {
+  width: 43.33333%;
+}
+
+/* line 112, sass/core/_grid.scss */
+.gd-12 {
+  width: 47.5%;
+}
+
+/* line 112, sass/core/_grid.scss */
+.gd-13 {
+  width: 51.66667%;
+}
+
+/* line 112, sass/core/_grid.scss */
+.gd-14 {
+  width: 55.83333%;
+}
+
+/* line 112, sass/core/_grid.scss */
+.gd-15 {
+  width: 60%;
+}
+
+/* line 112, sass/core/_grid.scss */
+.gd-16 {
+  width: 64.16667%;
+}
+
+/* line 112, sass/core/_grid.scss */
+.gd-17 {
+  width: 68.33333%;
+}
+
+/* line 112, sass/core/_grid.scss */
+.gd-18 {
+  width: 72.5%;
+}
+
+/* line 112, sass/core/_grid.scss */
+.gd-19 {
+  width: 76.66667%;
+}
+
+/* line 112, sass/core/_grid.scss */
+.gd-20 {
+  width: 80.83333%;
+}
+
+/* line 112, sass/core/_grid.scss */
+.gd-21 {
+  width: 85%;
+}
+
+/* line 112, sass/core/_grid.scss */
+.gd-22 {
+  width: 89.16667%;
+}
+
+/* line 112, sass/core/_grid.scss */
+.gd-23 {
+  width: 93.33333%;
+}
+
+/* line 107, sass/core/_grid.scss */
+.gd-24 {
+  margin: 0 auto;
+  width: 97.5%;
+}
+
+/* line 168, icon/*.png */
+.icon-sprite, .icon-chat, .icon-count, .icon-country, .icon-ensure, .icon-full, .icon-horn, .icon-inline, .icon-logo, .icon-qq, .icon-repayment, .icon-safe, .icon-slogan, .icon-sub-logo, .icon-table, .icon-tel, .icon-wind {
+  background-image: url('../images/icon-s0b502d0324.png');
+  background-repeat: no-repeat;
+}
+
+/* line 84, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-chat {
+  background-position: -32px 0;
+}
+
+/* line 84, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-count {
+  background-position: 0 0;
+}
+
+/* line 84, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-country {
+  background-position: -150px -464px;
+}
+
+/* line 84, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-ensure {
+  background-position: 0 -324px;
+}
+
+/* line 84, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-full {
+  background-position: -102px 0;
+}
+
+/* line 84, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-horn {
+  background-position: -305px -120px;
+}
+
+/* line 84, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-inline {
+  background-position: -256px -151px;
+}
+
+/* line 84, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-logo {
+  background-position: 0 -151px;
+}
+
+/* line 84, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-qq {
+  background-position: -293px -120px;
+}
+/* line 84, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-repayment {
+  background-position: 0 -464px;
+}
+
+/* line 84, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-safe {
+  background-position: -140px -324px;
+}
+
+/* line 84, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-slogan {
+  background-position: 0 -120px;
+}
+
+/* line 84, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-sub-logo {
+  background-position: 0 -237px;
+}
+
+/* line 84, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-table {
+  background-position: -280px -151px;
+}
+
+/* line 84, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-tel {
+  background-position: -281px -120px;
+}
+
+/* line 84, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-wind {
+  background-position: 0 -604px;
+}
+.mb30{
+  margin-bottom:30px;
+}
+/* line 4, sass/model/_header.scss */
+.site-top {
+  height: 30px;
+  background: #f8f8f8;
+  line-height: 30px;
+  font-size: 14px;
+}
+/* line 9, sass/model/_header.scss */
+.site-top .welcome {
+  color: #666666;
+}/* line 14, sass/model/_header.scss */
+.site-top .nav-box li {
+  float: left;
+  padding: 0 5px;
+  margin-top: 7px;
+  line-height: 1.2em;
+}
+/* line 22, sass/model/_header.scss */
+.site-top .nav-box .nav li.left-line {
+  border-left: 1px solid #999;
+}
+/* line 24, sass/model/_header.scss */
+.site-top .nav-box .nav li a {
+  color: #ff4216;
+}
+.header{
+  background:#fff;
+}
+/* line 34, sass/model/_header.scss */
+.header .logo-box {
+  padding: 20px 0;
+}
+/* line 36, sass/model/_header.scss */
+.header .logo-box .logo {
+  margin-right: 20px;
+}
+/* line 38, sass/model/_header.scss */
+.header .logo-box .logo .icon-logo {
+  display: block;
+  width: 256px;
+  height: 86px;
+}
+/* line 44, sass/model/_header.scss */
+.header .logo-box .icon-slogan {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  width: 281px;
+  height: 31px;
+  margin-top: 35px;
+}
+/* line 51, sass/model/_header.scss */
+.header .menu {
+  margin-top: 45px;
+}
+/* line 53, sass/model/_header.scss */
+.header .menu li {
+  float: left;
+  margin: 0 15px;
+}
+/* line 56, sass/model/_header.scss */
+.header .menu li.active {
+  border-bottom: 2px solid #ff4216;
+}
+/* line 59, sass/model/_header.scss */
+.header .menu li a {
+  display: block;
+  padding: 10px 0;
+  font-size: 18px;
+}
+
+/* line 2, sass/model/_footer.scss */
+.footer {
+  background: #2d3237;
+  padding-top: 34px;
+}
+/* line 5, sass/model/_footer.scss */
+.footer .link {
+  color: #fff;
+  margin-left: 75px;
+}
+/* line 8, sass/model/_footer.scss */
+.footer .link a {
+  margin: 0 5px;
+  color: #fff;
+  font-size: 14px;
+}
+/* line 14, sass/model/_footer.scss */
+.footer .icon {
+  margin: 36px 0 0 75px;
+}
+/* line 16, sass/model/_footer.scss */
+.footer .icon li {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  margin-right: 20px;
+}
+/* line 19, sass/model/_footer.scss */
+.footer .icon li img {
+  width: 99px;
+  height: 36px;
+}
+/* line 25, sass/model/_footer.scss */
+.footer .chat {
+  padding-top: 2px;
+  text-align: center;
+}
+/* line 27, sass/model/_footer.scss */
+.footer .chat i {
+  display: block;
+  width: 70px;
+  height: 70px;
+  margin-bottom: 5px;
+}
+/* line 33, sass/model/_footer.scss */
+.footer .chat span {
+  font-size: 14px;
+  color: #999;
+}
+/* line 38, sass/model/_footer.scss */
+.footer .contact {
+  padding: 0 0 25px 100px;
+}
+/* line 40, sass/model/_footer.scss */
+.footer .contact span {
+  font-size: 14px;
+  color: #999;
+}
+/* line 44, sass/model/_footer.scss */
+.footer .contact h1 {
+  font-size: 36px;
+  color: #b1d1e8;
+  padding: 10px 0 15px;
+}
+/* line 50, sass/model/_footer.scss */
+.footer .copyright {
+  text-align: center;
+  background: #262a2f;
+}
+/* line 53, sass/model/_footer.scss */
+.footer .copyright span {
+  font-size: 14px;
+  color: #666666;
+  line-height: 30px;
+}
+
+/* line 60, sass/model/_footer.scss */
+#suspend {
+  width: 220px;
+  height: 305px;
+  position: fixed;
+  top: 150px;
+  right: -160px;
+}
+/* line 67, sass/model/_footer.scss */
+#suspend ul li {
+  margin-bottom: 5px;
+}
+/* line 69, sass/model/_footer.scss */
+#suspend ul li a {
+  padding: 10px 0;
+  display: block;
+  width: 60px;
+  -moz-border-radius: 5px 0 0 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px 0 0 5px;
+  background: #ccc;
+}
+/* line 75, sass/model/_footer.scss */
+#suspend ul li a .icon-inline {
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin: 5px 18px;
+}
+/* line 81, sass/model/_footer.scss */
+#suspend ul li a .icon-count {
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin: 5px 14px;
+}
+/* line 87, sass/model/_footer.scss */
+#suspend ul li a span {
+  display: block;
+  width: 16px;
+  margin: 5px 22px;
+  color: #fff;
+}
+/* line 95, sass/model/_footer.scss */
+#suspend ul li.active a {
+  background: #ff4216;
+}
+/* line 101, sass/model/_footer.scss */
+#suspend .inline {
+  padding: 8px;
+  background: #ff4216;
+  width: 160px;
+  box-sizing: border-box;
+  height: 275px;
+  color: #fff;
+}
+/* line 108, sass/model/_footer.scss */
+#suspend .inline span {
+  font-size: 14px;
+  line-height: 1.5;
+}
+/* line 112, sass/model/_footer.scss */
+#suspend .inline .phone {
+  padding: 10px 0;
+  border-bottom: 1px solid #fff;
+}
+/* line 116, sass/model/_footer.scss */
+#suspend .inline .phone .title {
+  margin-bottom: 5px;
+}
+/* line 119, sass/model/_footer.scss */
+#suspend .inline .phone i {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  width: 12px;
+  height: 11px;
+}
+/* line 120, sass/model/_footer.scss */
+#suspend .inline .phone h1 {
+  font-size: 20px;
+  line-height: 1.5;
+}
+/* line 129, sass/model/_footer.scss */
+#suspend .inline .qq {
+  padding: 10px 0;
+  border-bottom: 1px solid #fff;
+}
+/* line 132, sass/model/_footer.scss */
+#suspend .inline .qq .title {
+  margin-bottom: 5px;
+}
+/* line 135, sass/model/_footer.scss */
+#suspend .inline .qq i {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  width: 12px;
+  height: 12px;
+}
+/* line 140, sass/model/_footer.scss */
+#suspend .inline .qq h1 {
+  font-size: 20px;
+  line-height: 1.5;
+}
+/* line 145, sass/model/_footer.scss */
+#suspend .inline .time {
+  padding: 15px 0;
+}
+/* line 127, sass/model/_footer.scss */
+#suspend .inline .time span {
+  display: block;
+}

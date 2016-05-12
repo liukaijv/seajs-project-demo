@@ -1,0 +1,16 @@
+@charset "UTF-8";
+.shibor, .shibor-refer{
+	.box-bd{
+		border: 1px solid lighten(colors(gray), 10%);
+	}
+	.table{
+		margin-top: -1px;
+		thead{
+			background: colors(light);
+		}
+	}
+	.J_scorllTable{
+		height: 186px;
+		overflow: hidden;
+	}
+}

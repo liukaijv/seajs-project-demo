@@ -1,0 +1,301 @@
+@CHARSET "UTF-8";
+
+/******************kdMessage start**************/
+#kd-ui-message {
+	background: #F0F0F0;
+	border: 1px solid #BBB;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	color: #555;
+	margin: 5px;
+	min-height: 10px;
+	padding: 5px 10px 5px 10px;
+	line-height: 1.8;
+	font-size: 14px;
+	font-family: 微软雅黑;
+}
+
+#kd-ui-message.info {
+	padding-left: 30px;
+	border-color: #9EB6D4;
+	background: url(../images/msg-info.png) no-repeat 10px center #E0EFFF;
+}
+
+#kd-ui-message.warn {
+	padding-left: 30px;
+	border-color: #DAC008;
+	background: url(../images/msg-warn.png) no-repeat 10px center #FFD;
+}
+
+#kd-ui-message.error {
+	padding-left: 30px;
+	border-color: #DF9898;
+	background: url(../images/msg-error.png) no-repeat 10px center #FFE7E7;
+}
+
+.kd-message {
+	background: #F0F0F0;
+	border: 1px solid #BBB;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	color: #555;
+	margin: 5px;
+	min-height: 10px;
+	padding: 5px 10px 5px 10px;
+	line-height: 1.8;
+	font-size: 14px;
+	font-family: 微软雅黑;
+}
+
+.kd-message.info {
+	padding-left: 30px;
+	border-color: #9EB6D4;
+	background: url(../images/msg-info.png) no-repeat 10px center #E0EFFF;
+}
+
+.kd-message.warn {
+	padding-left: 30px;
+	border-color: #DAC008;
+	background: url(../images/msg-warn.png) no-repeat 10px center #FFD;
+}
+
+.kd-message.error {
+	padding-left: 30px;
+	border-color: #DF9898;
+	background: url(../images/msg-error.png) no-repeat 10px center #FFE7E7;
+}
+/******************kdMsg end **************/
+
+/******************kdDialog开始**************/
+#kd-ui-dialog-bg {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #282828;
+	top: 0;
+	left: 0;
+}
+
+#kd-ui-dialog-box {
+	position: fixed;
+	_position: absolute;
+	background: #FFF;
+	text-align: left;
+	border-radius: 6px;
+	border: 5px solid #FFF;
+	font-family: 微软雅黑;
+	user-select: none;
+	-o-user-select: none;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+}
+
+#kd-ui-dialog-title {
+	position: relative;
+	height: 30px;
+	overflow: hidden;
+}
+
+#kd-ui-dialog-title h2 {
+	position: relative;
+	left: 10px;
+	top: 5px;
+	font-size: 14px;
+	color: #C70808;
+	font-weight: bold;
+}
+
+#kd-ui-dialog-close {
+	position: absolute;
+	opacity: .5;
+	filter: alpha(opacity = 50);
+	right: 10px;
+	top: -4px;
+	overflow: hidden;
+	background: #FFF;
+	cursor: pointer;
+	color: #C70808;
+	font-size: 22px;
+	font-weight: bold;
+}
+
+#kd-ui-dialog-close:hover {
+	opacity: 1;
+	filter: alpha(opacity = 100);
+}
+
+#kd-ui-dialog-content-border {
+	position: relative;
+	top: -1px;
+	border-top: 1px solid #C78888;
+	padding: 5px 0 5px 5px;
+}
+
+#kd-ui-dialog-content .alert {
+	margin: 10px;
+	font-size: 14px;
+}
+
+#kd-ui-dialog-content .confirm {
+	margin: 10px;
+	font-size: 14px;
+}
+
+#kd-ui-dialog-content img,#kd-ui-dialog-content iframe {
+	display: block;
+}
+
+#kd-ui-dialog-content .loading {
+	position: absolute;
+	left: 47%;
+	top: 30%;
+	margin-left: -8px;
+	margin-top: -8px;
+}
+
+#kd-ui-dialog-bottom {
+	padding: 5px;
+	text-align: right;
+}
+
+#kd-ui-dialog-bottom button {
+	color: #333;
+	cursor: pointer;
+	font-size: 14px;
+	margin-left: 5px;
+	padding: 4px 12px;
+	text-align: center;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+	background-color: #fff;
+	font-family: 微软雅黑;
+}
+
+#kd-ui-dialog-bottom button:hover {
+	color: #333;
+	border: 1px solid #CCC;
+	background-color: #E9E9E9;
+}
+/**********kdDialog结束**********/
+
+/*分页开始*/
+.pager-info {
+	padding: 10px;
+}
+
+.pager-info .page_nav {
+	text-align: center;
+}
+
+.pager-info .page_nav a {
+	color: #666;
+	width: 32px;
+	height: 25px;
+	font-size: 12px;
+	margin: 0px 3px;
+	line-height: 25px;
+	text-align: center;
+	display: inline-block;
+	border-radius: 3px;
+	border: 1px solid #DDD;
+	font-family: "Microsoft YaHei", "微软雅黑";
+	vertical-align: middle;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.pager-info .page_nav a:hover {
+	background: #FAFAFA;
+}
+
+.pager-info .page_nav span {
+	color: #787878;
+	width: 32px;
+	height: 25px;
+	font-size: 12px;
+	margin: 0px 3px;
+	line-height: 25px;
+	text-align: center;
+	display: inline-block;
+	border-radius: 3px;
+	border: 1px solid #DDD;
+	font-family: "Microsoft YaHei", "微软雅黑";
+	vertical-align: middle;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.pager-info .page_nav .disabled {
+	color: #AFAEAE;
+	cursor: default;
+	background: #E9E7E7;
+	border: 1px solid #D8D8D8;
+}
+
+.pager-info .page_nav .curr {
+	background: #e60012;
+	border: 1px solid #e60012;
+	color: #FFF;
+	font-weight: bold;
+}
+
+.pager-info .page_nav .normalsize {
+	border: 0;
+	width: auto;
+	font-size: 14px;
+}
+
+.pager-info .page_nav .goto {
+	display: inline-block;
+	width: 34px;
+	height: 18px;
+	border: 1px solid #DFDFDF;
+	margin: 0px 1px 8px 1px;
+	padding: 0px;
+	position: relative;
+	left: 0px;
+	top: 5px;
+	
+	overflow: visible;
+}
+
+.pager-info .page_nav .goto .gotoinput {
+	width: 32px;
+	height: 16px;
+	text-align: center;
+	border: 0px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	outline: none;
+}
+
+.pager-info .page_nav .goto .gotobutton {
+	width: 34px;
+	height: 20px;
+	line-height: 20px;
+	padding: 0px;
+	font-family: arial, 宋体, sans-serif;
+	text-align: center;
+	border: 0px;
+	background-color: #F50;
+	color: #FFF;
+	position: absolute;
+	left: 0px;
+	top: -1px;
+	display: none;
+}
+
+.pager-info .page_nav .prev {
+	width: 70px;
+}
+
+.pager-info .page_nav .next {
+	width: 70px;
+}
+/*分页结束*/

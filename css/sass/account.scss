@@ -1,0 +1,12 @@
+@charset "UTF-8";
+//参数配置
+@import "config"; //页面相关配置
+
+//账户中心相关css
+@import "account/public"; //账户中心公用样式
+@import "account/financial_asset"; //账户中心金融资产样式
+@import "account/account_guide"; //账户中心频道引导页样式
+@import "account/menu"; //账户中心菜单样式
+@import "account/userhead_info"; //用户中心头部文件
+@import "account/financing_basic"; //我的理财
+@import "account/qualification"; //资质申请

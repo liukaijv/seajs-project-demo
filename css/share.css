@@ -1,0 +1,79 @@
+@charset "UTF-8";
+/* 源图片之间的间距 */
+.share-sprite, .share-app, .share-bottom-logo, .share-chat, .share-country, .share-free, .share-full, .share-m-chat, .share-m-weibo, .share-major, .share-next, .share-prev, .share-repayment, .share-safe, .share-triangle_right, .share-up, .share-weibo {
+  background-image: url('../images/share-sda78bb1898.png');
+  background-repeat: no-repeat;
+}
+
+.share-app {
+  background-position: 0 0;
+}
+.share-app:hover, .share-app.app-hover {
+  background-position: 0 -42px;
+}
+
+.share-bottom-logo {
+  background-position: 0 -84px;
+}
+
+.share-chat {
+  background-position: 0 -143px;
+}
+.share-chat:hover, .share-chat.chat-hover {
+  background-position: 0 -185px;
+}
+
+.share-country {
+  background-position: 0 -227px;
+}
+
+.share-free {
+  background-position: 0 -319px;
+}
+
+.share-full {
+  background-position: 0 -411px;
+}
+
+.share-m-chat {
+  background-position: 0 -533px;
+}
+
+.share-m-weibo {
+  background-position: 0 -555px;
+}
+
+.share-major {
+  background-position: 0 -577px;
+}
+
+.share-next {
+  background-position: 0 -669px;
+}
+
+.share-prev {
+  background-position: 0 -755px;
+}
+
+.share-repayment {
+  background-position: 0 -841px;
+}
+
+.share-safe {
+  background-position: 0 -963px;
+}
+
+.share-triangle_right {
+  background-position: 0 -1055px;
+}
+
+.share-up {
+  background-position: 0 -1069px;
+}
+
+.share-weibo {
+  background-position: 0 -1111px;
+}
+.share-weibo:hover, .share-weibo.weibo-hover {
+  background-position: 0 -1153px;
+}

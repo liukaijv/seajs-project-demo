@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <!-- 引入公用css -->
+  <!--#include virtual="/public/public_css.shtm"-->
+  <link rel="stylesheet" type="text/css" href="/css/base.css">
+  <link rel="stylesheet" type="text/css" href="/css/public.css">
+  <link rel="stylesheet" type="text/css" href="/css/account.css">
+  <link rel="stylesheet" type="text/css" href="/css/kd.ui.plugin.css">
+  <link rel="stylesheet" type="text/css" href="/css/jquery-ui-1.9.2.custom.min.css">
+</head>
+
+<body>
+  <!-- 引入头部文件 -->
+  <!--#include virtual="/public/header.shtm"-->
+  <div id="J_account_figure"></div>
+  <div class="w">
+    <div class="gd-5">
+    <!--#include virtual="/usercenter/account_asidenav.shtm"-->
+    </div>
+    <div class="gd-19" style="height: 460px;">
+      <!-- 账户总览 -->
+      <div class="box financing">
+        <div class="box-hd">
+          <h2 class="title">产品查看申请</h2>
+        </div>
+        <div class="contract-filter clearfix row">
+          <div class="uc-fillform">
+            <div class="tips tips-blue mt10">
+              <h3 class="tips-title">温馨提示:</h3>
+              <p>1.此功能用于发起产品查看申请</p>
+              <p>2.申请通过后能查看该产品的所有信息</p>
+            </div>
+            <form class="form">
+            </form>
+          </div>
+        </div>
+        <div id="J_fundlists" style="margin-top: 20px;"></div>
+      </div>
+    </div>
+  </div>
+<!-- 引入尾部文件 -->
+<!--#include virtual="/public/footer.shtm"-->
+<script type="text/javascript" src="../../sea.js"></script>
+<script type="text/javascript" src="../../seajs_config.js"></script>
+<script type="text/javascript">seajs.use(["kfat/usercenter/rights_apply"]);</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<div id="yield">
+{{#if flag}}
+  暂无数据
+{{else}}
+  <table>
+    <colgroup>
+      <col width="20%">
+      <col width="80%">
+    </colgroup>
+        <tbody>
+  {{#each this}}
+          <tr>
+            <td id="table-label">
+              {{filename}}
+            </td>
+            <td>
+              <a href="/fileserver/{{#getSubstring fileaddr 13 300}}{{/getSubstring}}">
+                {{filename}}
+              </a>
+            </td>
+          </tr>
+</div>
+    {{/each}}
+        </tbody>
+    </table>
+  {{/if}}
+</div>

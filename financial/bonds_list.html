@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <!-- 引入公用css -->
+  <!--#include virtual="/public/public_css.shtm"-->
+  <link rel="stylesheet" type="text/css" href="/css/base.css"></head>
+  <link rel="stylesheet" type="text/css" href="/css/public.css"></head>
+  <link rel="stylesheet" type="text/css" href="/css/pro_list.css"></head>
+  <link rel="stylesheet" type="text/css" href="/css/login/iconfont/iconfont.css">
+</head>
+
+<body style="background:#f8f8f8;">
+  <!-- 引入头部文件 -->
+  <!--#include virtual="/public/header.shtm"-->
+  <div class="w">
+    <div class="gd-24">
+      <div class="crumb">
+        <a href="/">首页</a>
+        > <strong>投资理财</strong>
+      </div>
+    </div>
+  </div>
+  <div class="w">
+    <div class="main gd-24"  style="padding: 0 15px;">
+      <div class="box invest">
+        <div class="box-hd">
+          <h2>投资理财</h2>
+        </div>
+        <div class="box-bd" style="min-height:200px;">
+        <ul class="debtlist" id="J_bonds_list"></ul>
+      </div>
+      <ul id="page_area" class="pagination"><li class="disabled"><a class="first">首页</a></li><li class="pre disabled"><a class="disabled prev">上一页</a></li><li class="page active" pnum="1"><a page="1">1</a></li><li></li><li class="next disabled"><a class="disabled next">下一页</a></li><li class="last disabled"><a class="last" target="_self">末页</a></li><li class="disabled"><a class="normalsize">共1页</a></li></ul>
+    </div>
+
+    <ul id="page_area" class="pagination"></ul>
+  </div>
+  <div class="aside gd-6">
+    <div class="sidebar"></div>
+  </div>
+</div>
+<!-- 引入尾部文件 -->
+<!--#include virtual="/public/footer.shtm"-->
+</body>
+<!--引入seajs核心文件-->
+<!--#include virtual="/public/base.shtm"-->
+<script type="text/javascript">seajs.use(["kfat/financial/bonds_list"]);</script>
+
+</html>

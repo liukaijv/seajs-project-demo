@@ -1,0 +1,42 @@
+@charset "UTF-8";
+//参数配置
+@import "model/mixin"; //引入占位模块中的mixin
+@import "config"; //页面相关配置
+@import "model/placeholder"; //引入占位
+
+//通用主样式
+@import "model/reset"; //重置CSS基础样式
+@import "model/layout"; //栅格布局
+@import "model/button"; //按钮样式
+@import "model/form"; //公用的form
+@import "model/public"; //公共
+@import "model/box"; //盒子模块
+@import "model/crumb"; //通用面包屑
+@import "model/table"; //表格样式
+@import "model/tips"; //页面内提示块
+
+//页面样式开始
+@import "model/icon"; //图片精灵
+@import "model/site-nav"; //站点导航
+@import "model/header"; //页头部
+// @import "model/turn"; //轮播广告
+@import "model/slider"; //滑块广告
+@import "model/tab"; //Tab切换
+@import "model/list"; //列表
+@import "model/index"; //首页
+@import "model/share"; //通用百度分享
+@import "model/product"; //产品详情页
+@import "model/purchase"; //采购详情页
+@import "model/unit"; //小组件
+@import "model/comments"; //评论模块
+@import "model/payment"; //支付方式
+@import "model/sift"; //搜索筛选页
+
+//注册登录
+@import "model/register"; //注册登录
+@import "model/validform"; //验证ICON
+
+@import "model/pop"; //弹出盒子
+@import "model/pages"; //分页模块
+@import "model/footer"; //页脚&侧边导航
+//@import 'model/media'; //媒体查询

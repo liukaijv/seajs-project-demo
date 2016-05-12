@@ -1,0 +1,19 @@
+//占位关闭
+%close{
+  position: absolute;
+  width: 12px;
+  height: 12px;  
+  background-color:colors(black);
+  cursor: pointer;
+  @include transition(.3s ease-in);
+  i{  
+    vertical-align: top;
+    @include transition(.3s ease-in);
+  }
+  &:hover{
+    background-color:colors(primary);
+    i{
+      @include transform(rotate(180deg));
+    }     
+  }
+}

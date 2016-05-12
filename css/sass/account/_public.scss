@@ -1,0 +1,90 @@
+@charset "UTF-8";
+// 账户中心左侧导航
+.uc-aside{
+	font-size: fonts(size) * 1.4;
+	border: 1px solid lighten(colors(gray),10%);
+	background-color: colors(light);
+
+}
+
+//账户中心tab
+.uc-tab{
+  .tab-hd{
+    border-bottom: 2px solid colors(gray);
+    font-size: fonts(size) * 1.6;
+    li{
+      position: relative;
+      overflow: hidden;
+      color: colors(dark);
+      &:before{
+        height: 50%;
+        position: absolute;
+        left: 0;
+        top: 25%;
+        content: '';
+        border-left: 1px solid colors(gray);
+      }       
+      &:first-child{
+        &:before{
+          content: none;
+        }
+      }
+      &.active{
+        height: 36px;
+        color: colors(orange);
+        border-bottom: 2px solid colors(orange);
+        margin-bottom: -2px;
+      }
+    }
+  }
+  .tab-bd{
+    /* border: 1px solid lighten(colors(gray),10%);
+    border-top:none; */
+  }
+  .table{
+    thead{
+      font-size: fonts(size) * 1.2;
+    }
+    tbody{
+      td{
+        padding: 12px 5px;
+      }
+    }
+  }
+}
+
+
+// 账户总览
+.user-brief{
+  // padding:20px 0;
+  margin-bottom: 20px;
+  font-size:fonts(size) * 1.6;
+  height: 40px;
+  line-height: 32px;
+  border-bottom: 2px solid lighten(colors(gray),10%);
+  dt,dd{
+    @include float;
+  }
+  dt{
+     border-bottom: 2px solid colors(auxiliary);
+     margin:0 8px -2px 0;
+     height: 40px;
+  }
+  .safe-status{
+    margin-left: 30px;
+    i{
+      color: colors(white);
+      background-color: colors(gray);
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      line-height: 32px;
+      text-align: center;
+      font-size: fonts(size) * 1.6;
+      @include border-radius(50%);
+    }
+    .active i{
+      background-color: lighten(mix(colors(white),colors(green),50%), 10%);
+    }
+  }
+}

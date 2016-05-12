@@ -1,0 +1,51 @@
+<p class="description">
+  <i class="iconfont"></i> 
+  亲爱的投资者，为了对您的风险承受能力做出评估，请您认真、客观地填写以下问卷。对于您填写的个人信息，本中心将予以严格保密，不会向任何第三方透露。因监管部门履行监管职责要求或司法部门依法行使调阅查询权除外。
+</p>
+{{#if flag}}
+	暂无数据
+{{else}}
+  <form id="doEstimateForm" class="assess-survey">
+	{{#each this}}
+          <dl>
+            <dt>{{@index}}. {{qusname}}           
+              <input type="radio" name="{{qusid}}" style="display: none;" datatype="*" nullmsg="请选择答案!">
+                <span class="kdValidform_checktip"></span>
+            </dt>
+            <dd>
+              <input type="radio" value="1" ans="{{ans1}}" name="{{qusid}}" id="{{qusid}}1">
+              <label for="{{qusid}}1">
+                {{ans1}}&nbsp;<span style="color:red">-2分</span>
+              </label>
+            </dd>
+            <dd>
+              <input type="radio" value="2" ans="{{ans2}}" name="{{qusid}}" id="{{qusid}}2">
+              <label for="{{qusid}}2">
+                {{ans2}}&nbsp;<span style="color:red">0分</span>
+              </label>
+            </dd>
+            <dd>
+              <input type="radio" value="3" ans="{{ans3}}" name="{{qusid}}" id="{{qusid}}3">
+              <label for="{{qusid}}3">
+                {{ans3}}&nbsp;<span style="color:red">-4分</span>
+              </label>
+            </dd>
+            <dd>
+              <input type="radio" value="4" ans="{{ans4}}" name="{{qusid}}" id="{{qusid}}4">
+              <label for="{{qusid}}4">
+                {{ans4}}&nbsp;<span style="color:red">-10分</span>
+              </label>
+            </dd>
+          </dl>   
+	 {{/each}}
+  </form>
+{{/if}}
+    <div id="checkForm" class="agreement-form">
+      <div class="agreement">
+        <input id="serviceAgreement" name="serviceAgreement" datatype="*" type="checkbox"> 
+        <label for="serviceAgreement">我已阅读并同意<a type="button" id="J_fxs" href="javascript:void(0);">《风险揭示书》</a></label>
+        <span class="kdValidform_checktip"></span></div>
+        <div class="actionArea">
+          <input id="J_doEstimate" class="btn btn-lg btn-blue" type="button" value="下一步">
+        </div>
+    </div>

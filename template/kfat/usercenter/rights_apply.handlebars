@@ -1,0 +1,28 @@
+
+<table class="table table-hline">
+    <thead>
+      <tr class="tac">
+        <th>产品名称</th>
+        <th>操作</th>
+      </tr>
+    </thead>
+{{#if flag}}
+<tbody></tbody><tfoot>
+  <tr>
+    <td colspan="7" class="tac">暂无产品记录！</td>
+  </tr>
+</tfoot>
+{{else}}
+  {{#each this}}
+  <tr>
+    <td>
+      {{fundname}}
+    </td>
+    <td class="tac">            
+      <a class="btn btn-blue J_applyRigths" href="javascript:void(0)" fundcode="{{fundcode}}" catid="{{cat_id}}">发起申请</a>
+    </td>
+  </tr>
+{{/each}}
+{{/if}}
+</table>
+<ul id="page_has" class="pagination"><li class="disabled"><a class="first">首页</a></li><li class="pre disabled"><a class="disabled prev">上一页</a></li><li class="page active" pnum="1"><a page="1">1</a></li><li></li><li class="next disabled"><a class="disabled next">下一页</a></li><li class="last disabled"><a class="last" target="_self">末页</a></li><li class="disabled"><a class="normalsize">共1页</a></li></ul>

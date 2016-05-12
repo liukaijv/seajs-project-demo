@@ -1,0 +1,63 @@
+{{#if flag}}
+暂无数据
+{{else}}
+{{#each this}}
+  <div class="account_register"> 
+    <div class="user-type clearfix">
+      <form class="personal-account" id="J_confirm" method="post">
+            <div class="identity">
+              <input name="personalaccount" value="0" type="hidden">
+              <h3>身份信息</h3>
+              <ul>
+                  <li>
+                  <label for="realname"><span>&nbsp;&nbsp;</span>真实姓名</label>
+                    <input name="certificateName" id="" value="{{chinesename}}" type="text" readonly="readonly">
+                  </li>
+                  <li>
+                   <label for="idnum"><span>&nbsp;&nbsp;</span>身份证号</label>
+                      <input name="certificateNo" value="{{certificateno}}" id="J_certificateno" type="text" readonly="readonly">
+                      <input class="hide" value="0" id="J_certificatetype" type="text" readonly="readonly">
+                      <input class="hide" value="300401" id="J_channelno" type="text" readonly="readonly">
+                      <input class="hide" value="{{phoneno}}" id="J_mobiletel" type="text" readonly="readonly">
+                 </li>
+              </ul>
+            </div>    
+        <div class="banks">
+          <h3>银行卡信息</h3>
+          <ul>
+            <li class="tieonBanks clearfix">  
+              <a href="javascript:void(0);" target="_self" class="selected" code="1002">
+                <img src="/images/bank/bank_26.png" title="中国工商银行">
+              </a>
+            </li>
+            <li id="">
+              <label for="cardNum"><span>&nbsp;&nbsp;</span>银行卡号</label> 
+                <input name="bankaccount" id="J_bankaccount" type="text" readonly="readonly">  
+            </li>   
+            <li>
+              <label for="cell_num">验证码</label>
+              <input type="text" id="authcode" name="authcode">
+              <img id="imgauthcode" style="width:116px;border:1px solid #fafafa;cursor:pointer;" class="authcode" src="#" title="点击刷新验证码" alt="点击刷新验证码">
+              <span class="kdValidform_checktip" id="kdValidform_checktip_authcode">请输入验证码，再获取手机验证码！</span>   
+            </li> 
+            <li>
+              <label for="captcha"><span style="color:red">*&nbsp;</span>手机验证码</label>
+              <input type="text" id="J_msgcode" name="msgcode" datatype="n6-6" errormsg="请输入6位数字验证码！">
+              <input type="button" id="J_getmobileCode" value="获取验证码" name="button" style="width:116px;height:40px;border:1px solid #fafafa;cursor:pointer;">
+              <span class="kdValidform_checktip" id="kdValidform_checktip_validatcode">请获取验证码！</span>
+            </li>
+            <li>
+              <label for="cardNum"><span style="color:red">*&nbsp;</span>交易密码</label>
+              <input id="J_password" name="password" type="password" datatype="n6-6" nullmsg="请输入6位数字交易密码！" errormsg="交易密码输入有误！">
+            <span class="kdValidform_checktip"></span></li>  
+          </ul> 
+        </div>
+        <div class="actionArea clearfix">
+            <input id="J_infoconfirm" class="btn  btn-lg btn-red" type="button" value="确认">
+            <input id="J_tradepwd" name="trdpwd" value="" type="hidden">
+        </div>  
+      </form>
+    </div>
+  </div>
+{{/each}}
+{{/if}}

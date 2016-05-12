@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+//按钮尺寸设置
+@mixin button-size($padding,$font-size,$line-height,$radius){
+  padding:$padding;
+  font-size:$font-size;
+  line-height: $line-height;
+  border-radius:$radius;
+}

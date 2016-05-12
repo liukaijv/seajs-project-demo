@@ -1,0 +1,159 @@
+@charset "utf-8";
+.cart-info{
+	border:1px solid colors(gray);
+	border-top:0;
+	padding:20px 29px 29px;
+	@include border-radius(0 0 radius(S) radius(S));
+	font-family:fonts(family);
+	font-size: fonts(size) * 1.4;
+
+	//表格
+	.table{
+		tbody{
+			td{
+				border-color:lighten(colors(gray),5%);
+				border-style:dotted;
+				padding:5px 10px;
+				line-height:1.5;
+			}
+			p{
+				line-height:1.5;
+			}
+			th{
+				background-color:lighten(colors(primary), 48%);
+				border:1px solid lighten(colors(primary), 40%);
+				border-width:1px 0;
+				color:colors(primary);
+			}
+		}
+		tfoot{
+			td{
+				padding:10px;
+				vertical-align:middle;
+				border-width:1px 0 1px 1px;
+			}
+		}
+		.pic{
+			@include float;
+			width:50px;
+			height:50px;
+			margin-right: 5px;
+		}
+	}
+	
+	//盒子
+	.box{
+		.box-hd{
+			border-width:1px;
+			h2{
+				font-size: fonts(size) * 1.6;
+				border-width:1px;
+			}
+		}
+		.box-bd{
+			/* border:1px solid colors(gray);
+			border-top: 0;
+			padding:19px; */
+		}
+	}
+
+	//表单	
+	.form{
+		dt{
+			position:absolute;
+			text-align: right;
+			width: 85px;
+			line-height: 26px;
+		}
+		dd{
+			padding-left: 90px;
+			line-height: 26px;
+		}
+	}
+}
+
+// 收货地址样式
+.consignee{
+	li{
+		padding-left:85px;
+		height:32px;
+		line-height:32px;
+		strong{
+			display:none;
+		}
+		&.active{
+			height:30px;
+			padding-left:84px;
+			border:1px solid lighten(colors(blue), 45%);
+			line-height:30px;
+			background:lighten(colors(blue), 60%);
+			strong{
+				@include float;
+				width:80px;
+				margin-left:-85px;
+				color: colors(primary);
+				text-align:right;
+				line-height:30px;
+			}
+		}
+	}
+	.addConsignee{
+		margin:10px 0;
+	}
+}
+
+.total{
+	@include pie-clearfix;
+	dl{
+		@include float;
+		dd{
+			padding-left:95px;
+		}
+		dt{
+			width:90px;
+		}
+	}
+}
+
+// 支付信息
+.payinfo{
+	@include float(right);
+	font-size: fonts(size) * 1.4;
+	li{
+		text-align:right;
+		line-height:30px;
+		span{
+			@include inline-block;
+			width:100px;
+		}
+		em{
+			color: colors(dark);
+			padding:0 5px;
+			// font-style:normal;
+		}
+		strong{
+			span{
+				color:colors(primary);
+				font-size:fonts(size) * 1.6;
+			}
+		}
+	}
+}
+
+// 发票备注
+.order-assist{
+	li{
+		line-height: 20px;
+	}
+	span{
+		cursor:pointer;
+	}
+	&-bd{
+		display: none;
+		width:600px;
+		padding:9px;
+		border:1px solid colors(gray);
+		margin: 5px 0;
+		overflow: hidden;
+	}
+}

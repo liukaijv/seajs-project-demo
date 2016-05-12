@@ -1,0 +1,15 @@
+@charset "UTF-8";
+//图片精灵配置
+$valid: sprite-map("valid/*.png");
+$valid-sprite-base-class:'.valid'; //配置精灵的基础类注意：必须在导入精灵图之前做配置
+$valid-sprite-dimensions:true; //自动设置sprite精灵尺寸
+$valid-clean-up:false; //自动清除过期的精灵图片
+$default-sprite-separator:'-'; //默认sprite链接字符设置
+$disable-magic-sprite-selectors:false; //是否通过伪类选择器自动生成精灵
+$sprite-layout:"smart"; //设置精灵图片拼合方式 smart:最紧密 vertical:纵向排列 horizontal:横向排列 diagonal:对角线排列
+@import "valid/*.png";
+@include all-valid-sprites; //自动生成所有图片精灵
+.valid{
+	display:inline-block;
+	vertical-align: middle;
+}

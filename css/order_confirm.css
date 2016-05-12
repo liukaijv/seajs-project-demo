@@ -1,0 +1,393 @@
+@charset "UTF-8";
+/**! 
+ * @author colpu
+ * @copyright mingfu network
+ * 本配置基于scss框架compass,在运用时请注意是否安装sass,compass
+ */
+/* @media all and (orientation:portrait){ //这是匹配竖屏的状态，竖屏时的css代码
+  @content;
+}
+@media all and (orientation:landscape){ //这是匹配横屏的状态，横屏时的css代码
+  @content;
+} */
+/**
+ * 自定设置百分比 tags_per_width
+ * 实用范围 知道槽间距为margin-right, 子标签左右对齐父元素
+ * @parm $n 没换多少个标签
+ * @parm $gutter 每个标签间的槽距
+ */
+/**
+ * 获取颜色map方法
+ * @parm $k 颜色的key值
+ */
+/**
+ * 获取字体map方法
+ * @parm $k 颜色的key值
+ */
+/**
+ * 获取层级map方法
+ * @parm $k 颜色的key值
+ */
+/**
+ * 获取圆角map方法
+ * @parm $k 颜色的key值
+ */
+/**
+ * 获取圆角map方法
+ * @parm $k 颜色的key值
+ */
+.order-confirm {
+  width: 80%;
+  margin: 0 auto;
+  padding: 16px 56px;
+  background-color: #fff;
+}
+.order-confirm .box-hd {
+  height: 48px;
+  line-height: 48px;
+  font-size: 24px;
+  border-bottom: 2px solid #e6ba1c;
+}
+.order-confirm .pro-name {
+  font-size: 22px;
+  line-height: 48px;
+}
+.order-confirm .pro-name .modify {
+  font-size: 12px;
+  padding: 2px;
+  background-color: #00c246;
+  margin-right: 4px;
+  color: #fff;
+  vertical-align: middle;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+.order-confirm .pro-name .info {
+  font-size: 12px;
+  color: #999;
+}
+.order-confirm .form {
+  border: 1px solid #e6e6e6;
+  padding: 24px 24px 0 24px;
+  line-height: 48px;
+}
+.order-confirm .form > dl {
+  overflow: hidden;
+}
+.order-confirm .form > dl > dt {
+  position: absolute;
+  padding: 10px 0;
+}
+.order-confirm .form > dl > dd {
+  padding: 10px 0 10px 180px;
+  margin-bottom: 0;
+  border-top: 1px solid #e6e6e6;
+  margin-top: -1px;
+  font-size: 16px;
+  color: #999;
+}
+.order-confirm .form > dl em {
+  color: #2e2e2e;
+}
+.order-confirm .btn-lg {
+  margin-top: 30px;
+  width: 256px;
+  line-height: 56px;
+  font-size: 24px;
+}
+
+.steps-input {
+  height: 58px;
+}
+.steps-input a {
+  float: left;
+  display: inline;
+  width: 56px;
+  line-height: 56px;
+  border: 1px solid #e6e6e6;
+  font-family: "SimSun";
+  font-size: 48px;
+  color: #999;
+  text-align: center;
+  background-color: #f5f5f5;
+}
+.steps-input a.less {
+  border-right: 0;
+  -moz-border-radius: 3px 0 0 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px 0 0 3px;
+}
+.steps-input a.more {
+  border-left: 0;
+  -moz-border-radius: 0 3px 3px 0;
+  -webkit-border-radius: 0;
+  border-radius: 0 3px 3px 0;
+}
+.steps-input input {
+  float: left;
+  display: inline;
+  height: 56px;
+  padding: 0 7px;
+  margin: 0;
+  border: 1px solid #e6e6e6;
+  outline: none;
+}
+.steps-input input:focus {
+  -moz-box-shadow: 1px 1px 3px #f5f5f5 inset;
+  -webkit-box-shadow: 1px 1px 3px #f5f5f5 inset;
+  box-shadow: 1px 1px 3px #f5f5f5 inset;
+}
+.steps-input span {
+  float: left;
+  display: inline;
+  margin-left: 10px;
+}
+
+.account-info {
+  margin-top: 16px;
+  border: 1px solid #e6e6e6;
+  background-color: #f5f5f5;
+}
+.account-info li {
+  border-top: 1px solid #e6e6e6;
+  padding: 19px;
+}
+
+.radio_checkbox {
+  display: inline-block;
+  cursor: pointer;
+  line-height: 32px;
+  padding-left: 32px;
+  background: transparent url('../images/checkbox.png?1437464867') no-repeat 0 center;
+}
+.radio_checkboxed{
+  background: transparent url('../images/checkbox_checked.png?1437464858') no-repeat 0 center;
+}
+/*
+.account-info input[type="radio"]:checked + .radio_checkbox, .account-info input[type="checkbox"]:checked + .radio_checkbox {
+  background: transparent url('../images/checkbox_checked.png?1437464858') no-repeat 0 center;
+}
+*/
+/*
+.account-info input[type="radio"]{
+  box-sizing:border-box;
+  -webkit-appearance:none;
+  display: inline-block;
+  cursor: pointer;
+  height:32px;
+  width:32px;
+  line-height: 32px;
+  padding-left: 32px;
+  margin-bottom:-9px;
+  background: transparent url('../images/checkbox.png?1437464867') no-repeat 0 center;
+}
+.account-info input[type="radio"]:checked{
+  background: transparent url('../images/checkbox_checked.png?1437464858') no-repeat 0 center;
+}
+.account-info input[type="radio"].checked{
+  background: transparent url('../images/checkbox_checked.png?1437464858') no-repeat 0 center;
+}
+*/
+.account-info .bank-card {
+  display: inline-block;
+  border: 1px solid #b6daf2;
+  padding: 4px 10px;
+  background-color: #fff;
+}
+.account-info .thumbnail {
+  display: inline-block;
+  width: 156px;
+  height: 48px;
+  padding-right: 9px;
+  margin-right: 10px;
+  border-right: 1px solid #b6daf2;
+}
+.account-info .thumbnail img {
+  width: 100%;
+  height: 100%;
+}
+
+/******************kdMessage start**************/
+#kd-ui-message {
+  background: #F0F0F0;
+  border: 1px solid #BBB;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  color: #555;
+  margin: 5px;
+  min-height: 10px;
+  padding: 5px 10px 5px 10px;
+  line-height: 1.8;
+  font-size: 14px;
+  font-family: 微软雅黑;
+}
+
+#kd-ui-message.info {
+  padding-left: 30px;
+  border-color: #9EB6D4;
+  background: url(../images/msg-info.png) no-repeat 10px center #E0EFFF;
+}
+
+#kd-ui-message.warn {
+  padding-left: 30px;
+  border-color: #DAC008;
+  background: url(../images/msg-warn.png) no-repeat 10px center #FFD;
+}
+
+#kd-ui-message.error {
+  padding-left: 30px;
+  border-color: #DF9898;
+  background: url(../images/msg-error.png) no-repeat 10px center #FFE7E7;
+}
+
+.kd-message {
+  background: #F0F0F0;
+  border: 1px solid #BBB;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  color: #555;
+  margin: 5px;
+  min-height: 10px;
+  padding: 5px 10px 5px 10px;
+  line-height: 1.8;
+  font-size: 14px;
+  font-family: 微软雅黑;
+}
+
+.kd-message.info {
+  padding-left: 30px;
+  border-color: #9EB6D4;
+  background: url(../images/msg-info.png) no-repeat 10px center #E0EFFF;
+}
+
+.kd-message.warn {
+  padding-left: 30px;
+  border-color: #DAC008;
+  background: url(../images/msg-warn.png) no-repeat 10px center #FFD;
+}
+
+.kd-message.error {
+  padding-left: 30px;
+  border-color: #DF9898;
+  background: url(../images/msg-error.png) no-repeat 10px center #FFE7E7;
+}
+
+/******************kdMsg end **************/
+/******************kdDialog开始**************/
+#kd-ui-dialog-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #282828;
+  top: 0;
+  left: 0;
+}
+
+#kd-ui-dialog-box {
+  position: fixed;
+  _position: absolute;
+  background: #FFF;
+  text-align: left;
+  border-radius: 6px;
+  border: 5px solid #FFF;
+  font-family: 微软雅黑;
+  user-select: none;
+  -o-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+#kd-ui-dialog-title {
+  position: relative;
+  height: 30px;
+  overflow: hidden;
+}
+
+#kd-ui-dialog-title h2 {
+  position: relative;
+  left: 10px;
+  top: 5px;
+  font-size: 14px;
+  color: #C70808;
+  font-weight: bold;
+}
+
+#kd-ui-dialog-close {
+  position: absolute;
+  opacity: .5;
+  filter: alpha(opacity=50);
+  right: 10px;
+  top: -4px;
+  overflow: hidden;
+  background: #FFF;
+  cursor: pointer;
+  color: #C70808;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+#kd-ui-dialog-close:hover {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+#kd-ui-dialog-content-border {
+  position: relative;
+  top: -1px;
+  border-top: 1px solid #C78888;
+  padding: 5px 0 5px 5px;
+}
+
+#kd-ui-dialog-content .alert {
+  margin: 10px;
+  font-size: 14px;
+}
+
+#kd-ui-dialog-content .confirm {
+  margin: 10px;
+  font-size: 14px;
+}
+
+#kd-ui-dialog-content img, #kd-ui-dialog-content iframe {
+  display: block;
+}
+
+#kd-ui-dialog-content .loading {
+  position: absolute;
+  left: 47%;
+  top: 30%;
+  margin-left: -8px;
+  margin-top: -8px;
+}
+
+#kd-ui-dialog-bottom {
+  padding: 5px;
+  text-align: right;
+}
+
+#kd-ui-dialog-bottom button {
+  color: #333;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 5px;
+  padding: 4px 12px;
+  text-align: center;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  font-family: 微软雅黑;
+}
+
+#kd-ui-dialog-bottom button:hover {
+  color: #333;
+  border: 1px solid #CCC;
+  background-color: #E9E9E9;
+}
+
+/**********kdDialog结束**********/
+
+/*# sourceMappingURL=order_confirm.css.map */

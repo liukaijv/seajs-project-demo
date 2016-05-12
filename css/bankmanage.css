@@ -1,0 +1,124 @@
+@charset "UTF-8";
+/**! 
+ * @author colpu
+ * @copyright mingfu network
+ * 本配置基于scss框架compass,在运用时请注意是否安装sass,compass
+ */
+/* @media all and (orientation:portrait){ //这是匹配竖屏的状态，竖屏时的css代码
+  @content;
+}
+@media all and (orientation:landscape){ //这是匹配横屏的状态，横屏时的css代码
+  @content;
+} */
+/**
+ * 自定设置百分比 tags_per_width
+ * 实用范围 知道槽间距为margin-right, 子标签左右对齐父元素
+ * @parm $n 没换多少个标签
+ * @parm $gutter 每个标签间的槽距
+ */
+/**
+ * 获取颜色map方法
+ * @parm $k 颜色的key值
+ */
+/**
+ * 获取字体map方法
+ * @parm $k 颜色的key值
+ */
+/**
+ * 获取层级map方法
+ * @parm $k 颜色的key值
+ */
+/**
+ * 获取圆角map方法
+ * @parm $k 颜色的key值
+ */
+/**
+ * 获取圆角map方法
+ * @parm $k 颜色的key值
+ */
+/**
+ * 银行卡管理界面
+ * 2015年10月13日15:11:25
+ */
+/* line 9, sass/bankmanage.scss */
+.bankcards .titlebar {
+  height: 36px;
+  line-height: 36px;
+  border-bottom: 2px solid #F5F5F5;
+  width: 100%;
+}
+/* line 14, sass/bankmanage.scss */
+.bankcards .titlebar h2 {
+  float: left;
+  padding: 0 10px;
+  line-height: 36px;
+  border-bottom: 2px solid #ff8800;
+  font-size: 18px;
+}
+/* line 23, sass/bankmanage.scss */
+.bankcards .panel-info {
+  border: 0;
+}
+/* line 25, sass/bankmanage.scss */
+.bankcards .panel-info .title {
+  height: 36px;
+  line-height: 36px;
+  font-size: 18px;
+  width: 100%;
+  padding-left: 10px;
+}
+/* line 33, sass/bankmanage.scss */
+.bankcards .panel-info .card-info {
+  height: 190px;
+  border: 1px solid #F5F5F5;
+}
+/* line 36, sass/bankmanage.scss */
+.bankcards .panel-info .card-info:hover {
+  box-shadow: 5px 5px 5px 0 #f5f5f5;
+}
+/* line 39, sass/bankmanage.scss */
+.bankcards .panel-info .card-info .add {
+  height: 130px;
+  padding-top: 65px;
+  padding-left: 110px;
+  display: inline-block;
+}
+/* line 45, sass/bankmanage.scss */
+.bankcards .panel-info .card-info .head {
+  height: 36px;
+  line-height: 36px;
+  border-bottom: 1px solid #F5F5F5;
+  padding: 8px 15px;
+}
+/* line 50, sass/bankmanage.scss */
+.bankcards .panel-info .card-info .head .bank-icon {
+  width: 136px;
+  height: 36px;
+  overflow: hidden;
+  float: left;
+}
+/* line 56, sass/bankmanage.scss */
+.bankcards .panel-info .card-info .head .unbind {
+  float: right;
+  margin-top: 4px;
+  padding: 3px 12px;
+}
+/* line 64, sass/bankmanage.scss */
+.bankcards .panel-info .card-info .content {
+  height: 56px;
+  padding-top: 40px;
+  border-bottom: 1px solid #F5F5F5;
+}
+/* line 68, sass/bankmanage.scss */
+.bankcards .panel-info .card-info .content h2 {
+  height: 30px;
+  line-height: 30px;
+  width: 100%;
+  font-size: 17px;
+}
+/* line 75, sass/bankmanage.scss */
+.bankcards .panel-info .card-info .foot {
+  height: 41px;
+  line-height: 41px;
+  padding-right: 15px;
+}

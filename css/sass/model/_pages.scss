@@ -1,0 +1,243 @@
+@charset "utf-8";
+.pages{
+	text-align:center;
+	font-size: 0;
+	p{
+		font-size:fonts(size) * 1.2;
+		margin-bottom:10px;
+		color:colors(dark);
+	}
+	a,span{
+		display: inline-block;
+		border: 1px solid colors(gray);
+		margin-left: -1px;
+		width:32px;
+		height:28px;
+		line-height:28px;
+		font-size:fonts(size) * 1.4;
+		text-align:center;
+		color: colors(darker);
+		font-family:Arial;
+		background: colors(white);
+		&.prev{
+			border-left:1px solid colors(gray);
+			@include border-radius(radius(S) 0 0 radius(S));	
+		}
+		&.next{
+			@include border-radius(0 radius(S) radius(S) 0);			
+		}
+	}
+	a:hover{
+		color: colors(primary);
+	}
+	span{
+		color: colors(dark);
+		cursor: not-allowed;
+		&.active{
+			position: relative;
+			//z-index: 1;
+			border-color: colors(auxiliary);
+			font-weight: bold;
+			color: colors(white);
+			background-color: colors(auxiliary); 
+			//cursor:default;
+		}
+	}
+}
+
+//小型分页
+.page-small{
+	text-align: center;
+	font-size: 0;
+	.page-num{
+		@include inline-block;
+		font-family: fonts(en);
+		font-size: fonts(size) * 1.2;
+		margin-right: 3px;
+	}
+	a,span{
+		@include inline-block;
+		font-family: fonts(cn);
+		border:1px solid colors(gray);
+		margin-left: -1px;
+		width:19px;
+		padding: 3px 0;
+		line-height: 1;
+		font-weight: 700;
+		font-size: fonts(size) * 1.2;
+		text-align: center;
+		background-color:colors(white);
+		&:hover{
+			background-color: colors(light)
+		}
+	}
+	span{
+		background-color: colors(light);
+		cursor:not-allowed;
+	}
+}
+
+.pagination{
+	text-align:center;
+	// @include inline-block;
+	@include border-radius(radius(S));
+	font-size: 0;
+	li{
+		display: inline;
+		a,span{
+			// @include float;
+			@include inline-block;
+			position: relative;
+			padding: 8px 12px;
+			border:1px solid colors(gray);
+			margin-left: -1px;
+			font-family:fonts(family);
+			font-size:fonts(size) * 1.4;
+			text-decoration: none;
+			&:focus{
+				color: colors(primary);
+			}
+		}
+		a{
+			&:hover{
+				color: colors(primary);
+			}
+		}
+		span{
+
+		}
+		&:first-child{
+			a,span{
+				margin-left:0;
+				@include border-radius(radius(S) 0 0 radius(S));
+			}
+		}
+
+		&:last-child{
+			a,span{
+				@include border-radius(0 radius(S) radius(S) 0);
+			}
+		}
+	}
+
+	.active{
+		a,span{
+			z-index: 1;
+			border-color: colors(auxiliary);
+			color: colors(white);
+			background-color: colors(auxiliary);
+			cursor: default;
+			&:hover{
+				border-color: colors(auxiliary);
+				color: colors(white);
+				background-color: colors(auxiliary);
+			}
+			&:focus{
+				border-color: colors(auxiliary);
+				color: colors(white);
+				background-color: colors(auxiliary);
+			}
+		}
+	}
+	
+	.disabled{
+		a,span{
+			border-color: colors(gray);
+			color: colors(dark);
+			background-color: colors(white);
+			cursor: not-allowed;
+			&:hover{
+				border-color: colors(gray);
+				color: colors(dark);
+				background-color: colors(white);
+			}
+			&:focus{
+				border-color: colors(gray);
+				color: colors(dark);
+				background-color: colors(white);
+			}
+		}
+	}
+}
+
+//以前p2p分页样式
+.pager-info {
+  padding: 10px;
+  text-align: center;
+  .page_nav{
+  	a,span{
+	    display: inline-block;
+	    width: 32px;
+	    height: 25px;
+	    margin: 0px 3px;
+	    border: 1px solid lighten(colors(gray), 10%);
+	    color: colors(dark);
+	    font-size: fonts(size) * 1.2;
+	    line-height: 25px;
+	    vertical-align: middle;
+	    @include ellipsis;
+	    @include border-radius(radius(S));
+    }
+    a{
+	    &:hover{
+	    	background-color: colors(light);
+	    }
+    }
+    span {
+		  color: colors(dark);
+		}
+		.disabled {
+		  color: colors(dark);
+		  cursor: default;
+		  background-color: lighten(colors(gray),15%);
+		  border: 1px solid lighten(colors(gray),10%);
+		}
+		.curr {
+		  background-color: colors(blue);
+		  border: 1px solid colors(blue);
+		  color: colors(white);
+		  font-weight: bold;
+		}
+		.normalsize {
+		  border: 0;
+		  width: auto;
+		  font-size: fonts(size) * 1.4;
+		}
+		.goto {
+			position: relative;
+			left: 0px;
+			top: 5px;		  
+		  width: 34px;
+		  height: 18px;
+		  border: 1px solid lighten(colors(gray), 10%);
+		  margin: 0px 1px 8px 1px;
+		  padding: 0;
+			overflow: visible;		  
+		  .gotoinput {
+		    position: absolute;
+		    width: 32px;
+		    height: 16px;
+		    border: 0;
+		    left: 0;
+		    top: 0;
+		    outline: none;
+		  }
+		  .gotobutton {
+		    position: absolute;
+		    left: 0px;
+		    top: -1px;
+		    display: none;
+		    width: 34px;
+		    height: 20px;
+		    line-height: 20px;
+		    padding: 0;
+		    border: 0;
+		    background-color: colors(primary);
+		    color: colors(white);
+		  }
+		}
+		.prev,.next{
+		  width: 70px;
+		}
+  }
+}

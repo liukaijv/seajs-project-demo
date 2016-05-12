@@ -1,0 +1,32 @@
+@charset "UTF-8";
+.site-nav{
+	height:36px;
+	font-size: fonts(size) * 1.4;
+	color: colors(auxiliary);
+	background-color: colors(darker);
+	.fl{
+		line-height:36px;
+	}
+	.fr{
+		ul{
+			padding-top: 10px;
+			@include float;
+		}
+		li{
+			@include float;
+			line-height: 1;
+			padding: 0 5px;
+		}
+		a{
+			color: colors(auxiliary);
+		}
+	}
+	.entrance{
+		margin-left: 64px;
+		height: 26px;
+		overflow: hidden;
+		li{
+			color:colors(dark);
+		}
+	}
+}

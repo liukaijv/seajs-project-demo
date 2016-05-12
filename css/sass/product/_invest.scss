@@ -1,0 +1,218 @@
+@charset "UTF-8";
+.debtlist{
+  .item{
+    border: 1px solid lighten(colors(gray), 10%);
+    margin-bottom: 20px;
+    @include box-shadow(4px 4px 0 0 colors(light));
+    @at-root{
+      &-hd{
+        height: 48px;
+        padding: 8px 16px;
+        border-bottom: 1px solid lighten(colors(gray), 10%);
+        background-color: colors(light);
+        .btn-lg{
+          @include float(right);
+          margin-top: 8px;
+        }
+        .title{
+          font-size: fonts(size) * 2.2;
+          line-height: 48px;
+        }
+        em{
+          font-size: fonts(size) * 1.2;
+          padding:2px;
+          background-color: colors(green);
+          margin-right: 2px;
+          color: colors(white);
+          vertical-align: middle;
+          @include border-radius(radius(S));
+        }
+      }
+      &-bd{
+        padding: 16px 0;
+        .attr{
+          overflow: hidden;
+          li{
+            @include float;
+            min-width: 72px;
+            position: relative;
+            height: 60px;
+            padding: 0 16px;
+            border-left: 1px solid colors(light);
+            margin-left: -1px;
+          }
+          .dt,.dd{
+            display: block;
+            font-size: fonts(size) * 1.2;
+          }
+          .dt{
+            color: colors(dark);
+          }
+          .dd{
+            position: absolute;
+            bottom: 0;
+            left: 16px;
+            white-space: nowrap;
+            i{
+              color: colors(blue);
+              margin-right: 4px;
+            }
+          }
+          .f16{
+            font-size: fonts(size) * 1.6;
+          }
+          .f28{
+           font-size: fonts(size) * 2.8; 
+          }
+          .yield{
+            width: 96px;
+          }
+
+        }
+      }
+    }
+  }
+}
+
+.invest{
+  .box-hd{
+    line-height: 48px;
+    border-bottom: 2px solid colors(auxiliary);
+  }
+}
+
+.aside-nav{
+  background-color: colors(white);
+  @include box-shadow(4px 4px 0 0 colors(light));
+  h1{
+    height: 64px;
+    padding: 24px;
+    color: colors(white);
+    border-bottom: 5px solid colors(auxiliary);
+    background-color: colors(primary);
+    font-size: fonts(size) *  2.4;
+    line-height: 1.2;
+    @include box-shadow(4px 4px 0 0 darken(colors(primary),10%));
+    span{
+      display: block;
+      line-height: 1.5;
+      font-size: fonts(size) *  1.4;
+      color: lighten(colors(primary), 30%);
+    }
+  }
+  ul{
+    position:relative;
+    z-index: 1;
+    overflow: hidden;
+    background-color: colors(white);
+    border: 1px solid lighten(colors(gray), 10%);
+    border-top:0;
+  }
+  li{
+    height: 48px;
+    padding: 0 48px;
+    margin-top: -1px;
+    border-top:1px solid lighten(colors(gray), 10%);
+    line-height: 48px;
+    font-size: fonts(size) * 1.6;
+    &.active,&:hover{
+      margin: -1px -1px 0 -1px;
+      padding:0 49px;
+      color: colors(white);
+      background-color: colors(auxiliary);
+      a{color: colors(white);}
+    }
+  }
+}
+
+.news{
+  margin-top: 28px;
+  @include box-shadow(4px 4px 0 0 colors(light));
+  .box-hd{
+    height: 48px;
+    line-height: 48px;
+    font-size: fonts(size) * 1.6;
+    background-color: lighten(colors(light),2%);
+    border: 1px solid lighten(colors(gray), 10%);
+    border-bottom: 2px solid colors(auxiliary);
+    h2{
+      color: colors(darker);
+      line-height: 48px;
+    }
+  }
+  .box-bd{
+    padding:10px;
+    border: 1px solid lighten(colors(gray), 10%);
+  }
+}
+
+// 转让
+.transfer{
+  margin-top: 16px;
+  .box-hd{
+    height: 48px;
+    line-height: 48px;
+    border-bottom: 2px solid colors(auxiliary);
+    .title{
+      font-size: fonts(size) * 2.4;
+    }
+  }
+  .table{
+    font-size: fonts(size) * 1.2;
+    background-color: colors(white);
+    @include box-shadow(2px 2px 0 0 colors(light));
+    td,th{ padding:10px 15px;}
+    thead{
+      th{
+        padding: 5px 15px;
+      }
+    }
+    tbody{
+      td,th{
+        padding:15px;
+        @include ellipsis;
+      }
+    }
+    .title{
+      font-size: fonts(size) * 1.6;
+      font-weight: bold;
+      line-height: 1;
+      em{
+        @include float;
+        width: 12px;
+        height: 28px;
+        line-height: 14px;
+        padding:2px;
+        margin-left:-20px;
+        text-align: center;
+        white-space: normal;
+        font-size: fonts(size) * 1.2;
+        color:colors(white);
+        font-weight: normal;
+        background-color: colors(green);
+        @include border-radius(radius(S));
+        overflow: hidden;
+      }
+      span{
+        display: block;
+        margin-top: 8px;
+        font-weight: normal;
+        color: colors(dark);
+        font-size: fonts(size) * 1.2;
+      }
+    }
+    .assure{
+      color: colors(dark);
+    }
+    .iconfont{
+      margin-right: 2px;
+      color: colors(blue);
+    }
+    .btn-lg{
+      width: 64px;
+    }
+    strong{
+      font-size: fonts(size) * 2;
+    }
+  }
+}

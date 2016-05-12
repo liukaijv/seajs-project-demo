@@ -1,0 +1,66 @@
+{{#if flag}}    
+暂无数据
+{{else}}
+{{#each this}}
+<div class="main">
+  <div class="tag-titlebar">
+      <h2>发布转让</h2>
+  </div>
+  <form class="floorform" id="J_addTransferForm" name="addTransferForm" method="post">
+      <div class="order-transfer">
+        <div class="bill">        
+        <h3><em class="tag">【理财产品】</em>{{fundname}}</h3>
+        <div class="properties clearfix">
+        <dl>
+        <dt>到期日：</dt>
+        <dd>{{validdate}}</dd>
+        </dl>
+        <dl>
+        <dt>投资金额：</dt>
+        <dd>{{applicationamount}}元</dd><dd>
+        </dd></dl>
+        <dl>
+        <dt>投资份额：</dt>
+        <dd>{{applicationvol}}元</dd><dd>
+        </dd></dl>
+        <dl>
+        <dt>成交价格：</dt>
+        <dd>{{tradingprice}}</dd>
+        </dl>
+        <dl>
+        <dt>利息：</dt>
+        <dd>{{interest}}元</dd>
+        </dl>
+        <dl>
+        <dt>总期限：</dt>         
+        <dd>{{deadline}}{{deadlineunitname}}</dd>
+        </dl>
+        <dl>
+        </div>
+        </div>    
+        <div class="floor">
+            <label class="property">转让份额：</label>
+            <div class="steps-input">
+                <input type="text" id="J_applicationvol" name="applicationvol" size="15" datatype="n" nullmsg="请输入金额！" errormsg="请正确输入金额!" value="{{applicationamount}}">
+            </div>
+        </div>  
+        <div class="floor">
+            <label class="property">回款渠道：</label>
+            <div class="steps-input">
+              <select id="J_repaycapitalaccount"></select>
+            </div>
+        </div>
+        <div class="floor">
+            <label class="property">交易密码：</label>
+            <div class="value">
+                <input type="password" id="J_tradepassword" autocomplete="off" datatype="n6-6" nullmsg="请输入交易密码！" errormsg="请输入正确的6位数交易密码！" name="tradepass">
+            <span class="kdValidform_checktip"></span></div>
+        </div>
+        <div class="actionArea">
+            <input class="btn-lg btn-red" type="button" id="J_doTransfer" value="确定">
+        </div>
+    </div>
+    </form>
+    </div>
+{{/each}}
+{{/if}}

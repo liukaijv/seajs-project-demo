@@ -1,0 +1,61 @@
+@charset "UTF-8";
+//参数配置
+@import "config"; //页面相关配置
+
+//通用主样式
+@import "model/reset"; //重置CSS基础样式
+@import "model/layout"; //栅格布局
+@import "model/public"; //公共
+
+//默认样式
+@import "model/button"; //按钮样式
+@import "model/form"; //公用的form
+@import "model/tab"; //Tab切换
+@import "model/box"; //盒子模块
+@import "model/news"; //盒子模块
+@import "model/crumb"; //通用面包屑
+.crumb{
+	height: 48px;
+	line-height: 48px;
+}
+@import "model/table"; //表格样式
+@import "model/tips"; //页面内提示块
+@import "model/list"; //列表
+@import "model/rank"; //排行
+@import "fonts/iconfont"; //字体样式
+
+//页面样式开始
+@import "model/icon"; //图片精灵
+@import "model/site-nav"; //站点导航
+@import "model/search"; //站点搜索
+@import "model/header"; //页头部
+@import "model/slider"; //滑块广告
+@import "model/sift"; //搜索筛选页
+@import "product/asset"; //金融资产
+@import "product/yield"; //权益资产
+@import "product/auction"; //竞价
+@import "product/loan"; //贷借款
+@import "publish/publish"; //项目发布
+@import "account/pay"; //支付页面
+@import "account/bond"; //报名
+@import "model/index"; //首页
+@import "product/shibor"; //首页
+
+
+// @import "model/index"; //首页
+// @import "model/share"; //通用百度分享
+// @import "model/product"; //产品详情页
+@import "model/article"; //文章详情
+@import "model/unit"; //小组件
+@import "model/step"; //小组件
+@import "model/progress"; //进度条
+// @import "model/comments"; //评论模块
+// @import "model/payment"; //支付方式
+
+//注册登录
+@import "model/register"; //注册登录
+@import "model/validform"; //验证ICON
+
+@import "model/pop"; //弹出盒子
+@import "model/pages"; //分页模块
+@import "model/footer"; //页脚&侧边导航

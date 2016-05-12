@@ -1,0 +1,104 @@
+@charset "UTF-8";
+//按钮基础类
+.btn{
+  @extend %button;
+}
+.btn-primary{
+  color:colors(white);
+  border-color:darken(colors(primary),2%);
+  background-color: colors(primary);
+  // @include background-image(linear-gradient(top,lighten(colors(primary),5%) colors(primary)));
+  &:hover,&:focus{
+    color:colors(white);
+    // @include background-image(linear-gradient(top,colors(primary) lighten(colors(primary),5%)));
+  }
+}
+.btn-auxiliary{
+  color:colors(white);
+  border-color:darken(colors(auxiliary),2%);
+  background-color: colors(auxiliary);
+  // @include background-image(linear-gradient(top,lighten(colors(auxiliary),5%) colors(auxiliary)));
+  &:hover,&:focus{
+    color:colors(white);
+    // @include background-image(linear-gradient(top,colors(auxiliary) lighten(colors(auxiliary),5%)));
+  }
+}
+.btn-gray{
+  color:colors(dark);
+  border-color:colors(gray);
+  @include background-image(linear-gradient(top,lighten(colors(gray),20%) lighten(colors(gray),15%)));
+  // @include text-shadow(1px 1px 0 0 rgba(colors(white), .5));
+  &:hover{
+    color:colors(dark);
+    // @include background-image(linear-gradient(top,lighten(colors(gray),5%) lighten(colors(gray),15%)));
+  }
+}
+.btn-red{
+  color:colors(white);
+  border-color: darken(colors(red),2%);
+  background-color: colors(red);
+  // @include background-image(linear-gradient(top,lighten(colors(red),5%) colors(red)));
+  &:hover,&:focus{
+    color:colors(white);
+    // @include background-image(linear-gradient(top,colors(red) lighten(colors(red),5%)));
+  }
+}
+.btn-orange{
+  color:colors(white);
+  border-color:darken(colors(orange),2%);
+  background-color: colors(orange);
+  // @include background-image(linear-gradient(top,lighten(colors(orange),5%) colors(orange)));
+  &:hover,&:focus{
+    color:colors(white);
+    // @include background-image(linear-gradient(top,colors(orange) lighten(colors(orange),5%)));
+  }
+}
+.btn-green{
+  color:colors(white);
+  border-color:darken(colors(green),2%);
+  background-color: colors(green);
+  // @include background-image(linear-gradient(top,lighten(colors(green),5%) colors(green)));
+  &:hover,&:focus{
+    color:colors(white);
+    // @include background-image(linear-gradient(top,colors(green) lighten(colors(green),5%)));
+  }
+}
+.btn-blue{
+  color:colors(white);
+  border-color:darken(colors(blue),2%);
+  background-color: colors(blue);
+  // @include background-image(linear-gradient(top,lighten(colors(blue),5%) colors(blue)));
+  &:hover,&:focus{
+    color:colors(white);
+    // @include background-image(linear-gradient(top,colors(blue) lighten(colors(blue),5%)));
+  }
+}
+
+/* XS最小号XS
+  SM小号S
+  MD中号M 默认为中号
+  LG大号L
+  XL更大一号XL */
+.btn-xs{
+  @extend %button;
+  padding: 0 5px;
+  line-height: 16px;
+  font-size: fonts(size) * 1.2;
+}
+.btn-sm{
+  @extend %button;
+  line-height: 20px;
+  font-size: fonts(size) * 1.4;
+}
+.btn-lg{
+  @extend %button;
+  padding: 0 16px;
+  line-height: 32px;
+  font-size: fonts(size) * 1.6;
+}
+.btn-xl{
+  @extend %button;
+  padding: 0 20px;
+  line-height: 40px;
+  font-size: fonts(size) * 1.8;
+}

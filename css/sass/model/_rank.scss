@@ -1,0 +1,61 @@
+@charset "UTF-8";
+//排行数字
+.rank-first,.rank-second,.rank-third,.rank-nor{
+	@include inline-block;
+	width:24px;
+	height:24px;
+	line-height:24px;
+	font-family: fonts(family);
+	font-size: fonts(size) * 1.4;
+	text-align: center;
+	color:colors(white);
+	background: colors(gray);
+	@include border-radius(50%);
+}
+.rank-first{
+	background-color:colors(red);
+}
+.rank-second{
+	background-color:colors(orange);
+}
+.rank-third{
+	background-color:colors(blue);
+}
+
+.rank{
+	margin-bottom: 16px;
+	font-size: fonts(size) * 1.4;
+	.box-hd{
+		height: 30px;
+		padding: 0 10px;
+		background-color: lighten(colors(gray),18%);
+		border-bottom: 1px solid lighten(colors(gray),10%);
+		h2{
+			line-height: 30px;
+			font-size: fonts(size) * 1.6;
+			color: colors(primary);
+			a{
+				color: colors(primary);
+			}
+		}
+	}
+	.table{
+		thead{
+			background:none;
+			th{
+				font-weight: normal;
+			}
+		}
+		tbody{
+			font-size: fonts(size) * 1.2;
+			tr{
+				@include last-child(){
+					td{
+						border-bottom: none;
+					}
+				}
+			}
+		}
+	}
+
+}

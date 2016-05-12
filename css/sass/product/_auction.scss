@@ -1,0 +1,326 @@
+@charset "UTF-8";
+.auction{
+	@include pie-clearfix;
+}
+
+//产品画廊
+.zoomMask{
+	background:colors(auxiliary) image-url("repeat.gif");
+	@include opacity(.3);
+}
+.gallery{
+	@include float;
+	margin-right: 20px;
+	.gallery-pic{
+		position: relative;
+		width: 350px;
+		height: 350px;
+		border: 1px solid colors(gray);
+		overflow: hidden;
+	}
+	.zoom{
+		position: absolute;
+		right:0;
+		bottom:0;
+		padding: 8px;
+		background-color: colors(light);
+		@include opacity(.8);
+		cursor: pointer;
+	}
+	.thumbnail{
+		position: relative;
+		width: 352px;
+		height: 54px;
+		margin: 10px 0;		
+		ul{
+			width: 540px;
+		}		
+		li{
+			position: relative;
+			@include float;
+			width: 50px;
+			height: 50px;
+			padding:1px;
+			border:1px solid colors(gray);
+			margin-right:10px;
+			cursor: pointer;
+			img{
+				width: 50px;
+				height: 50px;
+			}
+			&:hover{
+				border-color:lighten(colors(primary), 20%);
+			}
+			&.active{
+				padding:0;
+				border-color:colors(primary);
+				border-width:2px;
+				.i{
+					position: absolute;
+					right: 0;
+					bottom:0;
+				}
+			}
+
+		}
+		.ico-arrow{
+			display: block;
+			text-align: center;
+			line-height: 48px;
+			overflow: hidden;
+			&:before{
+				margin-left:1px;
+				font-family: fonts(cn);
+				font-size: fonts(size) * 2.4;
+				content:"›";
+				color: colors(gray);
+			}
+		}	
+		.prev,.next{
+			position: absolute;
+			top: 0;
+			width: 12px;
+			height: 54px;
+			border:1px solid lighten(colors(gray),10%);
+			background-color: colors(light);
+			cursor: pointer;
+			&:hover{
+				background-color: colors(light);
+			}			
+		}
+		.prev{
+			left: 0;
+			.ico-arrow{
+				&:before{
+					content:"‹";
+				}
+			}
+		}
+		.next{
+			right: 0;
+		}
+	}
+	.thumbnail-bd{
+		width: 310px;
+		height: 54px;
+		margin: 0 21px;
+		overflow: hidden;
+	}
+	.other{
+		line-height: 2.4;
+		font-size: fonts(size) * 1.4;
+		color: colors(dark);
+		strong{
+			color: colors(darker);			
+		}
+	}
+}
+
+.auction-info{
+	height: 460px;
+	margin: 0 270px 0 372px;
+	padding-right: 20px;
+	border-right: 1px dotted colors(gray);
+	h1{
+		max-height: 60px;
+		font-size: fonts(size) * 2.4;
+		// font-weight: bold;
+		line-height: 30px;
+		padding:6px 0 9px 0;
+		border-bottom:1px dotted colors(gray);
+		margin-bottom: 10px;
+		overflow: hidden;
+	}
+	dl{
+		font-size: fonts(size) * 1.4;
+		line-height: 30px;
+	}
+	dt{
+		@include float;
+		margin-right: 5px;
+		text-align: right;
+		color:darken(colors(dark), 20%);		
+	}
+	dd{
+		@include ellipsis;;
+		strong{
+			font-size: fonts(size) * 2.4;
+			font-weight: bold;
+			color:colors(red);
+		}
+	}
+	.col3{
+		@include pie-clearfix;
+		padding:10px 0;
+		overflow:hidden;
+		dl{
+			@include float;
+			width:27%;
+			height: 90px;
+			padding:0 3%;
+			line-height: 30px;
+			font-size: fonts(size) * 1.2;
+			border-left:1px solid lighten(colors(gray),10%);
+			margin-left: -1px;
+		}
+	}
+}
+
+.auction-option{
+	position: relative;
+	padding:9px;
+	border:1px solid lighten(colors(gray), 10%);
+	background-color: lighten(colors(gray), 18%);
+	margin-top: 20px;
+	.flag{
+		position: absolute;
+		top: -1px;
+		right: -1px;
+		span{
+			@include inline-block;
+			padding: 0 3px;
+			font-size: fonts(size) * 1.2;
+			line-height: 20px;
+			color: colors(white);
+			background-color: colors(green);
+			@include border-radius(0 0 0 radius(M));
+		}
+		.hide{
+			display: none;
+		}
+	}
+	.ico-doing{
+		background-color: colors(red);
+	}
+	p{
+		padding:10px 0 0 60px;
+	}
+}
+
+//拍卖出价记录
+.bid-record,.bin-record-list{
+	@include float(right);
+	width: 250px;
+	height: 460px;
+	overflow: hidden;
+	font-size: fonts(size) * 1.2;
+	.box-hd{
+		height: 30px;
+		padding: 0 10px;
+		background-color: lighten(colors(gray),18%);
+		border-bottom: 1px solid lighten(colors(gray),10%);
+		h2{
+			line-height: 30px;
+			font-size: fonts(size) * 1.4;
+			color: colors(primary);
+			a{
+				color: colors(auxiliary);
+			}
+		}
+		.more{
+			@include float(right);
+			color:colors(gray);
+		}
+	}
+	.box-bd{
+		height: 400px;
+		overflow: hidden;
+		p{
+			padding: 20px 0;
+			color: colors(dark);
+		}
+	}
+	.bid-ft{
+		margin-top: 5px;
+		border-top: 1px dotted colors(gray);
+		padding-top: 4px;
+		line-height: 20px;
+	}
+	.no-record{
+		height: 120px;
+		line-height: 120px;
+		color:colors(dark);
+	}
+}
+.bid-record,.bid-record-list{
+	.table{
+		font-size: fonts(size) * 1.2;
+		thead{
+			background:none;
+		}
+		th,td{
+			font-size: fonts(size) * 1.2;
+			border-style:dotted;
+		}
+	}
+	.light{
+		padding:2px 5px;
+		color: colors(white);
+		background-color: lighten(colors(blue), 40%);
+		@include border-radius(radius(M));
+	}
+}
+.bid-record-list{
+	.table{
+		width: 80%;
+		display: table;
+		margin: 0 auto;
+	}
+}
+
+// 项目介绍 & 项目须知
+.auction-introduce,.auction-know{
+	thead{
+		background: lighten(colors(gray),15%);
+	}
+	.table{
+		th{
+			color: colors(dark);
+			background-color: lighten(colors(gray),18%);
+			text-align: right;
+		}
+	}
+	.table + .table{
+		margin-top: -1px;
+	}
+}
+.auction-introduce{
+	.table{
+		th,td{
+			padding:20px 10px;
+		}
+	}
+}
+
+// 项目公告
+.auction-notice-con{
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	border-bottom: 1px dotted colors(gray);
+	p{
+		text-indent: 2em;
+		line-height: 1.5;
+		margin-bottom: 1em;
+	}
+}
+
+.detail-title{
+	height: 50px;
+	padding-top: 40px;
+	padding-bottom: 25px;
+	text-align: center;
+	h2{
+		@include inline-block;
+		padding: 0 10px;
+		font-size: fonts(size) * 3.2;
+		line-height: 40px;
+		color: colors(primary);
+		background-color: colors(white);
+	}
+	&:after{
+		content: '';
+		display: block;
+		border-bottom: 2px solid #b2b2b2;
+		margin-top: -20px;
+	}
+}

@@ -1,0 +1,31 @@
+<!-- footer start -->
+        <div id="footer">
+            <div class="footer-top">
+                <div class="w">
+                    <div class="gd-11">
+                        <ul class="ft-nav">
+                            <li> <a href="/content/news_list/index/3">关于我们</a> </li>
+                            <li> <a href="/content/news_list/index/2/2003">新手上路</a> </li>
+                            <li> <a href="/content/news_list/index/2">常见问题</a> </li>
+                        </ul>
+                        <!-- 页脚logo 开始 --><a href="/"><span class="ft-logo"><i class="share-bottom-logo"></i></span></a>
+                        <p class="copyright">©2015 招银 版权所有 ICP备12040508号</p>
+                    </div>
+                    <div class="gd-13">
+                        <!-- 二维码 开始 -->
+                        <ul class="qrcodes">
+                            <li> <img src="images/wechat.jpg" alt="扫一扫，关注我们的微信" title="扫一扫，关注我们的微信">
+                                <p>关注我们的微信</p>
+                            </li>
+                            <li>
+                                <!-- 联系方式 开始 -->
+                                <div class="contact">
+                                    <div class="freeline"> <span>服务时间(工作日 9:00-17:00)</span> <strong>400-820-8820</strong> </div>
+                                    <div class="email"> 客服邮箱： <a href="mailto:service@szkingdom.com">service@szkingdom.com</a> </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>

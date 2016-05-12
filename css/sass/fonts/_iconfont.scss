@@ -1,0 +1,35 @@
+@font-face {font-family: "iconfont";
+  src: url('iconfont/iconfont.eot'); /* IE9*/
+  src: url('iconfont/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont/iconfont.woff') format('woff'), /* chrome、firefox */
+  url('iconfont/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('iconfont/iconfont.svg#ico-font') format('svg'); /* iOS 4.1- */
+}
+
+[class^="ift-"]{
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.ift-shizhong:before { content: "\e60f"; }
+.ift-ok:before { content: "\e610"; }
+.ift-certification:before { content: "\e60a"; }
+.ift-shuaxin:before { content: "\e612"; }
+.ift-safe2:before { content: "\e611"; }
+.ift-advice:before { content: "\e60b"; }
+.ift-phone:before { content: "\e60c"; }
+.ift-auction:before { content: "\e60d"; }
+.ift-balance:before { content: "\e60e"; }
+.ift-card:before { content: "\e600"; }
+.ift-home:before { content: "\e601"; }
+.ift-money:before { content: "\e602"; }
+.ift-purse:before { content: "\e603"; }
+.ift-recharge:before { content: "\e604"; }
+.ift-safe:before { content: "\e605"; }
+.ift-search:before { content: "\e606"; }
+.ift-vat:before { content: "\e607"; }
+.ift-weixin:before { content: "\e608"; }
+.ift-withdraw:before { content: "\e609"; }

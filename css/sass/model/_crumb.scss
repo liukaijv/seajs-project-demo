@@ -1,0 +1,20 @@
+@charset "UTF-8";
+//面包屑
+.crumb{
+	font-size: fonts(size) * 1.2;
+	color:colors(gray);
+	font-family: fonts(cn);
+	em,b, strong, a{
+		font-family: fonts(family);
+	}
+	em,b{
+		font-style: normal;
+		color: colors(darker);
+	}
+	strong{
+		color: colors(blue);
+	}
+	a{
+		text-decoration: none;
+	}
+}

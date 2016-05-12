@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<!--#include virtual="/public/public_css.shtm"-->
+<link rel="stylesheet" type="text/css" href="/css/p2p_account.css"></link>
+<link rel="stylesheet" type="text/css" href="/css/kd.tools.validate.css"></link>
+<link rel="stylesheet" type="text/css" href="/css/iconfont/iconfont.css">
+<link rel="stylesheet" type="text/css" href="/css/login/iconfont/iconfont.css">
+<style>
+    .slider .slider-bd li a img{
+      width:100%;
+  }
+
+  </style>
+</head>
+
+<body>
+<!-- 引入头部文件 -->
+<!--#include virtual="/public/header.shtm"-->
+<!--引入头部-->
+<div class="slider" id="J_slider" style="margin-bottom:-10px;">
+  <div class="slider-bd">
+    <ul>
+      <li>
+        <a target="_self" href="javascript:void(0);" target="_self" >
+          <img src="../images/banner1-1300.png" width="100%"/>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="login-board">
+    <input type="hidden" id="forward" value="${forward!''}">
+    <h2>登录</h2>
+    <div class="validation" id="errortxt">
+      <span id="errortip"></span>
+    </div>
+    <form id="J_loginform" class="login-form" action="#" method="POST">
+      <ul>
+        <li class="username"> <i class="iconfont">&#xe626;</i>
+          <input type="hidden" name="back" id="back" value="<?php echo @$back;?>
+          " />
+          <input id="J_username" value="请输入您的用户名或手机号" onblur="if(this.value.replace(/\s/g, '')==''){this.value='请输入您的用户名或手机号';this.style.color='#ccc'}" onfocus="if(this.value=='请输入您的用户名或手机号'){this.value='';this.style.color='#333'}" name="username" type="text" maxlength="18" style="color: rgb(204, 204, 204);" datatype="*" sucmsg="用户名输入合法" nullmsg="用户名不能为空" errormsg="用户名不正确" class="Validform_error">
+        <li class="password"> <i class="iconfont">&#xe627;</i>
+          <input type="password" name="passwordtxt" class="input Validform_error" id="J_passwordtxt" datatype="*6-18" sucmsg="用户名密码合法" nullmsg="密码不能为空" errormsg="密码至少为6位">
+        </li>
+        <li>
+          <input name="authcode" id="authcode" type="text" value="验证码" onblur="if(this.value.replace(/\s/g, '')==''){this.value='验证码';this.style.color='#ccc'}" onfocus="if(this.value=='验证码'){this.value='';this.style.color='#333'}" class="input-authcode" style="color:#ccc">
+          <img id="imgauthcode" class="authcode" src="#" title="点击刷新验证码" alt="点击刷新验证码" />
+        </li>
+        <li>
+          <input class="btn-lg btn-blue" type="button" id="J_login" value="登录"></li>
+        <li>
+          <a href="/user/retrieve/retrieve_pwd" class="fl">忘记密码？</a>
+          <span class="fr">
+            没有账号？
+            <a href="user/register.html" class="blue">马上注册</a>
+          </span>
+        </li>
+      </ul>
+    </form>
+  </div>
+</div>
+<div id="J_footer"></div>
+
+<script type="text/javascript" src="../../sea.js"></script>
+<script type="text/javascript" src="../../seajs_config.js"></script>
+<script type="text/javascript">
+  seajs.use(["kfat/public/login","kfat/public/header","kfat/public/footer"]);
+</script>
+</body>
+
+</html>

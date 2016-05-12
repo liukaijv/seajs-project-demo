@@ -1,0 +1,489 @@
+@charset "UTF-8";
+.headlines{
+	@include pie-clearfix;
+	margin-bottom: 10px;
+	.thumbnail{
+		@include float;
+		margin-right:10px;
+	}
+	h4{
+		height:35px;
+		line-height:35px;
+		overflow:hidden;
+		font-weight: bold;
+		font-size:fonts(size) * 1.8;
+	}
+	p{
+		line-height:1.8;
+		font-size: fonts(size) * 1.4;
+		text-indent:2em;
+		color:colors(darker);
+	}
+	.more{
+		color:colors(gray);
+	}
+}
+
+
+//文字列表
+.list{
+	overflow: hidden;
+	li{
+		padding: 0 5px;
+		line-height: 36px;
+		font-size: fonts(size) * 1.4;
+		color:colors(dark);
+		@include ellipsis;
+		@include pie-clearfix;
+		border-bottom: 1px dotted lighten(colors(gray),10%);
+		@include last-child(){
+			border-bottom: 0;			
+		};
+		a{
+			text-decoration: none;
+			@include transition(.3s ease-in);
+		}
+		.time{
+			@include float(right);
+			margin: 0 3px;			
+			font-size: fonts(size) * 1.2;
+		}
+	}
+}
+.list-dot{
+	li{
+		&:before{
+			content:"›";
+			margin-right: 3px;
+		}
+	}
+}
+
+.list-thumbnail{
+	li{
+		padding: 8px 0;
+		margin-top: -1px;
+		border-top: 1px solid colors(light);
+	}
+	.thumbnail{
+		@include float;
+		margin-right: 10px;
+	}
+	h3{
+		line-height: 1.5;
+		color: colors(darker);
+		white-space: normal;
+	}
+}
+//文字列表 结束
+
+//产品列表
+.pro-list{
+	@include pie-clearfix;
+	.item{
+		position: relative;
+		@include pie-clearfix;
+		padding: 20px;
+		margin-bottom: 30px;
+		border: 1px solid lighten(colors(gray), 10%);
+		background-color:colors(white);
+	}
+	.thumbnail{
+		@include float;
+		width: 200px;
+		height: 150px;
+		position: relative;
+		margin-right: 16px;
+
+		overflow: hidden;
+		i{
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+		img{
+			width: 100%;
+			height: 100%;
+		}
+	}
+	//标识进度图标
+	.ico-start,.ico-doing{
+		padding: 0 3px;
+		font-size: fonts(size) * 1.2;
+		line-height: 20px;
+		color: colors(white);
+		background-color: colors(green);
+		@include border-radius(0 0 0 radius(M));
+	}
+	.ico-doing{
+		background-color: colors(red);
+	}
+	.info{
+		font-size: fonts(size) * 1.4;
+		@include pie-clearfix;
+		padding: 0 216px; 
+		dt,dd{
+			line-height: 30px;
+			@include ellipsis;
+			a{
+				color: colors(darker);
+			}
+		}
+		dt{
+			@include float;
+			margin-right: 3px;
+			color: colors(dark);
+		}
+		strong{
+			color: colors(red);
+			font-size: fonts(size) * 1.8;
+			line-height: 1;
+		}
+	}
+	h3{
+		font-size: fonts(size) * 1.8;
+		color: colors(auxiliary);
+		height: 20px;
+		line-height: 20px;
+		margin-bottom: 10px;
+	}
+	.col2{
+		dl{
+			@include float;
+			width: 45%;
+			margin-right: 5%;
+		}
+	}
+	.col3{
+		dl{
+			height: 30px;
+		}
+		dt,dd{
+			@include float;
+		}
+		dd{
+			margin-right: 20px;			
+		}
+	}
+
+	.operate{
+		@include float(right);
+		width: 215px;
+		padding-top: 40px;
+		.time{
+			font-size:fonts(size) * 1.4;
+			padding-top: 20px;
+			span{
+				font-size:fonts(size) * 1.8;
+			}
+		}
+	}
+}
+
+.pro-list2{
+	@extend %clearfix;
+	.item{
+		position: relative;
+		@extend %clearfix;
+		margin-bottom: 30px;
+		border: 1px solid lighten(colors(gray), 10%);
+		background-color:colors(white);
+		font-size: fonts(size) * 1.4;
+		@include border-radius(radius(S));
+		
+		//跳出嵌套
+		@at-root{
+			//项目信息盒子
+			&-hd{
+				font-size: fonts(size) * 1.4;
+				@extend %clearfix;
+				padding:10px;
+				margin-bottom: 16px;
+				background-color: colors(light);
+				@include border-radius(radius(S) radius(S) 0 0);
+				border-bottom:1px solid lighten(colors(gray), 12%);
+				p{
+					font-size: fonts(size) * 1.2;
+					color: colors(dark);
+				}
+			}
+
+			// 项目标题
+			&-title{
+				font-size: fonts(size) * 1.8;
+				color: colors(auxiliary);
+				padding:5px 0;
+			}
+
+			// 项目属性
+			&-attr{
+				padding: 0 10px;
+				@extend %clearfix;
+				a{
+					color: colors(darker);
+				}
+				dt,dd{
+					line-height: 30px;
+					@include ellipsis;
+				}
+				dt{
+					@include float;
+					margin-right: 3px;
+					color: colors(dark);
+				}
+				strong{
+					color: colors(red);
+					font-size: fonts(size) * 1.8;
+					line-height: 1;
+				}
+			}
+			
+		}		
+	}
+
+	// 分列
+	.col2{
+		dl{
+			@include float;
+			width: 45%;
+			margin-right: 10%;
+			@include nth-child(2n){
+				margin-right: 0;
+			};
+		}
+	}
+	.col3{
+		dl{
+			@include float;
+			width: 30%;
+			margin-right: 5%;
+			@include nth-child(3n){
+				margin-right: 0;
+			};
+		}
+	}
+	.col4{
+		dl{
+			@include float;
+			width: 22.75%;
+			margin-right: 3%;
+			@include nth-child(4n){
+				margin-right: 0;
+			};
+		}
+	}
+
+	// 缩略图
+	.thumbnail{
+		@include float;
+		width: 200px;
+		height: 150px;
+		position: relative;
+		margin-right: 16px;
+
+		overflow: hidden;
+		i{
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+		img{
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	// 操作
+	.handle{
+		padding:10px;
+		@extend %clearfix;
+		.time{
+			line-height: 34px;
+			span{
+				font-size:fonts(size) * 1.8;
+			}
+		}
+	}
+}
+
+.time{
+	color: colors(dark);
+	span{
+		color: colors(darker);
+		font-size:fonts(size) * 2.4;
+		padding:0 1px;
+	}
+}
+
+.auction-list{
+	@include pie-clearfix;
+	.item{
+		@include float;
+		width: 280px;
+		margin:0 20px 30px 0;
+		font-size: fonts(size) * 1.2;
+		background-color:colors(white);
+		a{
+			display: block;
+			position: relative;
+			border: 1px solid lighten(colors(gray), 10%);
+			@include pie-clearfix;
+			&:hover{
+				border-color: lighten(colors(primary), 10%)
+			}
+		}
+	}
+
+	.item-hd{
+		position: relative;
+		height: 185px;
+	}
+	.item-bd{
+		padding: 10px;
+		dl{
+			margin-bottom: 10px;
+		}
+		dt,dd{
+			display: inline;
+			margin-right: 5px;
+			color: colors(dark);
+		}
+		dd{
+			color: colors(darker);
+			strong{
+				font-size: fonts(size) * 2.6;
+				font-weight: bold;
+			}
+		}
+		.bid-tips{
+			color: colors(dark);
+		}
+	}
+	.item-ft{
+		color: colors(dark);
+		border-top: 1px dotted colors(gray);
+		span{
+			@include float;
+			width: 50%;
+			height: 30px;
+			line-height: 30px;
+			border-left: 1px dotted colors(gray);
+			margin-left: -1px;
+			text-align: center;
+			&.view{
+				border-left: none;
+			}
+		}
+		em{
+			font-weight: bold;
+			margin-right: 3px;
+		}
+	}
+
+	.thumbnail{
+		width: 100%;
+	}
+	.title{
+		width: 258px;
+		height: 25px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		padding: 0 10px;
+		line-height: 25px;
+		background-color: colors(light);
+		@include ellipsis;
+	}
+
+	.price-todo{
+		strong{
+			color: colors(red);
+		}
+	}
+	.price-done{
+		strong{
+			color: colors(green);
+		}
+	}
+
+	.flag-todo,.flag-doing,.flag-done,.flag-break,.flag-revocation{
+		position: absolute;
+		height: 0;
+		overflow: hidden;
+	}
+	.flag-todo,.flag-doing{
+		top: 235px;
+		right: -3px;
+		width: image-width("flag_todo.png");			
+		padding-top: image-height("flag_todo.png");
+		line-height: image-height("flag_todo.png");
+		background: image-url("flag_todo.png") no-repeat;
+	}
+	.flag-doing{
+		background-image: image-url("flag_doing.png");
+	}
+	.flag-done,.flag-break,.flag-revocation{			
+		top: 80px;
+		right: 20px;
+		width: image-width("flag_done.png");			
+		padding-top: image-height("flag_done.png");
+		line-height: image-height("flag_done.png");
+		background: image-url("flag_done.png") no-repeat;
+		
+	}
+	.flag-break{
+		background-image: image-url("flag_break.png");
+	}
+	.flag-revocation{
+		background-image: image-url("flag_revocation.png");
+	}
+	.hide{
+		display: none;
+	}
+}
+
+//图片列表
+.pic-list{
+	@include pie-clearfix;
+	li{
+		@include float;
+		margin:0 10px 10px;
+		h3{
+			height: 30px;
+			line-height: 30px;
+			font-size: fonts(size) * 1.4;
+			text-align: center;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			overflow: hidden;
+		}
+		
+	}
+	.pic{
+		text-align: center;
+		img{
+			width: 100%;
+			height: auto;
+		}
+	}
+	&.col7{
+		li{
+			width: percentage(1/7 - 0.01);
+			margin: 0 0.5% 10px 0.5%;
+			img{
+				width: 100%;
+				height: 36px;
+			}
+		}
+	}
+	&.col4{
+		li{
+			width: percentage(1/4 - 0.01);
+			margin: 0 0.5% 10px 0.5%;
+			img{
+				width: 100%;
+				height: 52px;				
+			}
+		}
+	}
+}

@@ -1,0 +1,23 @@
+@charset "UTF-8";
+//栅格栏配置
+$is_percentage:true;
+$grid_precentage_width: 1200px;
+$container:".w"; //包裹类
+$gridname:".gd"; //设置栅格栏类名
+$grid_width: 960px;
+$def_gutter: 24px; //槽间距
+$columns: 24;
+@import "core/grid"; //引入栅格栏模块
+@include auto_grids; //自动创建栅格类
+
+.main, .aside{
+	@include float;
+}
+.main{
+	width: 70%;
+	margin: 0 5%;
+}
+.aside{
+	width: 20%;
+	margin-top: -56px;
+}

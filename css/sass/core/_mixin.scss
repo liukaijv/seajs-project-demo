@@ -1,0 +1,170 @@
+@charset "UTF-8";
+//图片精灵mixin注意事项 精灵的获取需根据精灵的文件夹
+//获得精灵图片宽高及坐标
+@mixin mysprite($sprite, $isheight:true){
+  //$icon 全局_icon.sass申明变量
+  width: sprite-width($icon, $sprite);
+  @if $isheight {
+    height: sprite-height($icon, $sprite);
+  }@else{
+    height:0;
+    padding-top:sprite-height($icon, $sprite);
+    line-height:1;
+    overflow: hidden;
+    _font-size:0; //解决ie6撑搞
+  }  
+  background-position: sprite-position($icon, $sprite);
+}
+
+//获得精灵选择
+@mixin mysprite-selectors($map, $sprite-name, $full-sprite-name) {
+  @each $selector in $sprite-selectors {
+    @if sprite_has_selector($map, $sprite-name, $selector) {
+      &:#{$selector}, &.#{$full-sprite-name}-#{$selector}, &.#{$full-sprite-name}-#{$selector} {
+      		@include sprite-sprite-position("#{$sprite-name}_#{$selector}");          
+      }
+    }
+  }
+}
+//设置backgroundSize精灵图片
+@mixin resize-sprite($sprite, $isheight:true){
+  //$spritePre 全局_icon.sass申明变量
+  //$splitSprite 全局_icon.sass申明变量
+  width: sprite-width($icon, $sprite) * ($spritePre/100);
+  @if $isheight {
+    height: sprite-height($icon, $sprite) * ($spritePre/100);
+  }@else{
+    height:0;
+    padding-top:sprite-height($icon, $sprite) * ($spritePre/100);
+    line-height:1;
+    overflow: hidden;
+    _font-size:0; //解决ie6撑搞
+  }
+  background-size:(image-width($splitSprite) * ($spritePre/100)) (image-height($splitSprite) * ($spritePre/100));
+  background-position:0 floor(nth(sprite-position($icon, $sprite),2)  * ($spritePre/100));
+}
+
+//设置箭头图标
+@mixin arrow($color:colors(gray) transparent transparent, $width:7px 7px 0,$style:solid dashed dashed){
+	content:'';
+  font-size: 0;
+  width:0; height:0;line-height:0;
+  border-width:$width;
+	border-style:$style;
+	border-color:$color;
+}
+@mixin arrow-border($color:colors(white),$width:10px,$height:10px){
+    content: '';
+    display: inline-block;
+    width: $width; height: $height;
+    border: 1px solid $color;
+    border-width: 1px 1px 0 0;
+    @include transform(rotate(45deg));
+}
+
+
+//hover 生成对应的伪类
+@mixin hover{  
+  &:hover,&.hover{
+    @content;
+  }
+}
+
+//自定义线性渐变
+@mixin linear-gradient($angle, $details...){
+  //ie789
+  //background:image-url('gradient.png') repeat-x left top;
+  //ie10以上
+  //filter:progid:DXImageTransform.Microsoft.Gradient(startColorStr='transparent', endColorStr='#F3F3F7', gradientType='0');
+  background:linear-gradient($angle, $details...);
+  //ie6
+  _background-color:colors(black);
+  _filter:alpha(opacity=50);
+}
+
+/**
+ * 自定设置百分比 tags_per_width
+ * 实用范围 知道槽间距为margin-right, 子标签左右对齐父元素
+ * @parm $n 没换多少个标签
+ * @parm $gutter 每个标签间的槽距
+ */
+@mixin tags_per_width($n, $gutter){
+  width: (percentage(1 / $n) - $gutter) + ($gutter / $n);
+  margin-right: $gutter;
+  @include nth-child($n + 'n'){
+    margin-right: 0;
+  }
+}
+
+/**
+ * 获取颜色map方法
+ * @parm $k 颜色的key值
+ */
+@function colors($k){
+  @if not map-has-key($color, $k){
+      @warn "属性 `#{$k}` 在 `$color` 没找到。";
+  }  
+  @return map-get($color, $k);
+}
+
+/**
+ * 获取字体map方法
+ * @parm $k 颜色的key值
+ */
+@function fonts($k){
+  @if not map-has-key($font, $k){
+      @warn "属性 `#{$k}` 在 `$fonts` 没找到。";
+  }
+  @return map-get($font, $k);
+}
+
+/**
+ * 获取层级map方法
+ * @parm $k 颜色的key值
+ */
+@function zIndex($k){
+  @if not map-has-key($zIndex, $k){
+      @warn "属性 `#{$k}` 在 `$zIndex` 没找到。";
+  }
+  @return map-get($zIndex, $k);
+}
+
+/**
+ * 获取圆角map方法
+ * @parm $k 颜色的key值
+ */
+@function radius($k){
+  @if not map-has-key($radius, $k){
+      @warn "属性 `#{$k}` 在 `$radius` 没找到。";
+  }
+  @return map-get($radius, $k);
+}
+
+/**
+ * 获取圆角map方法
+ * @parm $k 颜色的key值
+ */
+@function button($k){
+  @if not map-has-key($button, $k){
+      @warn "属性 `#{$k}` 在 `$button` 没找到。";
+  }
+  @return map-get($button, $k);
+}
+
+//定义获取map值的方法
+@function getmap($key,$map:''){
+  @if $map != '' {
+    @if not map-has-key($map, $key){
+        @warn "属性 `#{$key}` 在 `$map` 没找到。";
+    }
+    @return map-get($map, $key);
+  }@else{
+    @return $key;
+  }    
+}
+
+//ie9一下不支持rgba，下面是rgba的替代
+@mixin myrgba($color,$opacity){
+  background-color: rgba($color,$opacity);
+  filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#cc000000, endcolorstr=#cc000000);
+}

@@ -1,0 +1,445 @@
+@charset "UTF-8";
+/**! 
+ * @author colpu
+ * @copyright mingfu network
+ * 本配置基于scss框架compass,在运用时请注意是否安装sass,compass
+ */
+/* @media all and (orientation:portrait){ //这是匹配竖屏的状态，竖屏时的css代码
+  @content;
+}
+@media all and (orientation:landscape){ //这是匹配横屏的状态，横屏时的css代码
+  @content;
+} */
+/**
+ * 自定设置百分比 tags_per_width
+ * 实用范围 知道槽间距为margin-right, 子标签左右对齐父元素
+ * @parm $n 没换多少个标签
+ * @parm $gutter 每个标签间的槽距
+ */
+/**
+ * 获取颜色map方法
+ * @parm $k 颜色的key值
+ */
+/**
+ * 获取字体map方法
+ * @parm $k 颜色的key值
+ */
+/**
+ * 获取层级map方法
+ * @parm $k 颜色的key值
+ */
+/**
+ * 获取圆角map方法
+ * @parm $k 颜色的key值
+ */
+/**
+ * 获取圆角map方法
+ * @parm $k 颜色的key值
+ */
+.clear, .clearfix {
+  *zoom: 1;
+}
+.clear:after, .clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: #2e2e2e;
+}
+a:hover {
+  color: #af1a19;
+}
+
+img {
+  vertical-align: middle;
+}
+
+body {
+  font-size: 16px;
+  color: #2e2e2e;
+  font-family: "Microsoft Yahei", SimSun, Tahoma, arial, SimHei, sans-serif;
+}
+
+input {
+  font-family: inherit;
+}
+
+hr {
+  border: 0;
+  border-bottom: 1px dotted #ccc;
+  height: 1px;
+  margin: 10px 0 9px 0;
+  *margin: 3px 0 2px 0;
+}
+
+.w {
+  min-width: 960px;
+  max-width: 1200px;
+  _width: expression(this.width<960px ? 960px: this.width<1200px?this.width:1200px);
+  *zoom: 1;
+  margin: 0 auto;
+}
+.w:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.gd-1, .gd-2, .gd-3, .gd-4, .gd-5, .gd-6, .gd-7, .gd-8, .gd-9, .gd-10, .gd-11, .gd-12, .gd-13, .gd-14, .gd-15, .gd-16, .gd-17, .gd-18, .gd-19, .gd-20, .gd-21, .gd-22, .gd-23 {
+  float: left;
+  display: inline;
+  padding-left: 1.25%;
+  padding-right: 1.25%;
+}
+
+.gd-1 {
+  width: 1.66667%;
+}
+
+.gd-2 {
+  width: 5.83333%;
+}
+
+.gd-3 {
+  width: 10%;
+}
+
+.gd-4 {
+  width: 14.16667%;
+}
+
+.gd-5 {
+  width: 18.33333%;
+}
+
+.gd-6 {
+  width: 22.5%;
+}
+
+.gd-7 {
+  width: 26.66667%;
+}
+
+.gd-8 {
+  width: 30.83333%;
+}
+
+.gd-9 {
+  width: 35%;
+}
+
+.gd-10 {
+  width: 39.16667%;
+}
+
+.gd-11 {
+  width: 43.33333%;
+}
+
+.gd-12 {
+  width: 47.5%;
+}
+
+.gd-13 {
+  width: 51.66667%;
+}
+
+.gd-14 {
+  width: 55.83333%;
+}
+
+.gd-15 {
+  width: 60%;
+}
+
+.gd-16 {
+  width: 64.16667%;
+}
+
+.gd-17 {
+  width: 68.33333%;
+}
+
+.gd-18 {
+  width: 72.5%;
+}
+
+.gd-19 {
+  width: 76.66667%;
+}
+
+.gd-20 {
+  width: 80.83333%;
+}
+
+.gd-21 {
+  width: 85%;
+}
+
+.gd-22 {
+  width: 89.16667%;
+}
+
+.gd-23 {
+  width: 93.33333%;
+}
+
+.gd-24 {
+  margin: 0 auto;
+  width: 97.5%;
+}
+
+
+.main {
+  background:#fff;
+}
+
+.aside{
+  margin-top:-28px;
+}
+
+.red {
+  color: #f46468;
+}
+
+.orange {
+  color: #ff8800;
+}
+
+.yellow {
+  color: #f1ba08;
+}
+
+.blue {
+  color: #3498db;
+}
+
+.purple {
+  color: #675fd6;
+}
+
+.green {
+  color: #00c246;
+}
+
+.dark {
+  color: #999;
+}
+
+.gray {
+  color: #ccc;
+}
+
+.white {
+  color: #fff;
+}
+
+.bg-red {
+  background-color: #f46468;
+}
+
+.bg-orange {
+  background-color: #ff8800;
+}
+
+.bg-yellow {
+  background-color: #f1ba08;
+}
+
+.bg-blue {
+  background-color: #3498db;
+}
+
+.bg-purple {
+  background-color: #675fd6;
+}
+
+.bg-green {
+  background-color: #00c246;
+}
+
+.bg-gray {
+  background-color: #f5f5f5;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.tac {
+  text-align: center;
+}
+
+.tar {
+  text-align: right;
+}
+
+.f12 {
+  font-size: 12px;
+}
+
+.f14 {
+  font-size: 14px;
+}
+
+.del {
+  text-decoration: line-through;
+}
+
+.blod {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.hide {
+  display: none;
+}
+
+.show, .block {
+  display: block;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.pt5 {
+  padding-top: 5px;
+}
+
+.pt10 {
+  padding-top: 10px;
+}
+
+.pt20 {
+  padding-top: 20px;
+}
+
+.mt5 {
+  margin-top: 5px;
+}
+
+.mt10 {
+  margin-top: 10px;
+}
+
+.mt20 {
+  margin-top: 20px;
+}
+
+.mb5 {
+  margin-bottom: 5px;
+}
+
+.mb10 {
+  margin-bottom: 10px;
+}
+
+.mb20 {
+  margin-bottom: 20px;
+}
+
+.mt32 {
+  margin-top: 32px;
+}
+
+.banner, .pro-figure {
+  height: 300px;
+  overflow-x: hidden;
+}
+.banner a, .pro-figure a {
+  display: block;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.pro-figure {
+  margin-bottom: -150px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+/*# sourceMappingURL=base.css.map */

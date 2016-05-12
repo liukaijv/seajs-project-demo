@@ -1,0 +1,83 @@
+
+{{#if flag}}
+请求错误
+{{else}}
+  {{#each this}}
+  <div class="box order-confirm">
+    <div class="box-hd">
+      <h2 class="title">支付订单</h2>
+    </div>
+    <div class="box-bd">
+              <p class="f24 mt20">支付金额：<strong class="f32 red">100.00</strong>元</p>
+        <p class="tips mt20">请您及时支付，以便订单尽快处理。</p>
+        <div class="form mt20">
+          <dl>
+            <dt>
+              <label for="">产品名称</label>
+            </dt>
+            <dd class="f24">
+              <em>{{fundname}}</em> </dd>
+            <dt>
+              <label for="">订单编号</label>
+            </dt>
+            <dd>
+              <strong class="f24 blue">{{appsheetserialno}}</strong> </dd>
+            <dt>
+              <label for="">产品编号</label>
+            </dt>
+            <dd>
+              {{fundcode}} 
+            </dd>
+            <dt>
+              <label for="">订购人</label>
+            </dt>
+            <dd>
+              {{investorname}} 
+            </dd>
+            <dt>
+              <label for="">年化收益率</label>
+            </dt>
+            <dd>
+              <strong class="f24 red">{{annualrate}}</strong>% </dd>
+            <dt>
+              <label for="">投资日期</label>
+            </dt>
+            <dd>
+              {{transactiondate}}
+            </dd>
+          </dl>
+        </div>
+      
+        <form class="pay-method" id="J_orderForm" method="post"> 
+          <dl id="TPD">
+              <ul class="account-info">
+            <li class="hide">
+              <dt class="operate">
+                          <input id="TPD_option" checked="true" name="TPD_option" type="checkbox" class="hide" datatype="*" nullmsg="请选择支付方式!" disabled=""><label for="TPD_option" class="radio_checkbox">三方支付</label>
+              
+              <span class="kdValidform_checktip"></span></dt>
+              </li>
+            <li>
+            <dd>
+              <!--<label>账户余额：</label>
+              <span><em>0.00</em>元</span>-->
+              <input id="J_thirdpayamount" name="thirdpayamount" value="0.00" title="三方支付账户余额" type="hidden">
+            </dd> 
+            </li>
+              <li>
+            <dd>
+              <label>支付密码：</label>
+              <input class="transition" id="J_transpwd" type="password" datatype="n6-6" nullmsg="请输入6位数字交易密码！" errormsg="交易密码只能是6位数字">
+              <input name="orderNo" id="J_orderNo" value="21201603041915292232" type="hidden">
+            <span class="kdValidform_checktip"></span></dd>
+            </li>
+            </ul>
+          </dl>
+          <div class="tar">
+            <input class="btn-lg btn-red" id="J_confirm" type="button" value="确认支付"">
+          </div>
+        </form>
+  </div>
+</div>
+{{/each}}
+{{/if}}

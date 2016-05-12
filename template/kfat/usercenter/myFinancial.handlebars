@@ -1,0 +1,47 @@
+<table class="table table-hline">
+    <colgroup>
+      <col width="20%">
+      <col>
+      <col>
+      <col>
+      <col>
+      <col>
+    </colgroup>
+    <thead>
+      <tr class="tac">
+        <th>项目名称</th>
+        <th>年化收益率</th>
+        <th>持有份额(份)</th>
+        <th>已收收益(元)</th>
+        <th>起息日</th>
+        <th>操作</th>
+        <!--<th>查看合同</th>-->
+      </tr>
+    </thead>
+{{#if flag}}
+<tbody></tbody><tfoot>
+  <tr>
+    <td colspan="7" class="tac">暂无购买的记录！</td>
+  </tr>
+</tfoot>
+{{else}}
+  {{#each this}}
+  <tr>
+    <td>
+      <a class="blue" href="/financial/bondsdetail.html?id={{fundcode}}">{{fundname}}</a>
+    </td>
+    <td>{{returnrate}}%</td>
+    <td>{{lastfundvol}}</td>
+    <td>{{receiveinterest}}</td>
+    <td>{{shareregisterdate}}</td>
+    <td class="tac">    
+      {{#equal istrans '1'}}
+        <a class="btn btn-red" href="/usercenter/transfer_detail.html?appsheetserialno={{appsheetserialno}}&detailserialno={{detailserialno}}">转让</a>       
+      {{/equal}}    
+      <a class="btn btn-red J_redeem href="javascript:void(0);" appsheetserialno="{{appsheetserialno}}" applicationamount="{{lastfundvol}}" fundcode="{{fundcode}}" fundname="{{fundname}}">赎回</a>
+    </td>
+  </tr>
+{{/each}}
+{{/if}}
+</table>
+<ul id="page_has" class="pagination"><li class="disabled"><a class="first">首页</a></li><li class="pre disabled"><a class="disabled prev">上一页</a></li><li class="page active" pnum="1"><a page="1">1</a></li><li></li><li class="next disabled"><a class="disabled next">下一页</a></li><li class="last disabled"><a class="last" target="_self">末页</a></li><li class="disabled"><a class="normalsize">共1页</a></li></ul>

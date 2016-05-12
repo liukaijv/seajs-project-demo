@@ -1,0 +1,51 @@
+{{#if flag}}
+  暂无数据
+{{else}}
+  {{#each this}}
+<div class="account-figure">
+  <div class="w">
+    <div class="gd-24 bd">
+      <div class="uc-userinfo">
+        <div class="uc-userinfo-hd">
+          <!--根据登陆用户查询用户头像-->
+          <div class="thumbnail">
+            <a href="/usercenter/accountinfo.html" target="_self"><img src="/images/usercenter/user_figure.png"></a>
+          </div>
+          <p class="user-name">您好，<a href="/usercenter/accountinfo.html" target="_self" title="用户名" id="J_username"></a><a href="/usercenter/accountinfo.html" class="user-info" target="_self">账户信息</a></p>
+          <!-- <div class="user-info">
+              <div class="user-info-hd">
+                  <i class="ico-arrow"></i><span class="blue"><a href="/account/accountinfo" target="_self">账户信息</a></span>
+              </div>
+          </div> -->
+          <div class="aside-safe"> <span>账户安全级别：</span>
+            <div class="progress">
+              <div class="per-bar"> <span class="per" style="width: 34%;"></span> </div>  <em>较高</em> </div>
+          </div>
+        </div>
+      </div>
+      <div class="operate">
+        <ul>
+          <li><a href=""><i class="ift-home"></i>平台中心</a></li>
+          <li><a href=""><i class="ift-safe"></i>账户安全</a></li>
+          <li><a href=""><i class="ift-card"></i>银行卡</a></li>
+          <li><a href="" class="recharge"><i class="ift-recharge"></i>充值</a></li>
+          <li><a href="" class="withdraw"><i class="ift-withdraw"></i>提现</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="now_yields_info"> <span class="mask"></span>
+    <div class="w">
+      <div class="gd-24">
+        <ul>
+          <li>账户余额: <strong>{{#toLocalString realmount}}{{/toLocalString}}</strong>元</li>
+          <!--<li>应收收益: <strong>{{interest}}</strong> 元</li>
+          <li>已收收益: <strong>{{receiveinterest}}</strong> 元</li>-->
+          <li>资金冻结金额: <strong>{{#toLocalString frozenamount}}{{/toLocalString}}</strong>元</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+  {{/each}}
+{{/if}}

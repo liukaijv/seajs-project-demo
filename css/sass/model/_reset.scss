@@ -1,0 +1,24 @@
+@charset "UTF-8";
+@import 'compass/reset'; //页面重置
+
+a{
+	text-decoration: none;
+	@include link-colors(colors(darker),colors(primary));
+}
+img{ vertical-align: middle;}
+body{
+	font-size: fonts(size) * 1.6;
+	color:colors(darker);
+	font-family: fonts(family);
+	//background: colors(light) image-url('repeat.gif') center center;
+}
+input{
+	font-family: inherit;
+}
+hr{
+	border:0;
+	border-bottom:1px dotted colors(gray);
+	height:1px;
+	margin:10px 0 9px 0;
+	*margin:3px 0 2px 0;
+}

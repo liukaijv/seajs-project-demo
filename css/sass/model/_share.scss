@@ -1,0 +1,16 @@
+@charset "UTF-8";
+//分享
+.share{
+	@include pie-clearfix;
+	height:28px;
+	strong{
+		@include float;
+		margin-right: 5px;
+		line-height: 28px;
+		font-size: fonts(size) * 1.2;
+		vertical-align: middle;	
+	}
+	.bds_more{
+		font-size: fonts(size) * 1.2;
+	}
+}

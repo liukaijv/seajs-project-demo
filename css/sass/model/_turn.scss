@@ -1,0 +1,120 @@
+@charset "UTF-8";
+//轮播广告turnad
+.turn{
+	position: relative;
+	//height: 320px;
+	.turn-hd{
+		position: absolute;
+		height: 16px;
+		bottom:10px;
+		margin: 0 -16px;
+		left: 50%;
+		text-align: center;
+		_width: 100px;
+		ul{
+			position: relative;
+			z-index:1;
+		}
+		li{
+			@include float;
+			width: 12px;
+			height: 0;			
+			padding-top: 12px;
+			margin:0 2px;
+			overflow: hidden;    
+			line-height: 12px;
+			text-align:center;
+			background-color:colors(white);
+			cursor:pointer;
+			@include border-radius(radius(L));
+			@include opacity(.5);
+			&.active{
+				@include opacity(1);
+			}
+		}
+		.mask{
+			position: absolute;
+			top: -5px;
+			left: -11px;
+			display:block;
+			width:100%;
+			height: 12px;
+			padding: 4px 10px;
+			border: 1px solid rgba(colors(black),0.7);
+			line-height: 1;
+			background:rgba(colors(black),0.5);
+			@include opacity(0.5);
+			@include border-radius(radius(L) * 2);		
+			*display: inline;
+			*zoom:1;
+		}
+
+		@include max-screen(960px){
+			height: 10px;
+			margin: 0 -10px;
+			li{
+				width: 6px;
+				padding-top: 6px;
+			}
+			.mask{
+				top:-3px;
+				left: -5px;
+				width:100%;
+				height: 6px;
+				padding: 2px 5px;
+			}	
+		};
+	}
+	.turn-bd{
+		overflow: hidden;   
+		width: 100%;
+		max-height: 320px;
+		//@include border-radius(radius(M));
+		li{
+			@include float;
+			width: 100%;
+			//height: 320px;
+			text-align: center;
+			background-color: colors(blue);
+			img{
+				width: 100%;
+				max-height: 320px;
+			}		
+		}
+	}
+
+	//下面是前/后按钮代码，如果不需要删除即可
+	.prev, .next{
+		position:absolute;    
+		top:50%;
+		margin-top:- sprite-sprite-height(arrow_prev) / 2;
+		@include opacity(.1);
+		background-color:colors(black);
+		cursor: pointer;
+		@include max-screen(960px){
+			margin-top:- sprite-sprite-height(arrow_prev) * ($spritePre/100)  / 2
+		}
+		   
+	}
+	.prev{
+		left:0;
+		//@include border-radius(0 30px 30px 0);
+	}
+	.next{
+		right:0;
+		//@include border-radius(30px 0 0 30px);
+	}
+	.prev:hover, .next:hover{
+		@include opacity(.3);
+		@include transition(0.3s);
+	}
+}
+.index-ad{
+	padding-top: 178px;
+	border:1px solid colors(gray);
+	background-color:colors(white);
+	img{
+		width: 100%;
+		max-height: 140px;
+	}
+}

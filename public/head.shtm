@@ -1,0 +1,15 @@
+<!-- 设置页面编码 -->
+<meta charset="UTF-8">
+<!-- 设置站点标题 -->
+<title><?php echo $title; ?></title>
+<!-- canonical目的是规范链接 -->
+<!-- 以最高版本IE进行渲染 -->
+<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+<!-- 360以wekit渲染 -->
+<!-- <meta name="renderer" content="webkit"> -->
+<!-- 桌面站点所需要设置在相关meta属性 开始 -->
+<!-- <meta name="applicable-device" content="pc"> -->
+<base target="_blank" href="/">
+<!-- 桌面站点所需要设置在相关meta属性 结束 -->
+<meta name="keywords" content="<?php echo $keywords; ?>">
+<meta name="description" content="<?php echo $description; ?>">

@@ -1,0 +1,113 @@
+@charset "UTF-8";
+@import "config"; //页面相关配置
+.user-brief dt{
+    border-bottom: 2px solid #ff8800;
+}
+.asset{
+    position: relative;
+    margin-bottom: 32px;
+    overflow: hidden;
+    .titlebar {
+          height: 80px;
+          line-height: 80px;
+          overflow: hidden;
+          background-color: #F8F8F8;
+          border: 1px solid #dadada;
+          padding: 0 25px;
+            .tag {
+                float: left;
+                margin: 0px 10px 0px 15px;
+                width: 75px;
+                background: url(../images/tag.png) no-repeat 50% 50%;
+                font-size: 14px;
+                color: #fff;
+                line-height: 80px;
+                padding-left: 15px;
+                height: 80px;
+            }
+            .h2 {
+                float: left;
+                font-size: 30px;
+                line-height: 80px;
+                color: #3c3c3c;
+                overflow: hidden;
+                -o-text-overflow: ellipsis;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                word-wrap: break-word;
+                word-break: break-all;
+                .pro-icon{
+                    background: url(../images/icon.png) no-repeat 0px 0;
+                    width: 110px;
+                    height: 40px;
+                }
+            }
+        }
+    .asset-properties{
+        .title{
+            height: 40px;
+            line-height: 40px;
+            margin-top: 20px;
+        }
+        .table{
+            td{
+                line-height: 48px;
+                height: 48px;
+				overflow: hidden;
+                font-size: 16px;
+                .label{
+                    display: inline-block;
+                    width:130px;
+                    line-height: 48px;
+                    height: 48px;
+                    padding-left: 30px;
+                    float: left;
+                    color: #666;
+                }
+                .label-val{
+                    float: left;
+                    display: inline-block;
+                    line-height: 48px;
+                    height: auto;
+					width: 280px;
+                }
+                .label-input{
+                    float: left;
+                    line-height: 48px;
+                    height: 48px;
+                    input{
+                        width: 230px;
+                        height: 30px;
+                        padding-left: 10px;
+                        font-size: 15px;
+                    }
+                    select{
+                        width: 244px;
+                        height: 36px;
+                        padding-left: 10px;
+                        font-size: 15px;
+                    }
+                }
+                .money{
+                    color: colors(red);
+                    font-size: 22px;
+                }
+                .star{
+                    color: red;
+                }
+            }
+        }
+    }
+    .buttonarea{
+        width: 300px;
+        padding-top: 40px;
+        height: 70px;
+        margin: 0 auto;
+        input{
+            width: 200px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 18px;
+        }
+    }
+}

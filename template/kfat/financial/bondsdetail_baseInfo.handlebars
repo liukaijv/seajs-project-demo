@@ -1,0 +1,144 @@
+
+    <div id="yield">
+          {{#if flag}}
+            暂无数据
+          {{else}}
+            {{#each this}}
+      <table>
+		<colgroup>
+			<col width="15%">
+			<col width="45%">
+			<col width="15%">
+			<col width="45%">
+		</colgroup>
+        <tbody>
+          <tr>
+            <td id="table-label">
+             发行人名字
+            </td>
+            <td>
+                {{distributorname}}
+            </td>
+            <td id="table-label">
+             产品类型名称
+            </td>
+            <td>
+                {{cat_name}}
+            </td>
+          </tr>
+		  <tr>
+            <td id="table-label">
+             收益计算名称
+            </td>
+            <td>
+                {{cashtypename}}
+            </td>
+            <td id="table-label">
+             计息名称
+            </td>
+            <td>
+                {{cashtypeinfo}}
+            </td>
+          </tr>
+		  <tr>
+            <td id="table-label">
+             产品期限
+            </td>
+            <td>
+                {{deadline}}
+            </td>
+            <td id="table-label">
+             产品评级
+            </td>
+            <td>
+                {{fundrisklevel}}
+            </td>
+          </tr>
+		  <tr>
+            <td id="table-label">
+             最低认购金额
+            </td>
+            <td>
+                {{#toLocalString mintendtenderedsum}}{{/toLocalString}}
+            </td>
+            <td id="table-label">
+             认购增减幅度
+            </td>
+            <td>
+                {{#toLocalString mintransvol}}{{/toLocalString}}
+            </td>
+          </tr>
+		  <tr>
+            <td id="table-label">
+             最低转让金额
+            </td>
+            <td>
+                {{#toLocalString mintransvol}}{{/toLocalString}}
+            </td>
+            <td id="table-label">
+             是否允许赎回
+            </td>
+            <td>
+                {{isredeemtname}}
+            </td>
+          </tr>
+		  <tr>
+            <td id="table-label">
+             最低赎回金额
+            </td>
+            <td>
+                {{#toLocalString minredemptionamount}}{{/toLocalString}}
+            </td>
+            <td id="table-label">
+             最高赎回金额
+            </td>
+            <td>
+                {{#toLocalString maxredemptionamount}}{{/toLocalString}}
+            </td>
+          </tr>
+		  <tr>
+            <td id="table-label">
+             交易开始时间
+            </td>
+            <td>
+                {{#changeDate begintranstime}}{{/changeDate}}
+            </td>
+            <td id="table-label">
+             交易结束时间
+            </td>
+            <td>
+                {{#changeDate endtranstime}}{{/changeDate}}
+            </td>
+          </tr>
+        </tbody>
+    </table>
+</div>
+            {{/each}}
+          {{/if}}
+    </div>
+
+<!--
+    <div id="yield">
+          {{#if flag}}
+            暂无数据
+          {{else}}
+            {{#each this}}
+            <ul>
+              <li>发行人名字:{{distributorname}}</li>
+              <li>产品类型名称:{{cat_name}}</li>
+              <li>收益计算名称:{{cashtypename}}</li>
+              <li>计息名称:{{cashtypeinfo}}</li>
+              <li>存续期限:{{continuelimit}}</li>
+              <li>产品评级:{{fundrisklevel}}</li>
+              <li>认购起点金额:{{subamountdes}}</li>
+              <li>认购增减幅度:</li>
+              <li>最低转让金额:{{mintransvol}}</li>
+              <li>是否允许赎回:{{isredeemtname}}</li>
+              <li>最低赎回金额:{{minredemptionamount}}</li>
+              <li>单笔赎回上限:{{totalredemptionamount}}</li>
+              <li>交易开始时间:{{#changeDate begintranstime}}{{/changeDate}}</li>
+              <li>交易结束时间:{{endtranstime}}</li>
+            </ul>
+            {{/each}}
+          {{/if}}
+    </div>-->

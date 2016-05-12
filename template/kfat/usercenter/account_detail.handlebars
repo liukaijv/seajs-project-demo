@@ -1,0 +1,88 @@
+{{#if flag}}    
+暂无数据
+{{else}}
+{{#each this}}
+<div class="main">
+  <div class="tag-titlebar">
+      <h2>基本信息</h2>
+  </div>
+  <form class="floorform" id="J_addTransferForm" name="addTransferForm" method="post">
+      <div class="account-transfer">
+        <div class="bill">        
+        <div class="properties clearfix">
+        <dl>
+        <dt>昵称：</dt>
+        <dd>{{loginname}}</dd>
+		
+        <dt>客户姓名：</dt>
+        <dd>{{chinesename}}</dd>
+		
+        <dt>证件类型：</dt>
+        <dd>{{certificatetype}}</dd>
+		
+		<dt>证件号码：</dt>
+        <dd>{{certificateno}}</dd>
+		
+		<dt>是否认证手机：</dt>
+		<dd>
+		{{#equal fphoneno '1'}}
+          已认证
+          {{else}}
+          未认证
+        {{/equal}}
+        </dd>
+		
+		<dt>手机号码：</dt>
+        <dd>{{phoneno}}</dd>
+	
+		<dt>客户类型：</dt>
+        <dd>{{custtype}}</dd>
+		
+		
+		<dt>是否已设置登录密码：</dt>
+		<dd>
+		{{#if floginpwd }}
+          已设置
+          {{else}}
+          未设置
+        {{/if}}
+        </dd>
+		
+		<dt>是否已设置交易密码：</dt>
+		<dd>
+		{{#equal ftrdpwd '1'}}
+          已设置
+          {{else}}
+          未设置
+        {{/equal}}
+        </dd>
+		
+		<dt>是否已风险测评：</dt>
+		<dd>
+		{{#equal frate '1'}}
+          已测评
+          {{else}}
+          未测评
+        {{/equal}}
+        </dd>
+		
+		<dt>风险评测分数：</dt>
+        <dd>{{ratescore}}</dd>
+		
+		<dt>绑卡状态：</dt>
+		<dd>
+		{{#equal fsignstatus '1'}}
+          已绑定
+          {{else}}
+          未绑定
+        {{/equal}}
+        </dd>
+		
+        </dl>
+        </div>
+        </div>    
+    </div>
+    </form>
+    </div>
+{{/each}}
+{{/if}}

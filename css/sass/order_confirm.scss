@@ -1,0 +1,321 @@
+@charset "UTF-8";
+//参数配置
+@import "config"; //页面相关配置
+.order-confirm{
+	width: 80%;
+	margin: 0 auto;
+	padding:16px 56px;
+	background-color: colors(white);
+	.box-hd{
+		height: 48px;
+		line-height: 48px;
+		font-size: fonts(size) * 2.4;
+		border-bottom: 2px solid colors(auxiliary);
+	}
+	.pro-name{
+		font-size: fonts(size) * 2.2;
+		line-height: 48px;
+		.modify{
+		  font-size: fonts(size) * 1.2;
+		  padding:2px;
+		  background-color: colors(green);
+		  margin-right: 4px;
+		  color: colors(white);
+		  vertical-align: middle;
+		  @include border-radius(radius(S));
+		}
+		.info{
+			font-size: fonts(size) * 1.2;
+			color: colors(dark);
+		}
+	}
+	.form{
+		border: 1px solid lighten(colors(gray), 10%);
+		// border-top: 0;
+		padding: 24px 24px 0 24px;
+		line-height: 48px;
+		&>dl{
+			overflow: hidden;
+			&>dt{
+				position: absolute;
+				padding:10px 0;
+			}
+			&>dd{
+				padding:10px 0 10px 180px;
+				margin-bottom: 0;
+				border-top:1px solid lighten(colors(gray), 10%);
+				margin-top: -1px;
+				font-size: fonts(size) * 1.6;
+				color: colors(dark);
+			}
+			em{
+				color: colors(darker);
+			}
+		}
+	}
+	.btn-lg{
+		margin-top: 30px;
+		width: 256px;
+		line-height: 56px;
+		font-size: fonts(size) * 2.4;
+	}
+}
+
+.steps-input{
+	height: 58px;
+	a{
+		@include float;
+	  width: 56px;
+	  line-height: 56px;
+	  border: 1px solid lighten(colors(gray), 10%);
+	  font-family: fonts(cn);
+	  font-size: fonts(size) * 4.8;
+	  color: colors(dark);
+	  text-align: center;
+	  background-color: colors(light);
+		&.less {
+		  border-right: 0;
+		  @include border-radius(radius(S) 0 0 radius(S));
+		}
+		&.more {
+		  border-left: 0;
+		  @include border-radius(0 radius(S) radius(S) 0);
+		}
+	}
+	input {
+	  @include float;
+	  height: 56px;
+	  padding:0 7px;
+	  margin:0;
+	  border: 1px solid lighten(colors(gray), 10%);
+	  outline: none;
+	  &:focus{
+	  	@include box-shadow(1px 1px 3px colors(light) inset);
+	  }
+	}
+	span {
+		@include float;
+	  margin-left: 10px
+	}
+}
+
+.account-info{
+	margin-top: 16px;
+	border: 1px solid lighten(colors(gray), 10%);
+	background-color: colors(light);
+	li{
+		border-top: 1px solid lighten(colors(gray), 10%);
+		padding: 19px;
+	}
+
+	.radio_checkbox{
+		display: inline-block;
+		cursor: pointer;
+		line-height: 32px;
+		padding-left: 32px;
+		background:transparent image-url('checkbox.png') no-repeat 0 center;
+	}
+	input[type="radio"]:checked + .radio_checkbox,input[type="checkbox"]:checked + .radio_checkbox{
+		background:transparent image-url('checkbox_checked.png') no-repeat 0 center;
+	}
+	.bank-card{
+		display: inline-block;
+		border: 1px solid lighten(colors(blue), 30%);
+		padding: 4px 10px;
+		background-color: colors(white);
+	}
+	.thumbnail{
+		display: inline-block;
+		width: 156px;
+		height: 48px;
+		padding-right:9px;
+		margin-right: 10px;
+		border-right: 1px solid lighten(colors(blue), 30%);
+		img{
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+
+
+/******************kdMessage start**************/
+#kd-ui-message {
+  background: #F0F0F0;
+  border: 1px solid #BBB;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  color: #555;
+  margin: 5px;
+  min-height: 10px;
+  padding: 5px 10px 5px 10px;
+  line-height: 1.8;
+  font-size: 14px;
+  font-family: 微软雅黑;
+}
+
+#kd-ui-message.info {
+  padding-left: 30px;
+  border-color: #9EB6D4;
+  background: url(../images/msg-info.png) no-repeat 10px center #E0EFFF;
+}
+
+#kd-ui-message.warn {
+  padding-left: 30px;
+  border-color: #DAC008;
+  background: url(../images/msg-warn.png) no-repeat 10px center #FFD;
+}
+
+#kd-ui-message.error {
+  padding-left: 30px;
+  border-color: #DF9898;
+  background: url(../images/msg-error.png) no-repeat 10px center #FFE7E7;
+}
+
+.kd-message {
+  background: #F0F0F0;
+  border: 1px solid #BBB;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  color: #555;
+  margin: 5px;
+  min-height: 10px;
+  padding: 5px 10px 5px 10px;
+  line-height: 1.8;
+  font-size: 14px;
+  font-family: 微软雅黑;
+}
+
+.kd-message.info {
+  padding-left: 30px;
+  border-color: #9EB6D4;
+  background: url(../images/msg-info.png) no-repeat 10px center #E0EFFF;
+}
+
+.kd-message.warn {
+  padding-left: 30px;
+  border-color: #DAC008;
+  background: url(../images/msg-warn.png) no-repeat 10px center #FFD;
+}
+
+.kd-message.error {
+  padding-left: 30px;
+  border-color: #DF9898;
+  background: url(../images/msg-error.png) no-repeat 10px center #FFE7E7;
+}
+/******************kdMsg end **************/
+
+/******************kdDialog开始**************/
+#kd-ui-dialog-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #282828;
+  top: 0;
+  left: 0;
+}
+
+#kd-ui-dialog-box {
+  position: fixed;
+  _position: absolute;
+  background: #FFF;
+  text-align: left;
+  border-radius: 6px;
+  border: 5px solid #FFF;
+  font-family: 微软雅黑;
+  user-select: none;
+  -o-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+#kd-ui-dialog-title {
+  position: relative;
+  height: 30px;
+  overflow: hidden;
+}
+
+#kd-ui-dialog-title h2 {
+  position: relative;
+  left: 10px;
+  top: 5px;
+  font-size: 14px;
+  color: #C70808;
+  font-weight: bold;
+}
+
+#kd-ui-dialog-close {
+  position: absolute;
+  opacity: .5;
+  filter: alpha(opacity = 50);
+  right: 10px;
+  top: -4px;
+  overflow: hidden;
+  background: #FFF;
+  cursor: pointer;
+  color: #C70808;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+#kd-ui-dialog-close:hover {
+  opacity: 1;
+  filter: alpha(opacity = 100);
+}
+
+#kd-ui-dialog-content-border {
+  position: relative;
+  top: -1px;
+  border-top: 1px solid #C78888;
+  padding: 5px 0 5px 5px;
+}
+
+#kd-ui-dialog-content .alert {
+  margin: 10px;
+  font-size: 14px;
+}
+
+#kd-ui-dialog-content .confirm {
+  margin: 10px;
+  font-size: 14px;
+}
+
+#kd-ui-dialog-content img,#kd-ui-dialog-content iframe {
+  display: block;
+}
+
+#kd-ui-dialog-content .loading {
+  position: absolute;
+  left: 47%;
+  top: 30%;
+  margin-left: -8px;
+  margin-top: -8px;
+}
+
+#kd-ui-dialog-bottom {
+  padding: 5px;
+  text-align: right;
+}
+
+#kd-ui-dialog-bottom button {
+  color: #333;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 5px;
+  padding: 4px 12px;
+  text-align: center;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  font-family: 微软雅黑;
+}
+
+#kd-ui-dialog-bottom button:hover {
+  color: #333;
+  border: 1px solid #CCC;
+  background-color: #E9E9E9;
+}
+/**********kdDialog结束**********/

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <!-- 引入公用css -->
+  <!--#include virtual="/public/public_css.shtm"-->
+  <link rel="stylesheet" type="text/css" href="/css/base.css">
+  <link rel="stylesheet" type="text/css" href="/css/public.css">
+  <link rel="stylesheet" type="text/css" href="/css/account.css">
+  <link rel="stylesheet" type="text/css" href="/css/jquery-ui-1.9.2.custom.min.css"></head>
+  <link rel="stylesheet" type="text/css" href="/css/usercenter.css"></head>
+
+<body>
+  <!-- 引入头部文件 -->
+  <!--#include virtual="/public/header.shtm"-->
+  <div id="J_account_figure"></div>
+  <div class="w">
+    <div class="gd-5">
+      <!--#include virtual="/usercenter/account_asidenav.shtm"--> </div>
+    <div class="gd-19">
+      <div class="uc-info">
+        <div class="uc-info-hd">
+          <h2 class="title">基础信息</h2>
+        </div>
+        <div class="uc-info-bd uc-fillform">
+          <div class="tips tips-blue mt10">
+            <h3 class="tips-title">温馨提示:</h3>
+            <p>1.一个帐号，只能对应绑定一个登录手机</p>
+            <p>2.绑定登陆手机,可享受通过绑定手机找回密码等服务。</p>
+          </div>
+          <dl class="form form-border">
+            <dt>登录手机:</dt>
+            <dd>
+              <a href="javascript:;" id="J_mobile_certificate" target="_self" class="blue">修改</a>
+            </dd>
+            <dt>登录密码:</dt>
+            <dd>
+              修改更高级别的密码能提高帐号的安全性。
+              <a href="javascript:;" id="J_modify_pwd" target="_self" class="blue">修改</a>
+            </dd>
+            <dt>交易密码:</dt>
+            <dd>
+              修改更高级别的交易密码能提高网上交易的安全性。
+              <a href="javascript:;" target="_self" class="blue" id="J_modifyPass">修改</a>
+            </dd>
+            <dt>交易密码找回:</dt>
+            <dd>
+              忘记交易密码，
+              <a href="javascript:;" id="J_findPass" target="_self" class="blue">点击此处找回</a>
+              。
+            </dd>
+
+          </dl>
+        </div>
+      </div>
+      <!--修改密码-->
+      <div id="modify_pwd" style="display:none;width:520px;">
+        <form role="form" id="modifyForm1" class="form form-pop" method="post" style="width:480px">
+          <dl>
+            <dt>
+              <label for="old_pwd">旧密码:</label>
+            </dt>
+            <dd>
+              <input type="password" id="old_pwd" name="old_pwd" class="input" placeholder="旧密码" datatype="*" nullmsg="密码不能为空" errormsg="密码不符规则">
+              <span class="Validform_checktip"></span>
+            </dd>
+            <dt>
+              <label for="new_pwd">新密码:</label>
+            </dt>
+            <dd>
+              <input type="password" id="new_pwd" name="new_pwd" class="input" placeholder="密码长度为6到16位的数字或字符" datatype="checkPassword" nullmsg="新密码不能为空" errormsg="密码不符规则">
+              <span class="Validform_checktip"></span>
+            </dd>
+            <dt>
+              <label for="new_pwd_confirm">确认新密码:</label>
+            </dt>
+            <dd>
+              <input type="password" class="input" id="new_pwd_confirm" name="new_pwd_confirm" onblur="match_pwd()" placeholder="密码长度为6到16位的数字或字符" datatype="*" recheck="new_pwd" nullmsg="不能为空" errormsg="两次密码不一致！">
+              <input type="hidden" id="id">
+              <span class="Validform_checktip"></span>
+            </dd>
+          </dl>
+          <div class="tac pt10">
+            <input type="button" class="btn btn-blue btn-pop" onclick="modify()" id="confrim_btn" value="确认">
+            <input type="reset" class="btn btn-gray btn-pop" onclick="javascript:layer.close(pwdLayer)" value="取消"></div>
+        </form>
+      </div>
+      <!--模态弹出框-->
+      <div id="J_modify_capitalpwd" style="display:none;">
+        <form id="modifyForm" class="form form-pop" method="post" style="width:480px">
+          <dl>
+            <dt>
+              <label for="old_capitalpwd">旧密码:</label>
+            </dt>
+            <dd>
+              <input type="password" id="old_capitalpwd" name="old_capitalpwd" maxlength="6" class="input" placeholder="旧交易密码" datatype="*" nullmsg="密码不能为空">
+              <span class="Validform_checktip"></span>
+            </dd>
+            <dt>
+              <label for="new_capitalpwd">新密码:</label>
+            </dt>
+            <dd>
+              <input type="password" id="new_capitalpwd" name="new_capitalpwd" maxlength="6" class="input" placeholder="6位数字交易密码" datatype="n6-6" nullmsg="密码不能为空" errormsg="密码不符规则">
+              <span class="Validform_checktip"></span>
+            </dd>
+            <dt>
+              <label for="new_capitalpwd_confirm">确认新密码:</label>
+            </dt>
+            <dd>
+              <input type="password" id="new_capitalpwd_confirm" maxlength="6" name="new_capitalpwd_confirm" class="input" placeholder="6位数字交易密码" datatype="*" recheck="new_capitalpwd" nullmsg="不能为空" errormsg="两次密码不一致">
+              <input type="hidden" id="id" value="">
+              <span class="Validform_checktip"></span>
+            </dd>
+          </dl>
+          <div class="tac pt10">
+            <input type="button" class="btn btn-blue btn-pop" id="confrim_capitalpwdbtn" value="确认">
+            <input type="reset" class="btn btn-gray btn-pop" value="取消"></div>
+        </form>
+      </div>
+
+      <!--模态弹出框-->
+      <div id="back_capitalpwd" style="display:none">
+        <form id="backform" class="form form-pop" method="post" style="width:480px">
+          <dl>
+            <dt>
+              <label for="authcode"> <strong>*</strong>
+                验证码:
+              </label>
+            </dt>
+            <dd>
+              <input type="text" id="authcodeback" name="authcodeback" class="input">
+              <img style="height:36px;width:116px;border:1px solid #fafafa;cursor:pointer;" class="imgauthcode" title="点击刷新验证码" alt="点击刷新验证码"></dd>
+            <dt>
+              <label for="old_capitalpwd">手机验证码:</label>
+            </dt>
+            <dd>
+              <input type="text" id="verifycodeback" name="verifycodeback" length="6" class="input" size="6">
+              <input type="button" style="height:36px;" id="backverify_btn" class="btn btn-blue" value="获取短信验证码"></dd>
+            <dt>
+              <label for="new_capitalpwd">新密码:</label>
+            </dt>
+            <dd>
+              <input type="password" id="new_capitalpwdback" name="new_capitalpwdback" maxlength="6" class="input" placeholder="6位数字交易密码"></dd>
+            <dt>
+              <label for="new_capitalpwd_confirm">确认新密码:</label>
+            </dt>
+            <dd>
+              <input type="password" id="new_capitalpwdback_confirm" name="new_capitalpwdback_confirm" maxlength="6" class="input" placeholder="6位数字交易密码">
+              <input type="hidden" id="id" value=""></dd>
+          </dl>
+          <div class="tac pt10">
+            <input type="button" class="btn btn-blue btn-pop" id="confrim_capitalpwdbackbtn" value="确认">
+            <input type="reset" class="btn btn-gray btn-pop" value="取消"></div>
+        </form>
+      </div>
+      <!--手机修改-->
+      <div id="mobile_certificate" style="display:none">
+        <form id="mobile_certificateForm" class="form form-pop" method="post" style="width:480px">
+          <dl>
+            <dt class="authcodeC">
+              <label for="authcode"> <strong>*</strong>
+                验证码:
+              </label>
+            </dt>
+            <dd class="authcodeC">
+              <input type="text" id="authcode" name="authcode" class="input">
+              <img style="height:36px;width:116px;border:1px solid #fafafa;cursor:pointer;" class="imgauthcode" title="点击刷新验证码" alt="点击刷新验证码"></dd>
+            <dt>
+              <label for="mobile" id="mobiletext">
+                <strong>*</strong>
+                手机号:
+              </label>
+            </dt>
+            <dd style="display:none" id="newmobileDis">
+              <input type="text" id="mobile" name="mobile" class="input">
+              <input type="button" style="height:36px;" id="verify_btn" class="btn btn-red" value="获取短信验证码"></dd>
+            <dd id="oldmobileDis">
+              <input type="text" id="old_mobile_text" class="input" disabled="">
+              <input type="button" style="height:36px;" id="old_verify_btn" class="btn btn-blue" value="获取短信验证码"></dd>
+            <dt>
+              <label for="verifycode">
+                <strong>*</strong>
+                短信验证码:
+              </label>
+            </dt>
+            <dd>
+              <input type="text" id="verifycode" name="verifycode" length="6" class="input" size="6">
+              <span class="f12" id="timecount"></span>
+              <input type="hidden" id="id" value=""></dd>
+            <dd class="pt10">
+              <input type="button" style="display:none;" class="btn btn-blue btn-pop" id="J_confrim_mobile_new" value="提交">
+              <input type="button" class="btn btn-blue btn-pop" id="J_confrim_mobile" id="confrim_mobile_next" value="下一步">
+              <input type="reset" class="btn btn-gray btn-pop" id="J_cancelNewMobile" value="取消"></dd>
+          </dl>
+        </form>
+      </div>
+
+      <!--邮箱认证-s-->
+      <div id="email_certificate" style="display:none">
+        <form id="email_certificateForm" class="form form-pop" method="post" style="width:480px">
+          <dl>
+            <dt>
+              <label for="email">
+                <strong>*</strong>
+                邮箱:
+              </label>
+            </dt>
+            <dd>
+              <input type="text" id="email" name="email" class="input">
+              <input type="hidden" id="id" value=""></dd>
+            <dd>
+              <input type="button" class="btn btn-red" onclick="confrim_emailOp()" id="confrim_email" value="发送验证邮件">
+              <input type="reset" class="btn btn-gray" onclick="javascript:layer.close(emailLayer)" value="取消"></dd>
+          </dl>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- 引入尾部文件 -->
+  <!--#include virtual="/public/footer.shtm"-->
+  <script type="text/javascript" src="../../sea.js"></script>
+  <script type="text/javascript" src="../../seajs_config.js"></script>
+  <script type="text/javascript">seajs.use(["kfat/usercenter/finacial_asset","kfat/usercenter/account_safe"]);</script>
+</body>
+</html>

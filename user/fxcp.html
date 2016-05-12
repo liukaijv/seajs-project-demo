@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+<!-- 引入公用css -->
+<!--#include virtual="/public/public_css.shtm"-->
+<link rel="stylesheet" type="text/css" href="/css/p2p_account.css"></link>
+<link rel="stylesheet" type="text/css" href="/css/kd.tools.validate.css"></link>
+<link rel="stylesheet" type="text/css" href="/css/share.css">
+<link rel="stylesheet" type="text/css" href="/css/iconfont_i.css">
+
+</head>
+
+<body>
+<!-- 引入头部文件 -->
+<!--#include virtual="/public/header.shtm"-->
+<!--main div start-->
+<div class="main">
+<div class="account_register">
+<table class="process-cells step-one">
+<tbody>
+<tr>
+<td style="width: 33.3%" class="current">1.注册</td>
+<td style="width: 33.3%">2.绑定银行卡</td>
+<td style="width: 33.3%">3.风险测评</td>
+</tr>
+</tbody>
+</table>
+<input id="riskflag" type="hidden" value="1">
+<div class="clearfix">
+<div id="J_fxcpform" class="risk_assessment">
+</div>
+</div>
+</div>
+</div>
+<!-- 引入尾部文件 -->
+<!--#include virtual="/public/footer.shtm"-->
+</body>
+<script type="text/javascript" src="../../sea.js"></script>
+<script type="text/javascript" src="../../seajs_config.js"></script>
+<script type="text/javascript">
+      seajs.use(["kfat/user/fxcp"]);
+  </script>
+
+</html>

@@ -1,0 +1,29 @@
+{{#if flag}}
+	暂无数据
+{{else}}
+	{{#each this}}
+		<li>
+      <div class="listed-product-item">
+        <h3 class="listed-product-title"><a href="kisp/bondDetail.html?id={{id}}">{{fundname}}</a></h3>
+        <div class="listed-product-yield-wrap">
+          <dl class="listed-product-yield">
+            <dd class="colored-pink"><strong>{{maxannualrate}}</strong>%</dd>
+            <dt>预期年化收益率</dt>
+          </dl>
+          <span class="kfsp-product-circle"></span>
+        </div>
+        <dl class="listed-product-details">
+          <dd><span class="colored-pink">{{maxdeadline}}</span>{{getDeadlineUnit deadlineunit}}</dd>
+          <dt>项目期限</dt>
+        </dl>
+        <dl class="listed-product-details">
+          <dd><span class="colored-black">{{fixMoney maxtenderedsum}}</span>元</dd>
+          <dt>起投金额</dt>
+        </dl>
+        <div class="listed-product-action">
+          {{{getHotProductButtonIndex status allowtime leftamount djs id}}}
+        </div>
+      </div>
+    </li>
+	{{/each}}
+{{/if}}

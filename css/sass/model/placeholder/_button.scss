@@ -1,0 +1,31 @@
+@charset "UTF-8";
+//按钮基础类
+%button{
+  display: inline-block;
+  margin-bottom: 0; // For input.btn
+  border:1px solid colors(gray); 
+  font-family: fonts(family);
+  @include button-size(0 10px, fonts(size) * 1.4, 24px, radius(S));
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  outline: 0;
+  *overflow:visible; //解决ie67双倍padding
+  input{display:none;}
+  // @include transition(.3s ease-in);
+  &:hover,&:focus {
+    text-decoration: none;
+    @include opacity(.9);
+  }
+
+  &:active,&.active {
+    @include box-shadow(inset 0 5px 5px rgba(0,0,0,.05));
+  }
+
+  &.disabled,&[disabled],fieldset[disabled] &{
+    cursor: not-allowed;
+    pointer-events:none; // Future-proof disabling of clicks
+    @include opacity(.65);
+    @include box-shadow(none);
+  }
+}

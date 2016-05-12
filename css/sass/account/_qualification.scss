@@ -1,0 +1,35 @@
+@charset "UTF-8";
+.qualification{
+	.box-bd{
+		padding: 32px;
+		color: colors(dark);
+		line-height: 1.8;
+		font-size: fonts(size) * 1.4;
+		p{
+			margin-bottom: 2em;
+			text-indent: 2em;
+		}
+		.status{
+			font-size: fonts(size) * 3.2;
+			color: colors(auxiliary);
+		}
+		.w128{
+			width: 128px;
+		}
+	}
+	.checkbox{
+		$w : image-width('checkbox.png');
+		$h : image-height('checkbox.png');
+		display: inline-block;
+		padding-left: $w + 4px;
+		background: image-url('checkbox.png') no-repeat 0 center;
+		cursor: pointer;
+		margin-bottom: 32px;
+	}
+	input[type="checkbox"]{
+		display: none;
+	}
+	input:checked + .checkbox{
+		background-image: image-url('checkbox_checked.png')
+	}
+}

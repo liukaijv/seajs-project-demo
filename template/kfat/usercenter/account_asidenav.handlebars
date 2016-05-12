@@ -1,0 +1,12 @@
+<div class="uc-aside">
+  <!-- 用户中心菜单 开始 -->
+  <ul class="uc-asideMenu" id="J_asideMenu">
+{{#if flag}}
+  暂无数据
+{{else}}
+  {{#each this}}
+    <li><a href="{{page}}" menuid={{menuid}} target="_self" class="cate-hd"><i class="ico-arrow"></i>{{menuname}}</a></li>
+  {{/each}}
+{{/if}}
+  </ul>
+</div>

@@ -1,0 +1,25 @@
+<div id="yield">
+{{#if flag}}
+  暂无数据
+{{else}}
+  <table>
+    <colgroup>
+      <col width="20%">
+      <col width="80%">
+    </colgroup>
+        <tbody>
+  {{#each this}}
+          <tr>
+            <td id="table-label">
+              {{title}}
+            </td>
+            <td>
+              {{content}}
+            </td>
+          </tr>
+</div>
+    {{/each}}
+        </tbody>
+    </table>
+  {{/if}}
+</div>

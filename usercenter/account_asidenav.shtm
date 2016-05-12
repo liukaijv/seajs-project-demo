@@ -1,0 +1,12 @@
+
+<div class="uc-aside">
+  <!-- 用户中心菜单 开始 -->
+  <ul class="uc-asideMenu" id="J_asideMenu">
+    <li class="active"><a href="/usercenter/financial_asset.html" target="_self" class="cate-hd"><i class="ico-arrow"></i>资产总览</a></li>
+    <li><a href="/usercenter/myFinancial.html" target="_self" class="cate-hd"><i class="ico-arrow"></i>我的理财</a></li>
+    <li><a href="/usercenter/rights_apply.html" target="_self" class="cate-hd"><i class="ico-arrow"></i>产品查看申请</a></li>
+    <li><a href="/usercenter/capital_cfg.html" target="_self" class="cate-hd"><i class="ico-arrow"></i>资金流水</a></li>
+    <li><a href="/usercenter/account_safe.html" target="_self" class="cate-hd"><i class="ico-arrow"></i>账户安全</a></li>
+    <li><a href="/user/fxcp.html" target="_self" class="cate-hd"><i class="ico-arrow"></i>风险测评</a></li>
+  </ul>
+</div>

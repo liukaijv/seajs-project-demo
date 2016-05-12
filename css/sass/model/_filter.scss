@@ -1,0 +1,37 @@
+@charset "UTF-8";
+.filter {
+  /* 条件筛选 */
+  margin-bottom: 15px;
+  border: 1px solid lighten(colors(gray),10%);
+  border-top: 0;
+  dl {
+  	@extend %clearfix;
+		font-size:fonts(size) * 1.4;
+		overflow: hidden;
+		dt {
+			// @include float;
+			position: absolute;
+		  width: 150px;
+		  padding: 16px 0;
+		  text-align: right;
+		}
+		dd{
+  		@extend %clearfix;
+			padding: 0 10px 0 156px;
+			border-top:1px dotted lighten(colors(gray),10%);
+			margin-top: -1px;
+		}
+		a{
+			@include float;
+			padding: 4px 8px;
+			margin: 10px 32px 10px 0;
+			border: 1px solid transparent;
+			border-radius: 2px;
+			&:hover, &.chosen{
+  			border: 1px solid lighten(colors(primary), 30%);
+				color: colors(primary);
+  			background-color: colors(white);
+			}
+		}
+	}
+}

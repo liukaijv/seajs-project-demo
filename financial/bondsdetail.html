@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <!-- 引入公用css -->
+  <!--#include virtual="/public/public_css.shtm"-->
+  <link rel="stylesheet" type="text/css" href="/css/base.css">
+  <link rel="stylesheet" type="text/css" href="/css/jrzc.css">
+  <link rel="stylesheet" type="text/css" href="/css/p2p_account.css">
+  <link rel="stylesheet" type="text/css" href="/css/kd.ui.css">
+  <link rel="stylesheet" type="text/css" href="/css/kd.tools.validate.css">
+  <link rel="stylesheet" type="text/css" href="/css/kd.ui.plugin.css">
+  <link rel="stylesheet" type="text/css" href="/css/public.css">
+  <link rel="stylesheet" type="text/css" href="/css/prodetail.css">
+  <link rel="stylesheet" type="text/css" href="/css/login/iconfont/iconfont.css">
+  <style type="text/css">
+    #table-label{
+        background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+  <!-- 引入头部文件 -->
+  <!--#include virtual="/public/header.shtm"-->
+
+  <form id="J_myform">
+    <div class="w">
+      <div class="gd-24">
+        <div class="pro-detail-box">
+          <!--产品购买信息-->
+          <div id="J_bondsdetail"></div>
+        </div><!--pro-detail-box end-->
+        <!--tab页-->
+        <div class="tab pro-detail-tab">
+          <div class="tab-hd">
+            <ul>
+              <li class="active">产品基本信息</li>
+              <li>产品附加信息</li>
+              <li>相关文件</li>
+              <li>投资记录</li>
+              <li>收益示例</li>
+            </ul>
+          </div>
+          <div class="tab-bd">
+            <!--基本信息-->
+            <div class="tab-item" id="J_baseInfo">
+            </div>
+            <!--扩展信息-->
+            <div class="tab-item hide" id="J_outInfo">
+            </div>
+            <!--相关文件-->
+            <div class="tab-item hide" id="J_fileInfo">
+            </div>
+            <div class="tab-item hide">
+              <div id="yield">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>序号</th>
+                      <th>投资者</th>
+                      <th>投资金额</th>
+                      <th>投资时间</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="tab-item hide">
+              <div id="yield">
+                <span>以资金投资起点<?php echo $mintenderedsum;?>元为例</span>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>还款日期</th>
+                      <th>应收利息（元）</th>
+                      <th>应收本金（元）</th>
+                      <th>本金余额（元）</th>
+                      <th>应收本息（元）</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                      </td>
+                      <td>
+                      </td>
+                      <td>
+                      </td>
+                      <td>
+                      </td>
+                      <td>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                      </td>
+                      <td>
+                      </td>
+                      <td>
+                      </td>
+                      <td>
+                      </td>
+                      <td>
+                      </td>
+                      <td>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div><!--tab end-->
+      </div>
+    </div>
+  </form>
+  <div class="form form-pop" id="J_payPassword" style="display:none">
+    <dl>
+      <dt><label for="">支付密码：</label></dt>
+      <dd><input class="input" id="J_transpwd" type="password" datatype="n6-6" nullmsg="请输入6位数字交易密码！" errormsg="交易密码只能是6位数字"></dd>
+      <dd><!-- 忘记了？<a href="/user/retrieve/retrieve_pwd" class="blue">点这里</a> --></dd>
+    </dl>
+    <div class="tac"><input id="J_confirm" type="button" class="btn-lg btn-red" value="确定" onclick="thirdpayFromSubmit()">&ensp;<input type="button" id="J_confirm_cancel" class="btn-lg btn-gray" value="取消" onclick="closeDiv()"></div>
+  </div>
+<!-- 引入尾部文件 -->
+<!--#include virtual="/public/footer.shtm"-->
+</body>
+<!--引入seajs核心文件-->
+<!--#include virtual="/public/base.shtm"-->
+<script type="text/javascript">seajs.use(["kfat/financial/bondsdetail"]);</script>
+
+</html>

@@ -1,0 +1,41 @@
+@charset "UTF-8";
+//图片精灵配置
+$sprite-map: sprite-map("sprite/*.png");
+$sprite-base-class:".ico"; //配置精灵的基础类注意：必须在导入精灵图之前做配置
+$sprite-layout:"smart"; //设置精灵图片拼合方式 smart:最紧密 vertical:纵向排列 horizontal:横向排列 diagonal:对角线排列
+$sprite-clean-up:false; //自动清除过期的精灵图片
+$default-sprite-separator:"-"; //默认sprite链接字符设置
+$disable-magic-sprite-selectors:false; //是否通过伪类选择器自动生成精灵
+$sprite-names:sprite-names($sprite-map);
+
+.ico{
+	@include inline-block;
+	background-image:sprite-url($sprite-map);
+}
+
+//测试sprite相关属性的获得的值
+/* .testsprite{
+	sprite-file:#{sprite-file($sprite-map, 'logo')}; 
+	sprite-url:"#{sprite-url($sprite-map)}";
+	sprite-path: "#{sprite-path($sprite-map)}";
+	sprite-names: "#{sprite-names($sprite-map)}";
+	map-name: #{sprite-map-name($sprite-map)};
+	sprite-map: #{sprite-map("sprite/*.png")};
+	allW:image-width("#{sprite-map-name($sprite-map)}.png");
+	allH:image-height("#{sprite-map-name($sprite-map)}.png");
+}  */
+
+/**
+ * 用户中心精灵图片mixin方法
+ */
+@include sprites(
+	$sprite-map, //map
+	$sprite-names, //精灵图片名称数组
+	$sprite-base-class, //要扩展的内容比如：要扩展.icon,flase不扩展
+	true, //是否获得精灵图片宽高
+	'ico', //类名开头名称可设置为空，如果不为空则和会以ico开头
+	0, //X偏移量
+	0, //Y偏移量
+	true, //是否用百分比设置坐标
+	$default-sprite-separator//连接字符可设置为空默认为-
+);

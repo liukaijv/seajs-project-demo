@@ -1,0 +1,13 @@
+@charset "UTF-8";
+//参数配置
+@import "config"; //页面相关配置
+
+@import "model/list"; //列表
+@import "usercenter/fillform"; //用户中心填表样式
+@import "usercenter/main"; //用户中心主题默认页相关样式
+@import "usercenter/userhead_info"; //用户信息展示
+@import "usercenter/binding_bank"; //绑定银行
+@import "model/step"; //用户中心填表样式
+@import "model/unit"; //小组件
+@import "model/payment"; //支付方式
+@import "model/validform"; //验证样式
